@@ -1,0 +1,59 @@
+site_name: Sidusfarma Docs
+site_description: Documentação técnica e analítica do projeto Sidusfarma
+site_dir: site
+docs_dir: docs
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
+plugins:
+  - search
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mathjax-init.js
+nav:
+  - Início: index.md
+  - Relatório Quantitativo: modelagem_quantitativa_de_dados_do_parceiro.md
+  - Inventário das Bases: inventario_das_bases.md
+  - Catálogo de Reports:
+      - Visão Geral: catalogo_reports/README.md
+      - Report 01: catalogo_reports/relatorio_01.md
+      - Report 02: catalogo_reports/relatorio_02.md
+      - Report 03: catalogo_reports/relatorio_03.md
+      - Report 04: catalogo_reports/relatorio_04.md
+      - Report 05: catalogo_reports/relatorio_05.md
+      - Report 06: catalogo_reports/relatorio_06.md
+      - Report 07: catalogo_reports/relatorio_07.md
+      - Report 08: catalogo_reports/relatorio_08.md
+      - Report 09: catalogo_reports/relatorio_09.md
+      - Report 10: catalogo_reports/relatorio_10.md
+      - Report 11: catalogo_reports/relatorio_11.md
+      - Report 12: catalogo_reports/relatorio_12.md
+  - Especificações:
+      - Especificação da Análise: specs/spec-analise-quantitativa-dados.md
+      - ADR 001: specs/adr-001-pipeline-analise-quantitativa.md

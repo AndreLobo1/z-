@@ -1,0 +1,2867 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e analítica do projeto Sidusfarma">
+      
+      
+      
+      
+        <link rel="prev" href="../modelagem_quantitativa_de_dados_do_parceiro/">
+      
+      
+        <link rel="next" href="../catalogo_reports/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Inventário das Bases - Sidusfarma Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inventario-das-bases" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Sidusfarma Docs" class="md-header__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sidusfarma Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inventário das Bases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Sidusfarma Docs" class="md-nav__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sidusfarma Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelagem_quantitativa_de_dados_do_parceiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório Quantitativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventário das Bases
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventário das Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#localizacao-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localização dos Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ligacoes-entre-as-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ligações Entre as Bases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-relacional-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão Relacional Resumida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clientescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clientes.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="clientes.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empresascsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        empresas.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="empresas.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisascsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pesquisas.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pesquisas.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        questoes.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="questoes.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#respondentescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        respondentes.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="respondentes.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#respostascsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        respostas.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="respostas.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo de Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 03
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 04
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 05
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 06
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 07
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 08
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Especificações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/spec-analise-quantitativa-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação da Análise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/adr-001-pipeline-analise-quantitativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR 001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#localizacao-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Localização dos Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ligacoes-entre-as-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ligações Entre as Bases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visao-relacional-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visão Relacional Resumida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clientescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clientes.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="clientes.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empresascsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        empresas.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="empresas.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pesquisascsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pesquisas.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pesquisas.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        questoes.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="questoes.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#respondentescsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        respondentes.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="respondentes.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#respostascsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        respostas.csv
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="respostas.csv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#papel-analitico_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Papel Analítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaves_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chaves
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colunas_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colunas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linhas-de-exemplo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 Linhas de Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inventario-das-bases">Inventário das Bases<a class="headerlink" href="#inventario-das-bases" title="Permanent link">&para;</a></h1>
+<p>Esta página concentra a visão estrutural das 6 bases usadas no projeto. O objetivo aqui é mostrar, de forma auditável e operacional, onde estão os arquivos, quais colunas existem em cada dataset, quais chaves permitem ligação entre as tabelas e como são 3 linhas reais de exemplo por base.</p>
+<h2 id="localizacao-dos-arquivos">Localização dos Arquivos<a class="headerlink" href="#localizacao-dos-arquivos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;">Caminho</th>
+<th style="text-align: right;">Registros</th>
+<th style="text-align: right;">Colunas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>clientes.csv</code></td>
+<td style="text-align: left;"><code>DADOS/clientes.csv</code></td>
+<td style="text-align: right;">5.430</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas.csv</code></td>
+<td style="text-align: left;"><code>DADOS/empresas.csv</code></td>
+<td style="text-align: right;">779</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.csv</code></td>
+<td style="text-align: left;"><code>DADOS/pesquisas.csv</code></td>
+<td style="text-align: right;">366</td>
+<td style="text-align: right;">33</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes.csv</code></td>
+<td style="text-align: left;"><code>DADOS/questoes.csv</code></td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.csv</code></td>
+<td style="text-align: left;"><code>DADOS/respondentes.csv</code></td>
+<td style="text-align: right;">18.735</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respostas.csv</code></td>
+<td style="text-align: left;"><code>DADOS/respostas.csv</code></td>
+<td style="text-align: right;">20.607</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ligacoes-entre-as-bases">Ligações Entre as Bases<a class="headerlink" href="#ligacoes-entre-as-bases" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Relação</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Situação observada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>REL-01</code></td>
+<td style="text-align: left;"><code>clientes.id_empresa → empresas.ID</code></td>
+<td style="text-align: left;">FK de contato para empresa</td>
+<td style="text-align: left;">íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REL-02</code></td>
+<td style="text-align: left;"><code>questoes.pesquisa_id → pesquisas.id</code></td>
+<td style="text-align: left;">FK de pergunta para pesquisa</td>
+<td style="text-align: left;">4 órfãos (<code>424</code>, <code>1116</code>, <code>1139</code>, <code>1147</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REL-03</code></td>
+<td style="text-align: left;"><code>respondentes.id_pesq → pesquisas.id</code></td>
+<td style="text-align: left;">FK de participação para pesquisa</td>
+<td style="text-align: left;">1 órfão (<code>304</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REL-04</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa → empresas.ID</code></td>
+<td style="text-align: left;">FK de participação para empresa</td>
+<td style="text-align: left;">íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REL-05</code></td>
+<td style="text-align: left;"><code>respondentes.id_cliente → clientes.id_cliente</code></td>
+<td style="text-align: left;">FK de participação para contato</td>
+<td style="text-align: left;">íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REL-06</code></td>
+<td style="text-align: left;"><code>respostas.pesquisa_id → pesquisas.id</code></td>
+<td style="text-align: left;">FK de resposta para pesquisa</td>
+<td style="text-align: left;">4 órfãos (<code>424</code>, <code>1116</code>, <code>1139</code>, <code>1147</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>REL-07</code></td>
+<td style="text-align: left;"><code>respostas.id_pergunta → questoes.id_pergunta</code></td>
+<td style="text-align: left;">FK de resposta para pergunta</td>
+<td style="text-align: left;">íntegra</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visao-relacional-resumida">Visão Relacional Resumida<a class="headerlink" href="#visao-relacional-resumida" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    E["empresas.csv\nPK: ID"]
+    C["clientes.csv\nPK: id_cliente\nFK: id_empresa"]
+    P["pesquisas.csv\nPK: id"]
+    Q["questoes.csv\nPK: id_pergunta\nFK: pesquisa_id"]
+    R["respondentes.csv\nFK: id_pesq, id_empresa, id_cliente"]
+    S["respostas.csv\nPK: id_resposta\nFK: pesquisa_id, id_pergunta, id_empresa"]
+
+    C --&gt; E
+    R --&gt; E
+    R --&gt; C
+    R --&gt; P
+    Q --&gt; P
+    S --&gt; P
+    S --&gt; Q
+    S --&gt; E</code></pre>
+<h2 id="clientescsv"><code>clientes.csv</code><a class="headerlink" href="#clientescsv" title="Permanent link">&para;</a></h2>
+<h3 id="papel-analitico">Papel Analítico<a class="headerlink" href="#papel-analitico" title="Permanent link">&para;</a></h3>
+<p>Cadastro de contatos executivos vinculados a empresas. É a base que permite sair do nível institucional e enxergar cargo, departamento e perfil de quem responde.</p>
+<h3 id="chaves">Chaves<a class="headerlink" href="#chaves" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_cliente</code></td>
+<td style="text-align: left;">PK lógica do contato</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_empresa</code></td>
+<td style="text-align: left;">FK para <code>empresas.ID</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="colunas">Colunas<a class="headerlink" href="#colunas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Exemplo observado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_cliente</code></td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;"><code>s/i</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_empresa</code></td>
+<td style="text-align: left;">FK → <code>empresas.ID</code></td>
+<td style="text-align: left;"><code>5.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cargo</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Especialista</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>departamento</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Segurança do Trabalho</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>e-mail</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>cliente1@empresa5.com</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-linhas-de-exemplo">3 Linhas de Exemplo<a class="headerlink" href="#3-linhas-de-exemplo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>id_cliente</th>
+<th>id_empresa</th>
+<th>cargo</th>
+<th>departamento</th>
+<th>e-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s/i</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>5.0</td>
+<td>Especialista</td>
+<td>Segurança do Trabalho</td>
+<td>cliente1@empresa5.com</td>
+</tr>
+<tr>
+<td>2</td>
+<td>215.0</td>
+<td>Analista</td>
+<td>Recursos Humanos</td>
+<td>cliente2@empresa215.com</td>
+</tr>
+</tbody>
+</table>
+<h2 id="empresascsv"><code>empresas.csv</code><a class="headerlink" href="#empresascsv" title="Permanent link">&para;</a></h2>
+<h3 id="papel-analitico_1">Papel Analítico<a class="headerlink" href="#papel-analitico_1" title="Permanent link">&para;</a></h3>
+<p>Cadastro mestre das empresas farmacêuticas. É a base institucional central para associação, geografia e representatividade de mercado.</p>
+<h3 id="chaves_1">Chaves<a class="headerlink" href="#chaves_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ID</code></td>
+<td style="text-align: left;">PK lógica da empresa</td>
+</tr>
+</tbody>
+</table>
+<h3 id="colunas_1">Colunas<a class="headerlink" href="#colunas_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Exemplo observado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ID</code></td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;"><code>60</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Nome Fantasia</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Empresa 60</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>% de mercado</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>8,25%</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Nacionalidade</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Nacional</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Associado</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Sim</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Tipo de Associado</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Efetivo</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Cidade</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>São Paulo</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Estado</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>São Paulo</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>País</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Brasil</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-linhas-de-exemplo_1">3 Linhas de Exemplo<a class="headerlink" href="#3-linhas-de-exemplo_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Nome Fantasia</th>
+<th>% de mercado</th>
+<th>Nacionalidade</th>
+<th>Associado</th>
+<th>Tipo de Associado</th>
+<th>Cidade</th>
+<th>Estado</th>
+<th>País</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60</td>
+<td>Empresa 60</td>
+<td>8,25%</td>
+<td>Nacional</td>
+<td>Sim</td>
+<td>Efetivo</td>
+<td>São Paulo</td>
+<td>São Paulo</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Empresa 85</td>
+<td>7,18%</td>
+<td>Nacional</td>
+<td>Sim</td>
+<td>Efetivo</td>
+<td>São Paulo</td>
+<td>São Paulo</td>
+<td>Brasil</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Empresa 62</td>
+<td>6,79%</td>
+<td>Nacional</td>
+<td>Sim</td>
+<td>Efetivo</td>
+<td>São Paulo</td>
+<td>São Paulo</td>
+<td>Brasil</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pesquisascsv"><code>pesquisas.csv</code><a class="headerlink" href="#pesquisascsv" title="Permanent link">&para;</a></h2>
+<h3 id="papel-analitico_2">Papel Analítico<a class="headerlink" href="#papel-analitico_2" title="Permanent link">&para;</a></h3>
+<p>Base mestre das pesquisas executadas ou cadastradas. É a principal tabela de processo, prazo, status, área, tipo e volume agregado por pesquisa.</p>
+<h3 id="chaves_2">Chaves<a class="headerlink" href="#chaves_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;">PK lógica da pesquisa</td>
+</tr>
+</tbody>
+</table>
+<h3 id="colunas_2">Colunas<a class="headerlink" href="#colunas_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Exemplo observado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;"><code>49</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>titulo</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Transformação Digital 2022</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>status</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Finalizada</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tipo</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Pesquisa fixa anual</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>area</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Business Support</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>participantes</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>53.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>part_mercado</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>58%</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>data_solicitacao</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>22/11/2022</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>data_aprov</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>05/04/2023</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>data_divulgacao</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>24/11/2022</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>data_limite</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>02/12/2022</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>prorrogada_ate</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>15/03/2023</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>data_entrega</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>14/10/2022</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dias_uteis_para_entrega</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>12.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>complexidade</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>alta</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tipo de resposta</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>empresa</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tempo_preenchimento</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>4.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>objetivos</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>entender como as indústrias farmacêuticas estruturam sua política para beneficiar colaboradores que são transferidos para outras localidades.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dia da semana de lançamento</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>5.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dias úteis aberta</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>7.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dias entre a solicitação e a divulgação</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>2.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dias para tabulação</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>3.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 22</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 23</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 24</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 25</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 26</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 27</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 28</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 29</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 30</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 31</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Unnamed: 32</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-linhas-de-exemplo_2">3 Linhas de Exemplo<a class="headerlink" href="#3-linhas-de-exemplo_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>titulo</th>
+<th>status</th>
+<th>tipo</th>
+<th>area</th>
+<th>participantes</th>
+<th>part_mercado</th>
+<th>data_solicitacao</th>
+<th>data_aprov</th>
+<th>data_divulgacao</th>
+<th>data_limite</th>
+<th>prorrogada_ate</th>
+<th>data_entrega</th>
+<th>dias_uteis_para_entrega</th>
+<th>complexidade</th>
+<th>tipo de resposta</th>
+<th>tempo_preenchimento</th>
+<th>objetivos</th>
+<th>dia da semana de lançamento</th>
+<th>dias úteis aberta</th>
+<th>dias entre a solicitação e a divulgação</th>
+<th>dias para tabulação</th>
+<th>Unnamed: 22</th>
+<th>Unnamed: 23</th>
+<th>Unnamed: 24</th>
+<th>Unnamed: 25</th>
+<th>Unnamed: 26</th>
+<th>Unnamed: 27</th>
+<th>Unnamed: 28</th>
+<th>Unnamed: 29</th>
+<th>Unnamed: 30</th>
+<th>Unnamed: 31</th>
+<th>Unnamed: 32</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>49</td>
+<td>Transformação Digital 2022</td>
+<td>Finalizada</td>
+<td>Pesquisa fixa anual</td>
+<td>Business Support</td>
+<td>53.0</td>
+<td>58%</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>14/10/2022</td>
+<td></td>
+<td>alta</td>
+<td>empresa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td>Premiação da Força de Vendas 2022</td>
+<td>Finalizada</td>
+<td>Pesquisa fixa anual</td>
+<td>Business Support</td>
+<td>51.0</td>
+<td>45%</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>11/11/2022</td>
+<td></td>
+<td>alta</td>
+<td>empresa</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Atualização das medidas de prevenção contra COVID-19</td>
+<td>Finalizada</td>
+<td>Solicitação de associado</td>
+<td>Sindical Trabalhista e RH</td>
+<td>75.0</td>
+<td>66%</td>
+<td>22/11/2022</td>
+<td></td>
+<td>24/11/2022</td>
+<td>02/12/2022</td>
+<td></td>
+<td>07/12/2022</td>
+<td>12.0</td>
+<td></td>
+<td>empresa</td>
+<td>4.0</td>
+<td></td>
+<td>5.0</td>
+<td>7.0</td>
+<td>2.0</td>
+<td>3.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="questoescsv"><code>questoes.csv</code><a class="headerlink" href="#questoescsv" title="Permanent link">&para;</a></h2>
+<h3 id="papel-analitico_3">Papel Analítico<a class="headerlink" href="#papel-analitico_3" title="Permanent link">&para;</a></h3>
+<p>Cadastro de perguntas por pesquisa. É a base que define o instrumento, o tipo de questão e o grau de confiança da extração.</p>
+<h3 id="chaves_3">Chaves<a class="headerlink" href="#chaves_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_pergunta</code></td>
+<td style="text-align: left;">PK lógica da pergunta</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisa_id</code></td>
+<td style="text-align: left;">FK para <code>pesquisas.id</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="colunas_3">Colunas<a class="headerlink" href="#colunas_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Exemplo observado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_pergunta</code></td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;"><code>1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisa_id</code></td>
+<td style="text-align: left;">FK → <code>pesquisas.id</code></td>
+<td style="text-align: left;"><code>1147</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisa_titulo</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Tecnologia para a Força de Vendas</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>enunciado</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Qual é a faixa aproximada do total de colaboradores no Brasil?</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tipo</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>multipla_escolha</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>qtd_alternativas</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>4.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>alternativas</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>1001 a 3000 | 501 a 1000 | Acima de 3000 | Até 500</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>linhas_matriz</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Representantes de visitação médica | Representantes de ponto de venda (PDV) | ...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>colunas_matriz</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Notebook | Tablet | Smartphone | Ipad/Table</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>confianca</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>alta</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>formato_arquivo</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>new</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>col_origem</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>20</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>observacoes</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">vazio</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-linhas-de-exemplo_3">3 Linhas de Exemplo<a class="headerlink" href="#3-linhas-de-exemplo_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>id_pergunta</th>
+<th>pesquisa_id</th>
+<th>pesquisa_titulo</th>
+<th>enunciado</th>
+<th>tipo</th>
+<th>qtd_alternativas</th>
+<th>alternativas</th>
+<th>linhas_matriz</th>
+<th>colunas_matriz</th>
+<th>confianca</th>
+<th>formato_arquivo</th>
+<th>col_origem</th>
+<th>observacoes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1147</td>
+<td>Tecnologia para a Força de Vendas</td>
+<td>Qual é a faixa aproximada do total de colaboradores no Brasil?</td>
+<td>multipla_escolha</td>
+<td>4.0</td>
+<td>1001 a 3000 / 501 a 1000 / Acima de 3000 / Até 500</td>
+<td></td>
+<td></td>
+<td>alta</td>
+<td>new</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>1147</td>
+<td>Tecnologia para a Força de Vendas</td>
+<td>Sua empresa possui colaboradores que atuam na Força de Vendas?</td>
+<td>multipla_escolha</td>
+<td>2.0</td>
+<td>Não / Sim</td>
+<td></td>
+<td></td>
+<td>alta</td>
+<td>new</td>
+<td>21</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>1147</td>
+<td>Tecnologia para a Força de Vendas</td>
+<td>Qual é o número total de colaboradores que compõem a Força de Vendas da empresa?</td>
+<td>multipla_escolha</td>
+<td>6.0</td>
+<td>Acima de 500 / Até 100 / De 101 a 200 / De 201 a 300 / De 301 a 400 / De 401 a 500</td>
+<td></td>
+<td></td>
+<td>alta</td>
+<td>new</td>
+<td>22</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="respondentescsv"><code>respondentes.csv</code><a class="headerlink" href="#respondentescsv" title="Permanent link">&para;</a></h2>
+<h3 id="papel-analitico_4">Papel Analítico<a class="headerlink" href="#papel-analitico_4" title="Permanent link">&para;</a></h3>
+<p>Registro de participação por empresa em uma pesquisa. É a espinha dorsal do relacionamento entre empresa, pesquisa e contato respondente.</p>
+<h3 id="chaves_4">Chaves<a class="headerlink" href="#chaves_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_pesq</code></td>
+<td style="text-align: left;">FK para <code>pesquisas.id</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_empresa</code></td>
+<td style="text-align: left;">FK para <code>empresas.ID</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_cliente</code></td>
+<td style="text-align: left;">FK para <code>clientes.id_cliente</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="colunas_4">Colunas<a class="headerlink" href="#colunas_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Exemplo observado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_pesq</code></td>
+<td style="text-align: left;">FK → <code>pesquisas.id</code></td>
+<td style="text-align: left;"><code>414</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hora_inicio</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>16/03/2026 18:58</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hora_termino</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>16/03/2026 19:05</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_empresa</code></td>
+<td style="text-align: left;">FK → <code>empresas.ID</code></td>
+<td style="text-align: left;"><code>1043</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>market_share</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>0,00%</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_cliente</code></td>
+<td style="text-align: left;">FK → <code>clientes.id_cliente</code></td>
+<td style="text-align: left;"><code>48</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-linhas-de-exemplo_4">3 Linhas de Exemplo<a class="headerlink" href="#3-linhas-de-exemplo_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>id_pesq</th>
+<th>hora_inicio</th>
+<th>hora_termino</th>
+<th>id_empresa</th>
+<th>market_share</th>
+<th>id_cliente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>414</td>
+<td>16/03/2026 18:58</td>
+<td>16/03/2026 19:05</td>
+<td>1043</td>
+<td>0,00%</td>
+<td>48</td>
+</tr>
+<tr>
+<td>414</td>
+<td>10/03/2026 15:46</td>
+<td>10/03/2026 15:51</td>
+<td>610</td>
+<td>0,00%</td>
+<td>531</td>
+</tr>
+<tr>
+<td>414</td>
+<td>10/03/2026 16:53</td>
+<td>10/03/2026 16:59</td>
+<td>47</td>
+<td>0,38%</td>
+<td>883</td>
+</tr>
+</tbody>
+</table>
+<h2 id="respostascsv"><code>respostas.csv</code><a class="headerlink" href="#respostascsv" title="Permanent link">&para;</a></h2>
+<h3 id="papel-analitico_5">Papel Analítico<a class="headerlink" href="#papel-analitico_5" title="Permanent link">&para;</a></h3>
+<p>Microdado de resposta por pergunta. É a base mais granular do projeto e sustenta benchmark, distribuição de alternativas e análises por item do questionário.</p>
+<h3 id="chaves_5">Chaves<a class="headerlink" href="#chaves_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_resposta</code></td>
+<td style="text-align: left;">PK lógica da resposta</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisa_id</code></td>
+<td style="text-align: left;">FK para <code>pesquisas.id</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_pergunta</code></td>
+<td style="text-align: left;">FK para <code>questoes.id_pergunta</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_empresa</code></td>
+<td style="text-align: left;">FK para <code>empresas.ID</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="colunas_5">Colunas<a class="headerlink" href="#colunas_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Coluna</th>
+<th style="text-align: left;">Papel da chave</th>
+<th style="text-align: left;">Exemplo observado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id_resposta</code></td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;"><code>1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisa_id</code></td>
+<td style="text-align: left;">FK → <code>pesquisas.id</code></td>
+<td style="text-align: left;"><code>1147</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_pergunta</code></td>
+<td style="text-align: left;">FK → <code>questoes.id_pergunta</code></td>
+<td style="text-align: left;"><code>1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondent_id</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>115137090018</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id_empresa</code></td>
+<td style="text-align: left;">FK → <code>empresas.ID</code></td>
+<td style="text-align: left;"><code>6.0</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>alternativa</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Representantes de visitação médica</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>linha_matriz</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Representantes de visitação médica</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>coluna_matriz</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Notebook</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>valor</code></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>1001 a 3000</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-linhas-de-exemplo_5">3 Linhas de Exemplo<a class="headerlink" href="#3-linhas-de-exemplo_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>id_resposta</th>
+<th>pesquisa_id</th>
+<th>id_pergunta</th>
+<th>respondent_id</th>
+<th>id_empresa</th>
+<th>alternativa</th>
+<th>linha_matriz</th>
+<th>coluna_matriz</th>
+<th>valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1147</td>
+<td>1</td>
+<td>115137090018</td>
+<td>6.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1001 a 3000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1147</td>
+<td>1</td>
+<td>115136982061</td>
+<td>8.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1001 a 3000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1147</td>
+<td>1</td>
+<td>115138578930</td>
+<td>142.0</td>
+<td></td>
+<td></td>
+<td></td>
+<td>501 a 1000</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "content.code.copy", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/mathjax-init.js"></script>
+      
+    
+  </body>
+</html>

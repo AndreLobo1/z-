@@ -1,0 +1,1696 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e analítica do projeto Sidusfarma">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Contexto Organizacional + Requisitos da Solução Analítica - Sidusfarma Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contexto-organizacional-requisitos-da-solucao-analitica" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Sidusfarma Docs" class="md-header__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sidusfarma Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contexto Organizacional + Requisitos da Solução Analítica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Sidusfarma Docs" class="md-nav__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sidusfarma Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelagem_quantitativa_de_dados_do_parceiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório Quantitativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventario_das_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventário das Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo de Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 03
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 04
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 05
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 06
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 07
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 08
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Especificações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/spec-analise-quantitativa-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação da Análise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/adr-001-pipeline-analise-quantitativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR 001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-cenario-organizacional-e-contexto-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cenário Organizacional e Contexto do Projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Cenário Organizacional e Contexto do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-visao-geral-do-parceiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Visão Geral do Parceiro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-contexto-do-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Contexto do Negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-objetivos-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Objetivos do Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-escopo-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Escopo do Projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Escopo do Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escopo-incluido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo Incluído
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escopo-nao-incluido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo Não Incluído
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-alinhamento-estrategico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Alinhamento Estratégico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Alinhamento Estratégico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-fluxo-de-valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Fluxo de Valor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-analise-de-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Análise de Stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-processos-impactados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Processos Impactados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-objetivos-estrategicos-atendidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Objetivos Estratégicos Atendidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-governanca-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Governança de Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Governança de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-estrutura-de-governanca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Estrutura de Governança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-seguranca-da-informacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Segurança da Informação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-lgpd-e-aspectos-regulatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 LGPD e Aspectos Regulatórios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-qualidade-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Qualidade dos Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-especificacao-dos-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Especificação dos Requisitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Especificação dos Requisitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Requisitos Funcionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-requisitos-nao-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Requisitos Não Funcionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-especificacao-da-solucao-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Especificação da Solução Analítica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Especificação da Solução Analítica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-perguntas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Perguntas de Negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-indicadores-e-metricas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Indicadores e Métricas de Negócio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-dashboards-propostos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Dashboards Propostos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Dashboards Propostos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-1-report-02-prazos-sla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard 1: Report 02 - Prazos &amp; SLA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-2-report-11-comparativo-anual-tendencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard 2: Report 11 - Comparativo Anual &amp; Tendências
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-matriz-de-rastreabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Matriz de Rastreabilidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="contexto-organizacional-requisitos-da-solucao-analitica">Contexto Organizacional + Requisitos da Solução Analítica<a class="headerlink" href="#contexto-organizacional-requisitos-da-solucao-analitica" title="Permanent link">&para;</a></h1>
+<p>Este documento consolida o contexto organizacional do projeto, os requisitos da solução analítica e a especificação inicial dos dashboards previstos para a Sprint 1. A base principal desta versão é formada pelo <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Tapi.md">TAPI do projeto</a>, pelo <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Workshop%20Sindusfarma.md">Workshop Sindusfarma</a>, pela <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Apresentac%CC%A7a%CC%83o%20institucional%20Inteli.md">Apresentação institucional Inteli</a> e pelo relatório <a href="/Users/andrelobo/Downloads/Sidusfarma/docs/modelagem_quantitativa_de_dados_do_parceiro.md">Modelagem Quantitativa dos Dados do Parceiro</a>. Informações públicas externas podem complementar a narrativa, mas não substituem esses materiais, que são a principal fonte de diferenciação e aderência ao que o parceiro efetivamente apresentou ao grupo.</p>
+<h2 id="1-cenario-organizacional-e-contexto-do-projeto">1. Cenário Organizacional e Contexto do Projeto<a class="headerlink" href="#1-cenario-organizacional-e-contexto-do-projeto" title="Permanent link">&para;</a></h2>
+<h3 id="11-visao-geral-do-parceiro">1.1 Visão Geral do Parceiro<a class="headerlink" href="#11-visao-geral-do-parceiro" title="Permanent link">&para;</a></h3>
+<p>O parceiro do projeto é o <strong>Sindusfarma, Sindicato da Indústria de Produtos Farmacêuticos no Estado de São Paulo</strong>, organização de representação setorial voltada ao apoio técnico, regulatório e estratégico às empresas da indústria farmacêutica. Conforme o <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Tapi.md">TAPI</a>, a principal frente de negócio relacionada a este projeto é a <strong>Inteligência de Mercado e Pesquisas</strong>, operacionalizada pela Central de Pesquisas. Essa área conduz levantamentos setoriais e pesquisas aplicadas que subsidiam decisões das empresas participantes.</p>
+<p>O contexto institucional apresentado ao grupo mostra um parceiro inserido em um mercado farmacêutico de grande porte e alta relevância econômica, com presença de capital nacional e estrangeiro e com forte peso regulatório, comercial e operacional, como sintetizado na <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Apresentac%CC%A7a%CC%83o%20institucional%20Inteli.md">Apresentação institucional Inteli</a>. O TAPI informa volume aproximado de <strong>120 pesquisas por ano</strong> e cerca de <strong>60 empresas envolvidas por pesquisa</strong>, o que posiciona a Central de Pesquisas como um ativo estratégico de informação para o setor.</p>
+<p>Os principais serviços e entregas ligados a esse contexto são a condução de pesquisas setoriais, a consolidação de resultados, a publicação de relatórios e a manutenção de um acervo consultável por participantes e solicitantes. Em termos de propósito institucional no escopo deste projeto, o Sindusfarma busca transformar dados dispersos ao longo do ciclo de pesquisa em informação rastreável, confiável e útil para a tomada de decisão.</p>
+<h3 id="12-contexto-do-negocio">1.2 Contexto do Negócio<a class="headerlink" href="#12-contexto-do-negocio" title="Permanent link">&para;</a></h3>
+<p>O negócio está inserido em um setor com forte exigência regulatória, necessidade permanente de inteligência de mercado e grande sensibilidade a tempo de resposta, qualidade de informação e comparabilidade histórica. O <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Workshop%20Sindusfarma.md">Workshop Sindusfarma</a> reforça que o motivador principal do projeto é <strong>garantir governança suficiente para ganhar escala</strong>, ampliando volume e frequência das pesquisas sem multiplicar o esforço manual da equipe.</p>
+<p>Os principais desafios hoje são a fragmentação das fontes, a atualização manual dos painéis, a ausência de rastreabilidade ponta a ponta entre solicitação, execução e resultado, a necessidade de verificar dados em múltiplos sistemas e a baixa capacidade de afirmar gargalos operacionais com precisão. O TAPI registra que a Central opera com ferramentas consolidadas por etapa, como Excel, SurveyMonkey, Trello, repositório interno do site e um fluxo em n8n, mas sem integração estruturada entre elas.</p>
+<p>As oportunidades identificadas são claras: construir uma fonte única da verdade, acelerar a produção e leitura de indicadores, reduzir retrabalho, melhorar a publicação no site, sustentar um acervo confiável de pesquisas e ampliar a capacidade de análise temporal e comparativa. Entre as tendências relevantes para o projeto estão a centralização analítica em banco de dados em nuvem, a governança de dados como base de escala operacional, o consumo de dashboards por múltiplos perfis de usuário e o uso de dados anonimizados para exploração segura de resultados.</p>
+<p>Esses fatores justificam o projeto porque o valor do parceiro não está apenas em coletar respostas, mas em transformar o conjunto de pesquisas em inteligência operacional e estratégica reutilizável. Sem essa estrutura, o conhecimento produzido continua preso a silos e a processos artesanais.</p>
+<h3 id="13-objetivos-do-projeto">1.3 Objetivos do Projeto<a class="headerlink" href="#13-objetivos-do-projeto" title="Permanent link">&para;</a></h3>
+<p>Os objetivos abaixo foram formulados com base no <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Tapi.md">TAPI</a> e no <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Workshop%20Sindusfarma.md">Workshop Sindusfarma</a>:</p>
+<ol>
+<li><strong>Centralizar</strong> os dados do ciclo de vida das pesquisas em uma base relacional única na nuvem.</li>
+<li><strong>Integrar</strong> as fontes hoje dispersas sem substituir os sistemas operacionais já adotados pelo parceiro.</li>
+<li><strong>Automatizar</strong> a produção de indicadores operacionais e estratégicos que hoje dependem de atualização manual.</li>
+<li><strong>Rastrear</strong> o fluxo de cada pesquisa da solicitação à publicação no site, com melhor visibilidade de status, prazo e acervo.</li>
+<li><strong>Servir</strong> dashboards analíticos que apoiem decisões internas e leitura comparativa de resultados ao longo do tempo.</li>
+<li><strong>Fortalecer</strong> a governança e a conformidade no tratamento de dados, com atenção explícita à LGPD e ao controle de acesso por perfil.</li>
+</ol>
+<p>Cada objetivo gera valor ao parceiro porque reduz trabalho manual, melhora a confiança nos números divulgados, acelera a leitura gerencial do portfólio de pesquisas e prepara a Central para operar com mais escala e consistência.</p>
+<h3 id="14-escopo-do-projeto">1.4 Escopo do Projeto<a class="headerlink" href="#14-escopo-do-projeto" title="Permanent link">&para;</a></h3>
+<h4 id="escopo-incluido">Escopo Incluído<a class="headerlink" href="#escopo-incluido" title="Permanent link">&para;</a></h4>
+<p>O escopo incluído nesta etapa contempla a modelagem e implementação de uma base central para o ciclo de vida das pesquisas, a construção de pipeline de integração e tratamento de dados, a definição dos principais indicadores e a especificação de dashboards analíticos alinhados ao que o parceiro apresentou no TAPI e no workshop. Também estão incluídos os mecanismos de controle de acesso, governança básica de dados e publicação estruturada de informação para consumo interno e externo.</p>
+<p>No nível analítico, esta primeira versão concentra a solução em dois dashboards priorizados pelo grupo: <strong>Report 02 - Prazos &amp; SLA</strong> e <strong>Report 11 - Comparativo Anual &amp; Tendências</strong>, ambos já detalhados nos mockups textuais fornecidos pelo parceiro em <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/esboc%CC%A7o%20de%20relato%CC%81rios/relatorio_02.md">relatorio_02.md</a> e <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/esboc%CC%A7o%20de%20relato%CC%81rios/relatorio_11.md">relatorio_11.md</a>.</p>
+<h4 id="escopo-nao-incluido">Escopo Não Incluído<a class="headerlink" href="#escopo-nao-incluido" title="Permanent link">&para;</a></h4>
+<p>Não faz parte do projeto substituir SurveyMonkey, Trello, repositório público, Excel ou outros sistemas operacionais utilizados hoje pelo Sindusfarma. Também não faz parte desta etapa alterar os métodos de coleta, o desenho das pesquisas ou a lógica de captura junto aos participantes. A coleta permanece como está e só deve mudar futuramente se o próprio Sindusfarma entender que essa revisão faz sentido. O trabalho do grupo é <strong>capturar, tratar, integrar, governar e servir os dados</strong>, não redefinir as fontes de coleta.</p>
+<p>Também ficam fora do escopo desta sprint o tratamento de dados pessoais reais sem anonimização adequada, a formalização jurídica completa de políticas internas do parceiro e a implementação integral de todos os relatórios previstos no conjunto de mockups.</p>
+<h2 id="2-alinhamento-estrategico">2. Alinhamento Estratégico<a class="headerlink" href="#2-alinhamento-estrategico" title="Permanent link">&para;</a></h2>
+<h3 id="21-fluxo-de-valor">2.1 Fluxo de Valor<a class="headerlink" href="#21-fluxo-de-valor" title="Permanent link">&para;</a></h3>
+<p>O fluxo de valor central da área pode ser resumido em seis etapas: solicitação da pesquisa, planejamento do instrumento, coleta das respostas, consolidação dos dados, produção de indicadores e publicação dos resultados no site/acervo. As entradas principais são solicitações de associados, demandas recorrentes da área e respostas coletadas nas pesquisas. As saídas principais são relatórios consolidados, indicadores operacionais, dashboards gerenciais e acervo consultável.</p>
+<p>Os atores envolvidos nesse fluxo são a equipe interna da Central de Pesquisas, as áreas técnicas do Sindusfarma, os solicitantes das pesquisas, as empresas participantes e os consumidores dos relatórios publicados. O projeto se insere no ponto em que o fluxo hoje perde eficiência: a transição entre as etapas operacionais e a consolidação analítica. Seu papel é transformar esse trecho fragmentado em um fluxo governado, rastreável e reaproveitável.</p>
+<p>O projeto melhora esse fluxo ao reduzir conferência manual, dar continuidade informacional entre as etapas, fortalecer a publicação no site e permitir análise de KPIs e tendências sem necessidade de reconstituir a história da pesquisa a cada consulta.</p>
+<h3 id="22-analise-de-stakeholders">2.2 Análise de Stakeholders<a class="headerlink" href="#22-analise-de-stakeholders" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stakeholder</th>
+<th style="text-align: left;">Papel na organização</th>
+<th style="text-align: left;">Interesse no projeto</th>
+<th style="text-align: left;">Benefícios esperados</th>
+<th style="text-align: left;">Possíveis preocupações ou resistências</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Equipe interna da Central de Pesquisas</td>
+<td style="text-align: left;">Opera o fluxo, acompanha status e entrega resultados</td>
+<td style="text-align: left;">reduzir esforço manual e ganhar rastreabilidade</td>
+<td style="text-align: left;">visão operacional integrada, atualização mais rápida e menor retrabalho</td>
+<td style="text-align: left;">receio de transição de rotina, dependência de dados incompletos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Áreas técnicas do Sindusfarma</td>
+<td style="text-align: left;">validam questionários, acompanham adesão e qualidade da informação</td>
+<td style="text-align: left;">melhorar consistência e comparabilidade das análises</td>
+<td style="text-align: left;">acesso mais simples a indicadores, melhor alinhamento regulatório e analítico</td>
+<td style="text-align: left;">preocupação com qualidade dos dados e semântica dos indicadores</td>
+</tr>
+<tr>
+<td style="text-align: left;">Liderança de negócio da Central</td>
+<td style="text-align: left;">patrocina e valida a utilidade da solução</td>
+<td style="text-align: left;">aumentar escala, governança e visibilidade gerencial</td>
+<td style="text-align: left;">apoio à tomada de decisão, visão consolidada e melhor gestão do portfólio</td>
+<td style="text-align: left;">preocupação com aderência do dashboard ao negócio real</td>
+</tr>
+<tr>
+<td style="text-align: left;">Solicitantes das pesquisas</td>
+<td style="text-align: left;">demandam levantamentos e consomem resultados</td>
+<td style="text-align: left;">obter respostas mais rápidas e resultados mais confiáveis</td>
+<td style="text-align: left;">acervo mais acessível, melhor tempo de resposta e visão comparativa</td>
+<td style="text-align: left;">preocupação com atraso, clareza e completude dos relatórios</td>
+</tr>
+<tr>
+<td style="text-align: left;">Empresas participantes</td>
+<td style="text-align: left;">fornecem respostas e consultam publicações permitidas</td>
+<td style="text-align: left;">ter confiança na preservação e no uso correto dos dados</td>
+<td style="text-align: left;">anonimização, maior utilidade analítica dos resultados e visão setorial mais clara</td>
+<td style="text-align: left;">preocupação com LGPD, confidencialidade e exposição indevida</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-processos-impactados">2.3 Processos Impactados<a class="headerlink" href="#23-processos-impactados" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Processo</th>
+<th style="text-align: left;">Situação atual</th>
+<th style="text-align: left;">Limitações existentes</th>
+<th style="text-align: left;">Melhorias esperadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Planejamento e acompanhamento das pesquisas</td>
+<td style="text-align: left;">acompanhamento distribuído entre múltiplas ferramentas</td>
+<td style="text-align: left;">status e histórico não ficam consolidados automaticamente</td>
+<td style="text-align: left;">visão operacional unificada do ciclo das pesquisas</td>
+</tr>
+<tr>
+<td style="text-align: left;">Análise de KPIs</td>
+<td style="text-align: left;">leitura gerencial depende de atualização manual e reconciliação entre fontes</td>
+<td style="text-align: left;">atraso, retrabalho e baixa rastreabilidade</td>
+<td style="text-align: left;">indicadores automáticos, replicáveis e comparáveis</td>
+</tr>
+<tr>
+<td style="text-align: left;">Publicação no site e manutenção do acervo</td>
+<td style="text-align: left;">repositório público é alimentado sem integração plena com a base operacional</td>
+<td style="text-align: left;">risco de inconsistência entre interno e publicado</td>
+<td style="text-align: left;">publicação mais consistente e acervo alinhado à base central</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gestão de qualidade dos dados</td>
+<td style="text-align: left;">correções dependem de tratamento manual e heterogêneo</td>
+<td style="text-align: left;">inconsistências de domínio, órfãos e baixa completude em campos críticos</td>
+<td style="text-align: left;">regras de padronização, deduplicação e saneamento explícitas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-objetivos-estrategicos-atendidos">2.4 Objetivos Estratégicos Atendidos<a class="headerlink" href="#24-objetivos-estrategicos-atendidos" title="Permanent link">&para;</a></h3>
+<p>O projeto atende diretamente ao objetivo de tornar o Sindusfarma uma referência em dados do setor, objetivo explicitado no <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Workshop%20Sindusfarma.md">Workshop Sindusfarma</a>. Também contribui para o ganho de escala da Central de Pesquisas, para a redução da dependência de atualização manual e para o fortalecimento da governança da informação. Em vez de apenas informatizar relatórios, a solução proposta cria uma base analítica contínua para decisões operacionais, priorização de pesquisas, acompanhamento de adesão, leitura de prazos e publicação estruturada de conhecimento setorial.</p>
+<h2 id="3-governanca-de-dados">3. Governança de Dados<a class="headerlink" href="#3-governanca-de-dados" title="Permanent link">&para;</a></h2>
+<h3 id="31-estrutura-de-governanca">3.1 Estrutura de Governança<a class="headerlink" href="#31-estrutura-de-governanca" title="Permanent link">&para;</a></h3>
+<p>O material disponível não comprova a existência de uma estrutura formal completa de governança com comitê documentado, políticas corporativas detalhadas e matriz formal de stewardship. O que o <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Tapi.md">TAPI</a> e o <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Workshop%20Sindusfarma.md">Workshop Sindusfarma</a> mostram com segurança é uma governança <strong>operacionalmente ativa</strong>, com responsáveis identificáveis e com forte preocupação prática com qualidade, acesso e rastreabilidade.</p>
+<p>No material do projeto aparecem como papéis centrais Felipe Fernandes Rojas na liderança técnica, Reinaldo Nobrega na liderança de negócio e Fabio Moreira como liderança executiva da Central de Pesquisas. As áreas envolvidas incluem a equipe interna da Central, as áreas técnicas do Sindusfarma e os usuários externos que consultam ou alimentam partes do fluxo.</p>
+<p>Quanto a processos de aprovação, há evidência de validação operacional de questionários e acompanhamento por áreas técnicas, mas não há descrição formal completa do rito de aprovação de dados. Quanto a ferramentas, o ecossistema atual envolve Excel, SurveyMonkey, Trello, repositório interno do site, fluxo em n8n e a proposta de um banco central e camada analítica em nuvem.</p>
+<p>Como proposta fundamentada da equipe para registrar no artefato, faz sentido assumir para o projeto os seguintes papéis-alvo: <strong>Data Owner de negócio</strong> na Central de Pesquisas, <strong>Data Custodian técnico</strong> na equipe de dados/engenharia, e <strong>responsáveis explícitos por qualidade, acesso e publicação</strong> na camada analítica.</p>
+<h3 id="32-seguranca-da-informacao">3.2 Segurança da Informação<a class="headerlink" href="#32-seguranca-da-informacao" title="Permanent link">&para;</a></h3>
+<p>O <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/Workshop%20Sindusfarma.md">Workshop Sindusfarma</a> fornece base suficiente para afirmar que o parceiro espera autenticação obrigatória, controle de acesso baseado em papéis, anonimização de dados e separação entre contextos de desenvolvimento/teste e produção. Também foi explicitada a intenção de herdar permissões até a camada de BI.</p>
+<p>Por outro lado, os materiais consultados não detalham política implantada de backups, criptografia, auditoria de acesso ou prevenção de vazamento em nível operacional. Por isso, esta primeira versão registra como fato o que está evidenciado nos materiais e, como proposta da equipe, recomenda que a solução final inclua logs de acesso, trilha de auditoria para publicação no site, backups automatizados e segregação clara entre dados sensíveis, analíticos e públicos.</p>
+<h3 id="33-lgpd-e-aspectos-regulatorios">3.3 LGPD e Aspectos Regulatórios<a class="headerlink" href="#33-lgpd-e-aspectos-regulatorios" title="Permanent link">&para;</a></h3>
+<p>Há forte evidência, tanto no TAPI quanto no workshop, de que a conformidade com a LGPD é requisito central do projeto. O parceiro destacou que dados reais de empresas participantes, respostas individuais identificáveis e contatos não devem ir para contexto público, e que ambientes públicos ou acadêmicos devem operar com dados anonimizados ou fictícios.</p>
+<p>Também ficou claro que o tratamento de dados sensíveis e identificáveis deve respeitar anonimização desde a entrada analítica, especialmente para consumo externo. O material disponível não descreve em detalhe política de retenção, fluxo de direitos dos titulares ou base legal formalizada para cada tratamento. Portanto, nesta versão esses elementos devem ser descritos como pontos a aprofundar com o parceiro, sem impedir a especificação da solução.</p>
+<p>Os impactos dessas restrições no projeto são diretos: a camada analítica precisa separar consumo interno e externo, proteger respostas individuais, controlar acesso por perfil e evitar qualquer publicação que permita reidentificação indevida.</p>
+<h3 id="34-qualidade-dos-dados">3.4 Qualidade dos Dados<a class="headerlink" href="#34-qualidade-dos-dados" title="Permanent link">&para;</a></h3>
+<p>O diagnóstico de qualidade já foi consolidado no relatório <a href="/Users/andrelobo/Downloads/Sidusfarma/docs/modelagem_quantitativa_de_dados_do_parceiro.md">Modelagem Quantitativa dos Dados do Parceiro</a>. Os principais problemas conhecidos são heterogeneidade em domínios, baixa completude em variáveis operacionais críticas, colunas sem valor analítico, registros órfãos em relações com <code>pesquisas.csv</code> e fragilidade de campos importantes para SLA detalhado, como <code>complexidade</code>, <code>data_aprov</code>, <code>hora_inicio</code> e <code>hora_termino</code>.</p>
+<p>Os indicadores de qualidade já disponíveis para o projeto incluem completude geral, completude de variáveis críticas, presença de órfãos referenciais, colunas 100% nulas e inconsistências de domínio. Como mecanismos de validação, a equipe já possui auditoria de completude, verificação de integridade referencial e tratamento quantitativo de lacunas. Como processo corretivo proposto, recomenda-se quarentena de registros órfãos, normalização de domínio, derivação de flags operacionais e sinalização explícita de cobertura parcial nos KPIs.</p>
+<h2 id="4-especificacao-dos-requisitos">4. Especificação dos Requisitos<a class="headerlink" href="#4-especificacao-dos-requisitos" title="Permanent link">&para;</a></h2>
+<h3 id="41-requisitos-funcionais">4.1 Requisitos Funcionais<a class="headerlink" href="#41-requisitos-funcionais" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">User Story</th>
+<th style="text-align: left;">Critérios de Aceitação</th>
+<th style="text-align: left;">Teste de Usuário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RF01</td>
+<td style="text-align: left;">Como equipe interna da Central de Pesquisas, eu quero consolidar os dados das pesquisas em uma base central para reduzir a dependência de cruzamentos manuais.</td>
+<td style="text-align: left;">a solução integra pelo menos as bases principais do projeto; os dados ficam acessíveis em estrutura única; a origem dos registros permanece rastreável</td>
+<td style="text-align: left;">um usuário interno consulta informações de pesquisa, participação e publicação sem recorrer a planilhas paralelas</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF02</td>
+<td style="text-align: left;">Como gestor da Central, eu quero acompanhar indicadores de prazo e ciclo das pesquisas para identificar atrasos e priorizar ação operacional.</td>
+<td style="text-align: left;">o dashboard apresenta ciclo total, dias úteis aberta, dias para tabulação e prorrogações; é possível filtrar por período e tipo; casos fora do padrão ficam visíveis</td>
+<td style="text-align: left;">o gestor acessa o dashboard 02, aplica filtros e identifica pesquisas fora do comportamento esperado</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF03</td>
+<td style="text-align: left;">Como área técnica, eu quero comparar períodos e tendências das pesquisas para entender mudanças no portfólio e no engajamento ao longo do tempo.</td>
+<td style="text-align: left;">o dashboard apresenta evolução temporal, comparações entre períodos e indicadores por ano/onda; o usuário consegue segmentar a leitura</td>
+<td style="text-align: left;">a área técnica acessa o dashboard 11 e compara evolução entre períodos consecutivos</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF04</td>
+<td style="text-align: left;">Como usuário analítico autorizado, eu quero filtros por tempo, status e tipo para refinar a leitura dos dados conforme minha necessidade.</td>
+<td style="text-align: left;">os dashboards possuem filtros compatíveis com as perguntas de negócio; os recortes alteram os indicadores exibidos de forma coerente</td>
+<td style="text-align: left;">o usuário altera filtros e verifica mudança consistente dos números e visuais</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF05</td>
+<td style="text-align: left;">Como organização, eu quero publicar informações analíticas de forma consistente com o acervo do site para reduzir divergência entre o que é gerido internamente e o que é divulgado externamente.</td>
+<td style="text-align: left;">a solução prevê integração lógica entre base central e publicação; o acervo passa a depender da base governada; não há necessidade de duplicar manutenção manual</td>
+<td style="text-align: left;">um responsável valida que a informação publicada deriva da mesma base analítica usada nos painéis</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF06</td>
+<td style="text-align: left;">Como administrador, eu quero controlar o acesso por perfil para proteger dados internos e restringir o consumo conforme o papel do usuário.</td>
+<td style="text-align: left;">há diferenciação entre perfis interno, técnico e externo; dados sensíveis não aparecem em contexto público; o consumo externo opera sobre informação anonimizada</td>
+<td style="text-align: left;">um usuário externo não consegue acessar visões internas e um usuário interno acessa visões gerenciais completas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-requisitos-nao-funcionais">4.2 Requisitos Não Funcionais<a class="headerlink" href="#42-requisitos-nao-funcionais" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Categoria ISO 25010</th>
+<th style="text-align: left;">User Story</th>
+<th style="text-align: left;">Critérios de Aceitação</th>
+<th style="text-align: left;">Teste de Usuário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RNF01</td>
+<td style="text-align: left;">Segurança</td>
+<td style="text-align: left;">Como organização, eu quero controle de acesso por perfil para proteger dados internos e sensíveis.</td>
+<td style="text-align: left;">autenticação obrigatória; separação entre perfis; visões públicas sem dados identificáveis</td>
+<td style="text-align: left;">validar acessos com usuários de perfis diferentes</td>
+</tr>
+<tr>
+<td style="text-align: left;">RNF02</td>
+<td style="text-align: left;">Confiabilidade</td>
+<td style="text-align: left;">Como gestor, eu quero números consistentes entre base, indicadores e publicação para confiar nas análises.</td>
+<td style="text-align: left;">indicadores reproduzíveis; mesma lógica entre dashboards e base; tratamento explícito de lacunas</td>
+<td style="text-align: left;">confrontar amostras do dashboard com a base central e os cálculos documentados</td>
+</tr>
+<tr>
+<td style="text-align: left;">RNF03</td>
+<td style="text-align: left;">Desempenho</td>
+<td style="text-align: left;">Como usuário analítico, eu quero painéis com resposta adequada para explorar filtros sem travamento.</td>
+<td style="text-align: left;">consultas principais respondem em tempo aceitável para uso gerencial; filtros não inviabilizam a navegação</td>
+<td style="text-align: left;">aplicar filtros centrais e medir resposta percebida pelo usuário</td>
+</tr>
+<tr>
+<td style="text-align: left;">RNF04</td>
+<td style="text-align: left;">Usabilidade</td>
+<td style="text-align: left;">Como usuário de negócio, eu quero dashboards claros para interpretar tendências e gargalos sem depender da equipe técnica.</td>
+<td style="text-align: left;">títulos, filtros e visuais usam linguagem de negócio; leitura executiva é possível sem treinamento avançado</td>
+<td style="text-align: left;">pedir que um usuário de negócio responda perguntas do dashboard sem apoio técnico</td>
+</tr>
+<tr>
+<td style="text-align: left;">RNF05</td>
+<td style="text-align: left;">Manutenibilidade</td>
+<td style="text-align: left;">Como equipe do projeto, eu quero pipeline e regras documentadas para evoluir os dashboards sem retrabalho excessivo.</td>
+<td style="text-align: left;">regras de tratamento e fontes ficam documentadas; indicadores têm definição rastreável</td>
+<td style="text-align: left;">um novo membro da equipe entende origem e cálculo dos indicadores a partir da documentação</td>
+</tr>
+<tr>
+<td style="text-align: left;">RNF06</td>
+<td style="text-align: left;">Compatibilidade</td>
+<td style="text-align: left;">Como organização, eu quero que a solução conviva com as ferramentas atuais sem forçar substituição imediata das fontes de coleta.</td>
+<td style="text-align: left;">integração com fontes atuais; escopo não exige troca de SurveyMonkey, Trello ou métodos de coleta</td>
+<td style="text-align: left;">validar que o fluxo proposto usa as fontes existentes como entrada</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-especificacao-da-solucao-analitica">5. Especificação da Solução Analítica<a class="headerlink" href="#5-especificacao-da-solucao-analitica" title="Permanent link">&para;</a></h2>
+<h3 id="51-perguntas-de-negocio">5.1 Perguntas de Negócio<a class="headerlink" href="#51-perguntas-de-negocio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Pergunta de Negócio</th>
+<th style="text-align: left;">Requisito Funcional associado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PN01</td>
+<td style="text-align: left;">Qual é o ciclo total médio e mediano entre solicitação e divulgação das pesquisas?</td>
+<td style="text-align: left;">RF02</td>
+</tr>
+<tr>
+<td style="text-align: left;">PN02</td>
+<td style="text-align: left;">Quanto tempo as pesquisas permanecem abertas e quanto tempo a tabulação consome?</td>
+<td style="text-align: left;">RF02</td>
+</tr>
+<tr>
+<td style="text-align: left;">PN03</td>
+<td style="text-align: left;">Quais pesquisas estão mais sujeitas a atraso ou prorrogação?</td>
+<td style="text-align: left;">RF02</td>
+</tr>
+<tr>
+<td style="text-align: left;">PN04</td>
+<td style="text-align: left;">Como o volume de pesquisas evolui ao longo do tempo?</td>
+<td style="text-align: left;">RF03</td>
+</tr>
+<tr>
+<td style="text-align: left;">PN05</td>
+<td style="text-align: left;">O portfólio está mudando em composição, status ou tipo ao longo dos períodos?</td>
+<td style="text-align: left;">RF03</td>
+</tr>
+<tr>
+<td style="text-align: left;">PN06</td>
+<td style="text-align: left;">Como a adesão e outros indicadores variam entre anos ou ondas?</td>
+<td style="text-align: left;">RF03</td>
+</tr>
+<tr>
+<td style="text-align: left;">PN07</td>
+<td style="text-align: left;">Quais recortes temporais e operacionais precisam de atenção prioritária da equipe?</td>
+<td style="text-align: left;">RF02, RF03, RF04</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-indicadores-e-metricas-de-negocio">5.2 Indicadores e Métricas de Negócio<a class="headerlink" href="#52-indicadores-e-metricas-de-negocio" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: left;">Objetivo</th>
+<th style="text-align: left;">Significado para o negócio</th>
+<th style="text-align: left;">Granularidade de análise</th>
+<th style="text-align: left;">Possíveis dimensões de segmentação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ciclo médio da pesquisa</td>
+<td style="text-align: left;">medir tempo médio entre solicitação e divulgação</td>
+<td style="text-align: left;">mostra velocidade operacional agregada</td>
+<td style="text-align: left;">pesquisa, período</td>
+<td style="text-align: left;">tempo, tipo, área</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ciclo mediano da pesquisa</td>
+<td style="text-align: left;">medir valor central mais robusto do ciclo</td>
+<td style="text-align: left;">reduz distorção causada por extremos</td>
+<td style="text-align: left;">pesquisa, período</td>
+<td style="text-align: left;">tempo, tipo, área</td>
+</tr>
+<tr>
+<td style="text-align: left;">Média de dias úteis aberta</td>
+<td style="text-align: left;">medir janela de coleta</td>
+<td style="text-align: left;">indica quanto tempo a pesquisa permanece disponível</td>
+<td style="text-align: left;">pesquisa, período</td>
+<td style="text-align: left;">tempo, tipo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Média de dias para tabulação</td>
+<td style="text-align: left;">medir esforço pós-coleta</td>
+<td style="text-align: left;">mostra custo operacional da etapa de consolidação</td>
+<td style="text-align: left;">pesquisa, período</td>
+<td style="text-align: left;">tempo, tipo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Taxa de pesquisas prorrogadas</td>
+<td style="text-align: left;">medir peso de prorrogações</td>
+<td style="text-align: left;">sinaliza fragilidade de prazo ou necessidade de ajuste operacional</td>
+<td style="text-align: left;">pesquisa, período</td>
+<td style="text-align: left;">tempo, tipo, área</td>
+</tr>
+<tr>
+<td style="text-align: left;">Volume de pesquisas por período</td>
+<td style="text-align: left;">medir produção ao longo do tempo</td>
+<td style="text-align: left;">mostra ritmo do portfólio</td>
+<td style="text-align: left;">período</td>
+<td style="text-align: left;">ano, trimestre, tipo, status</td>
+</tr>
+<tr>
+<td style="text-align: left;">Volume de pesquisas finalizadas por período</td>
+<td style="text-align: left;">medir entregas concluídas</td>
+<td style="text-align: left;">mostra capacidade de fechamento do fluxo</td>
+<td style="text-align: left;">período</td>
+<td style="text-align: left;">ano, trimestre, tipo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crescimento do volume vs. período anterior</td>
+<td style="text-align: left;">medir tendência de expansão ou retração</td>
+<td style="text-align: left;">apoia leitura executiva do portfólio</td>
+<td style="text-align: left;">período</td>
+<td style="text-align: left;">ano, trimestre</td>
+</tr>
+<tr>
+<td style="text-align: left;">Volume de pesquisas em andamento</td>
+<td style="text-align: left;">medir carga operacional corrente</td>
+<td style="text-align: left;">mostra pressão atual sobre a equipe</td>
+<td style="text-align: left;">período</td>
+<td style="text-align: left;">status, tipo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Variação de adesão entre períodos</td>
+<td style="text-align: left;">medir mudança de engajamento ao longo do tempo</td>
+<td style="text-align: left;">ajuda a interpretar mudança de comportamento da base</td>
+<td style="text-align: left;">período</td>
+<td style="text-align: left;">ano, onda, tipo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-dashboards-propostos">5.3 Dashboards Propostos<a class="headerlink" href="#53-dashboards-propostos" title="Permanent link">&para;</a></h3>
+<h4 id="dashboard-1-report-02-prazos-sla">Dashboard 1: Report 02 - Prazos &amp; SLA<a class="headerlink" href="#dashboard-1-report-02-prazos-sla" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> apoiar o acompanhamento interno dos tempos operacionais do ciclo de pesquisa, destacando atrasos, prorrogações e comportamento agregado de prazo.</p>
+<p><strong>Perguntas de Negócio Respondidas:</strong> PN01, PN02, PN03, PN07.</p>
+<p><strong>Indicadores Apresentados:</strong> ciclo médio, ciclo mediano, média de dias úteis aberta, média de dias para tabulação, taxa de pesquisas prorrogadas.</p>
+<p><strong>Visualizações Previstas:</strong> linha temporal do ciclo ao longo do tempo para leitura de tendência; cartões para métricas centrais de prazo; tabela de pesquisas fora do padrão para ação operacional; barras por recorte de tipo ou área quando a segmentação for consistente. A linha é apropriada para evolução temporal, cartões para leitura executiva rápida e tabela para priorização operacional.</p>
+<p><strong>Filtros e Segmentações:</strong> período, tipo de pesquisa, área, status. O uso de <code>complexidade</code> deve aparecer apenas como filtro experimental ou secundário, nunca como eixo confiável principal nesta versão, porque o próprio relatório quantitativo mostrou baixa cobertura desse campo.</p>
+<p><strong>Protótipo:</strong> referência nos mockups fornecidos pelo parceiro em <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/esboc%CC%A7o%20de%20relato%CC%81rios/relatorio_02.md">relatorio_02.md</a> e <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/esboc%CC%A7o%20de%20relato%CC%81rios/relatorio_02.png">relatorio_02.png</a>.</p>
+<h4 id="dashboard-2-report-11-comparativo-anual-tendencias">Dashboard 2: Report 11 - Comparativo Anual &amp; Tendências<a class="headerlink" href="#dashboard-2-report-11-comparativo-anual-tendencias" title="Permanent link">&para;</a></h4>
+<p><strong>Objetivo:</strong> apoiar a leitura de evolução do portfólio e de mudança de comportamento dos indicadores entre anos ou ondas comparáveis.</p>
+<p><strong>Perguntas de Negócio Respondidas:</strong> PN04, PN05, PN06, PN07.</p>
+<p><strong>Indicadores Apresentados:</strong> volume de pesquisas por período, volume finalizado por período, crescimento vs. período anterior, variação de adesão entre períodos, tendência-chave.</p>
+<p><strong>Visualizações Previstas:</strong> linha de evolução temporal dos principais indicadores; composição por ano ou onda em barras empilhadas ou agrupadas; tabela do que mais mudou entre períodos. A linha é a melhor escolha para tendência, a composição por período ajuda a comparar estrutura, e a tabela evidencia mudanças que exigem interpretação qualitativa adicional.</p>
+<p><strong>Filtros e Segmentações:</strong> período, tipo, status, área e, quando houver critério padronizado, onda. O termo “onda” deve entrar no dashboard apenas depois de regra explícita de definição.</p>
+<p><strong>Protótipo:</strong> referência nos mockups fornecidos pelo parceiro em <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/esboc%CC%A7o%20de%20relato%CC%81rios/relatorio_11.md">relatorio_11.md</a> e <a href="/Users/andrelobo/Downloads/Sidusfarma/CONTEXTO_PROJETO/esboc%CC%A7o%20de%20relato%CC%81rios/relatorio_11.png">relatorio_11.png</a>.</p>
+<h2 id="6-matriz-de-rastreabilidade">6. Matriz de Rastreabilidade<a class="headerlink" href="#6-matriz-de-rastreabilidade" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Requisito Funcional</th>
+<th style="text-align: left;">Pergunta de Negócio</th>
+<th style="text-align: left;">Dashboard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">RF01</td>
+<td style="text-align: left;">PN01, PN02, PN04, PN05</td>
+<td style="text-align: left;">Report 02, Report 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF02</td>
+<td style="text-align: left;">PN01, PN02, PN03, PN07</td>
+<td style="text-align: left;">Report 02</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF03</td>
+<td style="text-align: left;">PN04, PN05, PN06, PN07</td>
+<td style="text-align: left;">Report 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF04</td>
+<td style="text-align: left;">PN01, PN02, PN04, PN05, PN06, PN07</td>
+<td style="text-align: left;">Report 02, Report 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF05</td>
+<td style="text-align: left;">PN05, PN07</td>
+<td style="text-align: left;">Report 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">RF06</td>
+<td style="text-align: left;">PN03, PN07</td>
+<td style="text-align: left;">Report 02, Report 11</td>
+</tr>
+</tbody>
+</table>
+<p>Essa matriz foi construída para garantir que todo requisito funcional esteja associado a pelo menos um dashboard e que todo dashboard atenda a pelo menos um requisito funcional. O Report 02 concentra leitura operacional de prazo e o Report 11 concentra leitura temporal e comparativa, formando juntos a base analítica inicial priorizada pelo grupo.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "content.code.copy", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/mathjax-init.js"></script>
+      
+    
+  </body>
+</html>

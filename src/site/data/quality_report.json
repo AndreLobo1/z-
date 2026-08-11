@@ -1,0 +1,286 @@
+{
+  "datasets": {
+    "clientes": {
+      "dataset_name": "clientes",
+      "row_count": 5430,
+      "col_count": 5,
+      "overall_completeness_pct": 99.75,
+      "completeness_pct": {
+        "id_cliente": 100.0,
+        "id_empresa": 99.98,
+        "cargo": 99.36,
+        "departamento": 99.43,
+        "e-mail": 99.98
+      },
+      "null_counts": {
+        "id_cliente": 0,
+        "id_empresa": 1,
+        "cargo": 35,
+        "departamento": 31,
+        "e-mail": 1
+      },
+      "duplicate_rows": 0,
+      "constant_columns": []
+    },
+    "empresas": {
+      "dataset_name": "empresas",
+      "row_count": 779,
+      "col_count": 9,
+      "overall_completeness_pct": 96.26,
+      "completeness_pct": {
+        "ID": 100.0,
+        "Nome Fantasia": 100.0,
+        "% de mercado": 100.0,
+        "Nacionalidade": 91.14,
+        "Associado": 99.87,
+        "Tipo de Associado": 93.71,
+        "Cidade": 94.61,
+        "Estado": 94.48,
+        "País": 92.55
+      },
+      "null_counts": {
+        "ID": 0,
+        "Nome Fantasia": 0,
+        "% de mercado": 0,
+        "Nacionalidade": 69,
+        "Associado": 1,
+        "Tipo de Associado": 49,
+        "Cidade": 42,
+        "Estado": 43,
+        "País": 58
+      },
+      "duplicate_rows": 0,
+      "constant_columns": []
+    },
+    "pesquisas": {
+      "dataset_name": "pesquisas",
+      "row_count": 366,
+      "col_count": 33,
+      "overall_completeness_pct": 54.94,
+      "completeness_pct": {
+        "id": 100.0,
+        "titulo": 100.0,
+        "status": 100.0,
+        "tipo": 100.0,
+        "area": 100.0,
+        "participantes": 91.53,
+        "part_mercado": 87.98,
+        "data_solicitacao": 98.91,
+        "data_aprov": 5.46,
+        "data_divulgacao": 97.81,
+        "data_limite": 97.81,
+        "prorrogada_ate": 18.58,
+        "data_entrega": 91.26,
+        "dias_uteis_para_entrega": 90.44,
+        "complexidade": 24.59,
+        "tipo de resposta": 100.0,
+        "tempo_preenchimento": 63.11,
+        "objetivos": 66.39,
+        "dia da semana de lançamento": 99.18,
+        "dias úteis aberta": 99.18,
+        "dias entre a solicitação e a divulgação": 90.71,
+        "dias para tabulação": 90.16,
+        "Unnamed: 22": 0.0,
+        "Unnamed: 23": 0.0,
+        "Unnamed: 24": 0.0,
+        "Unnamed: 25": 0.0,
+        "Unnamed: 26": 0.0,
+        "Unnamed: 27": 0.0,
+        "Unnamed: 28": 0.0,
+        "Unnamed: 29": 0.0,
+        "Unnamed: 30": 0.0,
+        "Unnamed: 31": 0.0,
+        "Unnamed: 32": 0.0
+      },
+      "null_counts": {
+        "id": 0,
+        "titulo": 0,
+        "status": 0,
+        "tipo": 0,
+        "area": 0,
+        "participantes": 31,
+        "part_mercado": 44,
+        "data_solicitacao": 4,
+        "data_aprov": 346,
+        "data_divulgacao": 8,
+        "data_limite": 8,
+        "prorrogada_ate": 298,
+        "data_entrega": 32,
+        "dias_uteis_para_entrega": 35,
+        "complexidade": 276,
+        "tipo de resposta": 0,
+        "tempo_preenchimento": 135,
+        "objetivos": 123,
+        "dia da semana de lançamento": 3,
+        "dias úteis aberta": 3,
+        "dias entre a solicitação e a divulgação": 34,
+        "dias para tabulação": 36,
+        "Unnamed: 22": 366,
+        "Unnamed: 23": 366,
+        "Unnamed: 24": 366,
+        "Unnamed: 25": 366,
+        "Unnamed: 26": 366,
+        "Unnamed: 27": 366,
+        "Unnamed: 28": 366,
+        "Unnamed: 29": 366,
+        "Unnamed: 30": 366,
+        "Unnamed: 31": 366,
+        "Unnamed: 32": 366
+      },
+      "duplicate_rows": 0,
+      "constant_columns": [
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25",
+        "Unnamed: 26",
+        "Unnamed: 27",
+        "Unnamed: 28",
+        "Unnamed: 29",
+        "Unnamed: 30",
+        "Unnamed: 31",
+        "Unnamed: 32"
+      ]
+    },
+    "questoes": {
+      "dataset_name": "questoes",
+      "row_count": 231,
+      "col_count": 13,
+      "overall_completeness_pct": 75.33,
+      "completeness_pct": {
+        "id_pergunta": 100.0,
+        "pesquisa_id": 100.0,
+        "pesquisa_titulo": 100.0,
+        "enunciado": 100.0,
+        "tipo": 100.0,
+        "qtd_alternativas": 89.18,
+        "alternativas": 87.45,
+        "linhas_matriz": 1.3,
+        "colunas_matriz": 1.3,
+        "confianca": 100.0,
+        "formato_arquivo": 100.0,
+        "col_origem": 100.0,
+        "observacoes": 0.0
+      },
+      "null_counts": {
+        "id_pergunta": 0,
+        "pesquisa_id": 0,
+        "pesquisa_titulo": 0,
+        "enunciado": 0,
+        "tipo": 0,
+        "qtd_alternativas": 25,
+        "alternativas": 29,
+        "linhas_matriz": 228,
+        "colunas_matriz": 228,
+        "confianca": 0,
+        "formato_arquivo": 0,
+        "col_origem": 0,
+        "observacoes": 231
+      },
+      "duplicate_rows": 0,
+      "constant_columns": [
+        "observacoes"
+      ]
+    },
+    "respondentes": {
+      "dataset_name": "respondentes",
+      "row_count": 18735,
+      "col_count": 6,
+      "overall_completeness_pct": 67.34,
+      "completeness_pct": {
+        "id_pesq": 100.0,
+        "hora_inicio": 4.31,
+        "hora_termino": 4.31,
+        "id_empresa": 100.0,
+        "market_share": 99.97,
+        "id_cliente": 95.43
+      },
+      "null_counts": {
+        "id_pesq": 0,
+        "hora_inicio": 17928,
+        "hora_termino": 17928,
+        "id_empresa": 0,
+        "market_share": 5,
+        "id_cliente": 856
+      },
+      "duplicate_rows": 0,
+      "constant_columns": []
+    },
+    "respostas": {
+      "dataset_name": "respostas",
+      "row_count": 20607,
+      "col_count": 9,
+      "overall_completeness_pct": 72.07,
+      "completeness_pct": {
+        "id_resposta": 100.0,
+        "pesquisa_id": 100.0,
+        "id_pergunta": 100.0,
+        "respondent_id": 100.0,
+        "id_empresa": 99.95,
+        "alternativa": 50.18,
+        "linha_matriz": 19.43,
+        "coluna_matriz": 19.43,
+        "valor": 59.68
+      },
+      "null_counts": {
+        "id_resposta": 0,
+        "pesquisa_id": 0,
+        "id_pergunta": 0,
+        "respondent_id": 0,
+        "id_empresa": 10,
+        "alternativa": 10266,
+        "linha_matriz": 16603,
+        "coluna_matriz": 16603,
+        "valor": 8309
+      },
+      "duplicate_rows": 0,
+      "constant_columns": []
+    }
+  },
+  "referential_integrity": {
+    "clientes.id_empresa -> empresas.ID": {
+      "parent_pk": "ID",
+      "child_fk": "id_empresa",
+      "orphan_count": 0,
+      "orphan_keys": []
+    },
+    "respondentes.id_pesq -> pesquisas.id": {
+      "parent_pk": "id",
+      "child_fk": "id_pesq",
+      "orphan_count": 1,
+      "orphan_keys": [
+        304
+      ]
+    },
+    "respondentes.id_empresa -> empresas.ID": {
+      "parent_pk": "ID",
+      "child_fk": "id_empresa",
+      "orphan_count": 0,
+      "orphan_keys": []
+    },
+    "respondentes.id_cliente -> clientes.id_cliente": {
+      "parent_pk": "id_cliente",
+      "child_fk": "id_cliente",
+      "orphan_count": 0,
+      "orphan_keys": []
+    },
+    "respostas.pesquisa_id -> pesquisas.id": {
+      "parent_pk": "id",
+      "child_fk": "pesquisa_id",
+      "orphan_count": 4,
+      "orphan_keys": [
+        1147,
+        424,
+        1116,
+        1139
+      ]
+    },
+    "respostas.id_pergunta -> questoes.id_pergunta": {
+      "parent_pk": "id_pergunta",
+      "child_fk": "id_pergunta",
+      "orphan_count": 0,
+      "orphan_keys": []
+    }
+  },
+  "overall_completeness_pct": 77.61
+}

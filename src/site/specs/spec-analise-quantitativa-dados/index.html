@@ -1,0 +1,1479 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e analítica do projeto Sidusfarma">
+      
+      
+      
+      
+        <link rel="prev" href="../../catalogo_reports/relatorio_12/">
+      
+      
+        <link rel="next" href="../adr-001-pipeline-analise-quantitativa/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Especificação da Análise - Sidusfarma Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spec-001-especificacao-tecnica-do-pipeline-de-analise-quantitativa-e-qualidade-de-dados" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Sidusfarma Docs" class="md-header__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sidusfarma Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Especificação da Análise
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sidusfarma Docs" class="md-nav__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sidusfarma Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modelagem_quantitativa_de_dados_do_parceiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório Quantitativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../inventario_das_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventário das Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo de Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 03
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 04
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 05
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 06
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 07
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 08
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalogo_reports/relatorio_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Especificações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação da Análise
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação da Análise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-visao-e-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Visão e Escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Visão e Escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Propósito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Requisitos Funcionais
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requisitos-nao-funcionais-iso-25010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Requisitos Não Funcionais (ISO 25010)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-contratos-de-interface-schemas-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Contratos de Interface (Schemas JSON)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Contratos de Interface (Schemas JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-contrato-de-qualidade-quality_reportjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Contrato de Qualidade: quality_report.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-contrato-de-indicadores-kpis_summaryjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Contrato de Indicadores: kpis_summary.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modelo-de-dados-mermaid-erd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Modelo de Dados (Mermaid ERD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cenarios-de-teste-bdd-gherkin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cenários de Teste (BDD / Gherkin)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Cenários de Teste (BDD / Gherkin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-auditoria-de-completude-dama-dmbok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 1: Auditoria de Completude DAMA-DMBOK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-validacao-de-integridade-referencial-chaves-estrangeiras-orfas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 2: Validação de Integridade Referencial (Chaves Estrangeiras Órfãs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-deteccao-de-outliers-pelo-metodo-iqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 3: Detecção de Outliers pelo Método IQR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr-001-pipeline-analise-quantitativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR 001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-visao-e-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Visão e Escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Visão e Escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Propósito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-requisitos-funcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Requisitos Funcionais
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-requisitos-nao-funcionais-iso-25010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Requisitos Não Funcionais (ISO 25010)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-contratos-de-interface-schemas-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Contratos de Interface (Schemas JSON)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Contratos de Interface (Schemas JSON)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-contrato-de-qualidade-quality_reportjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Contrato de Qualidade: quality_report.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-contrato-de-indicadores-kpis_summaryjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Contrato de Indicadores: kpis_summary.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modelo-de-dados-mermaid-erd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Modelo de Dados (Mermaid ERD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cenarios-de-teste-bdd-gherkin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cenários de Teste (BDD / Gherkin)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Cenários de Teste (BDD / Gherkin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1-auditoria-de-completude-dama-dmbok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 1: Auditoria de Completude DAMA-DMBOK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2-validacao-de-integridade-referencial-chaves-estrangeiras-orfas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 2: Validação de Integridade Referencial (Chaves Estrangeiras Órfãs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3-deteccao-de-outliers-pelo-metodo-iqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário 3: Detecção de Outliers pelo Método IQR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="spec-001-especificacao-tecnica-do-pipeline-de-analise-quantitativa-e-qualidade-de-dados">SPEC-001: Especificação Técnica do Pipeline de Análise Quantitativa e Qualidade de Dados<a class="headerlink" href="#spec-001-especificacao-tecnica-do-pipeline-de-analise-quantitativa-e-qualidade-de-dados" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>Versão:</strong> 1.0.0</li>
+<li><strong>Status:</strong> Approved</li>
+<li><strong>Single Source of Truth (SSoT):</strong> Este documento é a especificação autoritária do pipeline de dados. Qualquer alteração comportamental exige atualização prévia deste documento.</li>
+</ul>
+<hr />
+<h2 id="1-visao-e-escopo">1. Visão e Escopo<a class="headerlink" href="#1-visao-e-escopo" title="Permanent link">&para;</a></h2>
+<h3 id="11-proposito">1.1 Propósito<a class="headerlink" href="#11-proposito" title="Permanent link">&para;</a></h3>
+<p>O pipeline de análise quantitativa realiza a auditoria de qualidade de dados, o cálculo estatístico descritivo e a modelagem de indicadores sobre a base histórica da Central de Pesquisas do Sidusfarma.</p>
+<h3 id="12-escopo">1.2 Escopo<a class="headerlink" href="#12-escopo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Incluído:</strong> Processamento integral dos 6 datasets relacionais: <code>clientes.csv</code>, <code>empresas.csv</code>, <code>pesquisas.csv</code>, <code>questoes.csv</code>, <code>respondentes.csv</code>, <code>respostas.csv</code>.</li>
+<li><strong>Excluído:</strong> Alterações diretas no banco de dados de produção ou criação de tabelas físicas em SGBD (escopo de sprints futuras).</li>
+</ul>
+<hr />
+<h2 id="2-requisitos-funcionais">2. Requisitos Funcionais<a class="headerlink" href="#2-requisitos-funcionais" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Identificador</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RF-001</strong></td>
+<td style="text-align: left;">Auditoria DAMA-DMBOK</td>
+<td style="text-align: left;">O sistema deve auditar os 6 datasets nas 6 dimensões DAMA: Completude, Unicidade, Integridade Referencial (FKs), Consistência, Validade e Variância.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF-002</strong></td>
+<td style="text-align: left;">Mapeamento de Unidades e Variáveis</td>
+<td style="text-align: left;">O sistema deve definir o grão de cada dataset e classificar 20+ variáveis em: Identificadora, Categórica Nominal, Categórica Ordinal, Numérica Discreta, Numérica Contínua e Temporal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF-003</strong></td>
+<td style="text-align: left;">Estatística Descritiva e Outliers</td>
+<td style="text-align: left;">O sistema deve calcular Média (<span class="arithmatex">\(\mu\)</span>), Mediana (<span class="arithmatex">\(\tilde{x}\)</span>), Moda, Variância (<span class="arithmatex">\(\sigma^2\)</span>), Desvio Padrão (<span class="arithmatex">\(\sigma\)</span>), Coeficiente de Variação (<span class="arithmatex">\(CV\)</span>) e Limites de Outliers via <span class="arithmatex">\(IQR = Q3 - Q1\)</span> (<span class="arithmatex">\(LI/LS = Q1/Q3 \pm 1,5 \times IQR\)</span>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF-004</strong></td>
+<td style="text-align: left;">Catálogo de Indicadores (<span class="arithmatex">\(N/D\)</span>)</td>
+<td style="text-align: left;">O sistema deve calcular 10+ KPIs de negócio com Fichas Matemáticas explícitas (Numerador, Denominador, Janela Temporal e Filtros).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RF-005</strong></td>
+<td style="text-align: left;">Sensibilidade por Granularidade</td>
+<td style="text-align: left;">O sistema deve permitir a agregação de indicadores nos níveis Macro (Sidusfarma), Médio (Empresa) e Micro (Pesquisa/Respondente).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-requisitos-nao-funcionais-iso-25010">3. Requisitos Não Funcionais (ISO 25010)<a class="headerlink" href="#3-requisitos-nao-funcionais-iso-25010" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Identificador</th>
+<th style="text-align: left;">Categoria ISO 25010</th>
+<th style="text-align: left;">Métrica / Critério de Aceite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>RNF-001</strong></td>
+<td style="text-align: left;">Confiabilidade (Reliability)</td>
+<td style="text-align: left;">O pipeline deve tratar 100% das exceções de parsing de tipos ou dados ausentes sem interromper a execução (<code>Zero-Crash Policy</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RNF-002</strong></td>
+<td style="text-align: left;">Desempenho (Performance)</td>
+<td style="text-align: left;">O tempo de execução completo do processamento dos 6 CSVs e geração dos artefatos JSON deve ser <span class="arithmatex">\(\le 3,0\)</span> segundos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RNF-003</strong></td>
+<td style="text-align: left;">Manutenibilidade (Maintainability)</td>
+<td style="text-align: left;">100% do código deve ser estruturado em módulos independentes com cobertura de testes unitários <span class="arithmatex">\(\ge 90\%\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-contratos-de-interface-schemas-json">4. Contratos de Interface (Schemas JSON)<a class="headerlink" href="#4-contratos-de-interface-schemas-json" title="Permanent link">&para;</a></h2>
+<h3 id="41-contrato-de-qualidade-quality_reportjson">4.1 Contrato de Qualidade: <code>quality_report.json</code><a class="headerlink" href="#41-contrato-de-qualidade-quality_reportjson" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;total_datasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;overall_completeness_pct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;total_orphan_records&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;audit_timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ISO-8601&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;datasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;dataset_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;row_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;col_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;completeness_by_col&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">      </span><span class="nt">&quot;duplicate_rows&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;referential_integrity_errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="42-contrato-de-indicadores-kpis_summaryjson">4.2 Contrato de Indicadores: <code>kpis_summary.json</code><a class="headerlink" href="#42-contrato-de-indicadores-kpis_summaryjson" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;kpis&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;KPI-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;granularity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;numerator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;denominator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;unit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;percentage | count | days&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="5-modelo-de-dados-mermaid-erd">5. Modelo de Dados (Mermaid ERD)<a class="headerlink" href="#5-modelo-de-dados-mermaid-erd" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>erDiagram
+    CLIENTES ||--o{ EMPRESAS : possui
+    EMPRESAS ||--o{ RESPONDENTES : emprega
+    PESQUISAS ||--o{ QUESTOES : contem
+    PESQUISAS ||--o{ RESPOSTAS : recebe
+    RESPONDENTES ||--o{ RESPOSTAS : fornece
+    QUESTOES ||--o{ RESPOSTAS : avalia
+
+    CLIENTES {
+        int id_cliente PK
+        string nome_cliente
+        string setor
+    }
+    EMPRESAS {
+        int id_empresa PK
+        int id_cliente FK
+        string nome_empresa
+        string cnpj
+    }
+    RESPONDENTES {
+        int id_respondente PK
+        int id_empresa FK
+        string nome
+        string email
+    }
+    PESQUISAS {
+        int id_pesquisa PK
+        string titulo
+        date data_criacao
+        string status
+    }
+    QUESTOES {
+        int id_questao PK
+        int id_pesquisa FK
+        string texto_questao
+        string tipo_resposta
+    }
+    RESPOSTAS {
+        int id_resposta PK
+        int id_pesquisa FK
+        int id_questao FK
+        int id_respondente FK
+        string valor_resposta
+        datetime data_resposta
+    }</code></pre>
+<hr />
+<h2 id="6-cenarios-de-teste-bdd-gherkin">6. Cenários de Teste (BDD / Gherkin)<a class="headerlink" href="#6-cenarios-de-teste-bdd-gherkin" title="Permanent link">&para;</a></h2>
+<h3 id="cenario-1-auditoria-de-completude-dama-dmbok">Cenário 1: Auditoria de Completude DAMA-DMBOK<a class="headerlink" href="#cenario-1-auditoria-de-completude-dama-dmbok" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dado</strong> que os arquivos CSV das 6 bases são carregados pelo pipeline,</li>
+<li><strong>Quando</strong> a função <code>audit_completeness()</code> for executada,</li>
+<li><strong>Então</strong> o sistema deve retornar a porcentagem exata de valores nulos por coluna e calcular o percentual de completude global.</li>
+</ul>
+<h3 id="cenario-2-validacao-de-integridade-referencial-chaves-estrangeiras-orfas">Cenário 2: Validação de Integridade Referencial (Chaves Estrangeiras Órfãs)<a class="headerlink" href="#cenario-2-validacao-de-integridade-referencial-chaves-estrangeiras-orfas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dado</strong> a tabela <code>respostas</code> com a chave estrangeira <code>id_respondente</code>,</li>
+<li><strong>Quando</strong> for executada a verificação contra a chave primária <code>id_respondente</code> da tabela <code>respondentes</code>,</li>
+<li><strong>Então</strong> qualquer registro em <code>respostas</code> sem pai em <code>respondentes</code> deve ser contabilizado no relatório de erro referencial.</li>
+</ul>
+<h3 id="cenario-3-deteccao-de-outliers-pelo-metodo-iqr">Cenário 3: Detecção de Outliers pelo Método IQR<a class="headerlink" href="#cenario-3-deteccao-de-outliers-pelo-metodo-iqr" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dado</strong> uma variável numérica contínua (ex: <code>tempo_resposta_minutos</code>),</li>
+<li><strong>Quando</strong> for calculada a estatística descritiva,</li>
+<li><strong>Então</strong> o sistema deve definir <span class="arithmatex">\(IQR = Q3 - Q1\)</span>, estabelecer os limites <span class="arithmatex">\(LI = Q1 - 1,5 \times IQR\)</span> e <span class="arithmatex">\(LS = Q3 + 1,5 \times IQR\)</span>, e sinalizar os registros que excedem esses limites sem excluí-los da base.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/mathjax-init.js"></script>
+      
+    
+  </body>
+</html>

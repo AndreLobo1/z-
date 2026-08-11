@@ -1,0 +1,780 @@
+﻿ID;Nome Fantasia;% de mercado;Nacionalidade;Associado;Tipo de Associado;Cidade;Estado;País
+60;Empresa 60;8,25%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+85;Empresa 85;7,18%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+62;Empresa 62;6,79%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+8;Empresa 8;5,01%;Nacional;Sim;Efetivo;Guarulhos;São Paulo;Brasil
+501;Empresa 501;4,26%;Multinacional;Sim;Efetivo;Araucária;Paraná;Brasil
+59;Empresa 59;3,58%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+19;Empresa 19;2,59%;Multinacional;Sim;Efetivo;Cotia;São Paulo;Brasil
+121;Empresa 121;2,56%;Multinacional;Sim;Efetivo;Suzano;São Paulo;Brasil
+100;Empresa 100;2,34%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+49;Empresa 49;2,26%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+40;Empresa 40;2,25%;Nacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+28;Empresa 28;2,21%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+492;Empresa 492;2,19%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+65;Empresa 65;2,01%;Nacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+1195;Empresa 1195;1,76%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+16;Empresa 16;1,66%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+114;Empresa 114;1,37%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+106;Empresa 106;1,34%;Multinacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+76;Empresa 76;1,33%;Multinacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+97;Empresa 97;1,33%;Multinacional;-;Efetivo;Guarulhos;São Paulo;Brasil
+1244;Empresa 1244;1,10%;Multinacional;Sim;Efetivo;;;
+127;Empresa 127;1,10%;Multinacional;Sim;Efetivo;Jaguariúna;São Paulo;Brasil
+582;Empresa 582;1,10%;Nacional;Sim;Cooperador;Anápolis;Goiás;Brasil
+1207;Empresa 1207;1,05%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+731;Empresa 731;1,04%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+37;Empresa 37;1,02%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+99;Empresa 99;0,97%;Nacional;Sim;Efetivo;Hortolândia;São Paulo;Brasil
+940;Empresa 940;0,96%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+909;Empresa 909;0,94%;Nacional;Sim;Cooperador;São Paulo;São Paulo;BRASIL
+5;Empresa 5;0,92%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+670;Empresa 670;0,83%;Nacional;Sim;Cooperador;Anápolis;Goiás;Brasil
+23;Empresa 23;0,80%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+120;Empresa 120;0,79%;Multinacional;Sim;Efetivo;Cambé;Paraná;Brasil
+96;Empresa 96;0,78%;Multinacional;Sim;Efetivo;Itapevi;São Paulo;Brasil
+130;Empresa 130;0,75%;Multinacional;Sim;Efetivo;Barueri;São Paulo;Brasil
+74;Empresa 74;0,75%;Nacional;Sim;Efetivo;Hortolândia;São Paulo;Brasil
+52;Empresa 52;0,72%;Nacional;Sim;Efetivo;Itapira;São Paulo;Brasil
+111;Empresa 111;0,71%;Nacional;Sim;Efetivo;Aguaí;São Paulo;Brasil
+633;Empresa 633;0,66%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+567;Empresa 567;0,65%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+102;Empresa 102;0,64%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+541;Empresa 541;0,61%;Nacional;Sim;Efetivo;Toledo;Paraná;Brasil
+54;Empresa 54;0,60%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+12;Empresa 12;0,59%;Nacional;Sim;Efetivo;Atibaia;São Paulo;Brasil
+548;Empresa 548;0,59%;Multinacional;-;Cooperador;São Paulo;São Paulo;Brasil
+762;Empresa 762;0,59%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+11;Empresa 11;0,54%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+142;Empresa 142;0,53%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+612;Empresa 612;0,46%;Multinacional;Sim;Cooperador;Porto Alegre;Rio Grande do Sul;Brasil
+256;Empresa 256;0,44%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+48;Empresa 48;0,44%;Multinacional;Sim;Efetivo;Santana de Parnaíba;São Paulo;Brasil
+689;Empresa 689;0,44%;Nacional;Sim;Cooperador;CAMPOS DOS GOYTACAZES;Rio de Janeiro;Brasil
+26;Empresa 26;0,42%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+112;Empresa 112;0,41%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+922;Empresa 922;0,41%;Nacional;Sim;Cooperador;Santo Antônio de Jesus;Bahia;BRASIL
+47;Empresa 47;0,38%;Multinacional;Sim;Efetivo;Indaiatuba;São Paulo;Brasil
+69;Empresa 69;0,38%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+113;Empresa 113;0,37%;Multinacional;Sim;Efetivo;Barueri;São Paulo;Brasil
+88;Empresa 88;0,36%;Multinacional;Sim;Efetivo;;;
+89;Empresa 89;0,36%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+790;Empresa 790;0,35%;Nacional;Sim;Cooperador;Lagoa da Prata;Minas Gerais;Brasil
+538;Empresa 538;0,33%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+119;Empresa 119;0,33%;Multinacional;Sim;Cooperador;Barueri;São Paulo;Brasil
+584;Empresa 584;0,33%;Nacional;Sim;Cooperador;Goiânia;Goiás;Brasil
+118;Empresa 118;0,33%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+669;Empresa 669;0,32%;Nacional;Sim;Cooperador;Joinville;Santa Catarina;Brasil
+73;Empresa 73;0,29%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+457;Empresa 457;0,29%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+123;Empresa 123;0,28%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+487;Empresa 487;0,28%;Nacional;Sim;Efetivo;São Jerônimo;Rio Grande do Sul;Brasil
+105;Empresa 105;0,27%;Nacional;Sim;Efetivo;Juiz de Fora;Minas Gerais;Brasil
+141;Empresa 141;0,26%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+107;Empresa 107;0,26%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+658;Empresa 658;0,26%;Nacional;Sim;Efetivo;Taboão da Serra;São Paulo;Brasil
+234;Empresa 234;0,25%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+13;Empresa 13;0,24%;Multinacional;Sim;Efetivo;Taboão da Serra;São Paulo;Brasil
+1219;Empresa 1219;0,24%;;Sim;Efetivo;São Paulo;São Paulo;Brasil
+769;Empresa 769;0,22%;Nacional;Sim;Cooperador;Goiânia;Goiás;Brasil
+1266;Empresa 1266;0,22%;;Sim;;;;
+17;Empresa 17;0,21%;Nacional;Sim;Efetivo;Valinhos;São Paulo;Brasil
+715;Empresa 715;0,21%;Multinacional;Sim;Cooperador;Goiânia;Goiás;Brasil
+129;Empresa 129;0,20%;Nacional;Sim;Efetivo;São Bernardo do Campo;São Paulo;Brasil
+966;Empresa 966;0,20%;Nacional;Sim;Cooperador;Anápolis;Goiás;Brasil
+18;Empresa 18;0,20%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+108;Empresa 108;0,19%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1269;Empresa 1269;0,19%;;Sim;;;;
+1108;Empresa 1108;0,19%;Nacional;Sim;Cooperador;São José da Lapa;Minas Gerais;Brasil
+1121;Empresa 1121;0,18%;Nacional;Sim;Cooperador;Caruaru;Pernambuco;Brasil
+454;Empresa 454;0,17%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+83;Empresa 83;0,16%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1166;Empresa 1166;0,16%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;BRASIL
+1148;Empresa 1148;0,15%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+143;Empresa 143;0,14%;Multinacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+231;Empresa 231;0,14%;Nacional;Sim;Cooperador;PEDRAS GRANDES;Santa Catarina;BRASIL
+33;Empresa 33;0,13%;Multinacional;Sim;Efetivo;Porto Alegre;Rio Grande do Sul;Brasil
+1220;Empresa 1220;0,12%;Nacional;Sim;Cooperador;Belo Horizonte;Minas Gerais;Brasil
+79;Empresa 79;0,12%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1265;Empresa 1265;0,12%;;Sim;Cooperador;;;
+34;Empresa 34;0,12%;Nacional;Sim;Efetivo;Cotia;São Paulo;Brasil
+90;Empresa 90;0,12%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+661;Empresa 661;0,12%;Nacional;Sim;Cooperador;Colombo;Paraná;Brasil
+132;Empresa 132;0,11%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+403;Empresa 403;0,11%;Multinacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1163;Empresa 1163;0,10%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+1268;Empresa 1268;0,10%;;Sim;;;;
+592;Empresa 592;0,09%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+72;Empresa 72;0,09%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1178;Empresa 1178;0,09%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+77;Empresa 77;0,09%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1072;Empresa 1072;0,09%;Nacional;Sim;Cooperador;Betim;Minas Gerais;Brasil
+793;Empresa 793;0,08%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+41;Empresa 41;0,08%;Nacional;Sim;Efetivo;Atibaia;São Paulo;Brasil
+38;Empresa 38;0,08%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+475;Empresa 475;0,08%;Nacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+27;Empresa 27;0,07%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+110;Empresa 110;0,07%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+94;Empresa 94;0,07%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+128;Empresa 128;0,07%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+737;Empresa 737;0,06%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+139;Empresa 139;0,06%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+24;Empresa 24;0,05%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+45;Empresa 45;0,05%;Nacional;Sim;Efetivo;Jandira;São Paulo;Brasil
+777;Empresa 777;0,05%;Nacional;Sim;Cooperador;Joinville;Santa Catarina;Brasil
+1236;Empresa 1236;0,04%;Nacional;Sim;Cooperador;;;
+1089;Empresa 1089;0,04%;Nacional;Sim;Cooperador;Juiz de Fora;Minas Gerais;Brasil
+93;Empresa 93;0,04%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+42;Empresa 42;0,04%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+799;Empresa 799;0,04%;Nacional;Sim;Cooperador;Joinville;Santa Catarina;Brasil
+416;Empresa 416;0,04%;Nacional;Sim;Cooperador;Colombo;Paraná;Brasil
+1041;Empresa 1041;0,03%;Nacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+30;Empresa 30;0,03%;Nacional;Sim;Efetivo;Nova Lima;Minas Gerais;Brasil
+1190;Empresa 1190;0,03%;Multinacional;Sim;Efetivo;;;
+579;Empresa 579;0,03%;Nacional;Sim;Efetivo;Nova Odessa;São Paulo;Brasil
+749;Empresa 749;0,03%;Nacional;Sim;Cooperador;Barbalha;Ceará;Brasil
+882;Empresa 882;0,03%;Multinacional;Sim;Efetivo;Guarulhos;São Paulo;Brasil
+1223;Empresa 1223;0,03%;Multinacional;Sim;Cooperador;Aparecida de Goiânia;Goiás;
+649;Empresa 649;0,03%;Nacional;Sim;Cooperador;Itatiaia;Rio de Janeiro;Brasil
+131;Empresa 131;0,03%;Multinacional;Sim;Efetivo;Campinas;São Paulo;Brasil
+828;Empresa 828;0,02%;Nacional;Sim;Cooperador;Floriano;Piauí;Brasil
+1027;Empresa 1027;0,02%;Nacional;Sim;Cooperador;Recife;Pernambuco;Brasil
+66;Empresa 66;0,02%;Multinacional;Sim;Efetivo;Barueri;São Paulo;Brasil
+7;Empresa 7;0,02%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+15;Empresa 15;0,02%;Nacional;Sim;Efetivo;Ribeirão Preto;São Paulo;Brasil
+57;Empresa 57;0,02%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+811;Empresa 811;0,02%;Nacional;Sim;Cooperador;Florianópolis;Santa Catarina;Brasil
+98;Empresa 98;0,02%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+759;Empresa 759;0,01%;Nacional;Sim;Cooperador;São Gonçalo;Rio de Janeiro;Brasil
+95;Empresa 95;0,01%;Nacional;Sim;Efetivo;Contagem;Minas Gerais;Brasil
+888;Empresa 888;0,01%;Nacional;Sim;Cooperador;Porto Alegre;Rio Grande do Sul;
+591;Empresa 591;0,01%;Multinacional;Sim;Cooperador;Diadema;São Paulo;Brasil
+215;Empresa 215;0,01%;Multinacional;Sim;Efetivo;Cosmópolis;São Paulo;Brasil
+1033;Empresa 1033;0,01%;Nacional;Sim;Cooperador;Porto Alegre;Rio Grande do Sul;Brasil
+64;Empresa 64;0,01%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+426;Empresa 426;0,01%;Nacional;Sim;Cooperador;Contagem;Minas Gerais;Brasil
+1175;Empresa 1175;0,01%;Nacional;Sim;Cooperador;Limoeiro;Pernambuco;Brasil
+117;Empresa 117;0,01%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+807;Empresa 807;0,01%;Multinacional;Sim;Efetivo;Vargem Grande Paulista;São Paulo;Brasil
+81;Empresa 81;0,01%;Nacional;Sim;Efetivo;Goiânia;Goiás;Brasil
+851;Empresa 851;0,01%;Nacional;Sim;Cooperador;Aparecida de Goiânia;Goiás;Brasil
+953;Empresa 953;0,01%;Nacional;Sim;Efetivo;São Paulo;São Paulo;
+1085;Empresa 1085;0,00%;Nacional;Sim;Efetivo;São José do Rio Preto;São Paulo;Brasil
+55;Empresa 55;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+884;Empresa 884;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+782;Empresa 782;0,00%;Multinacional;Sim;Cooperador;Barueri;São Paulo;Brasil
+21;Empresa 21;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+53;Empresa 53;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+75;Empresa 75;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+92;Empresa 92;0,00%;Multinacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+1151;Empresa 1151;0,00%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+1032;Empresa 1032;0,00%;Nacional;Sim;Cooperador;Camaquã;Rio Grande do Sul;Brasil
+1025;Empresa 1025;0,00%;Nacional;Sim;Efetivo;Bauru;São Paulo;Brasil
+410;Empresa 410;0,00%;Multinacional;Sim;Cooperador;Campo Largo;Paraná;Brasil
+22;Empresa 22;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1271;Empresa 1271;0,00%;Multinacional;;;;;
+610;Empresa 610;0,00%;Nacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+1245;Empresa 1245;0,00%;Multinacional;Sim;Efetivo;;;
+1179;Empresa 1179;0,00%;Multinacional;Sim;Cooperador;Anápolis;Goiás;Brasil
+25;Empresa 25;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+43;Empresa 43;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+29;Empresa 29;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+286;Empresa 286;0,00%;Nacional;Sim;Cooperador;Valinhos;São Paulo;Brasil
+826;Empresa 826;0,00%;Multinacional;Sim;Cooperador;Belo Horizonte;Minas Gerais;Brasil
+122;Empresa 122;0,00%;Nacional;Sim;Cooperador;Belo Horizonte;Minas Gerais;Brasil
+1016;Empresa 1016;0,00%;Nacional;Sim;Cooperador;Curitiba;Paraná;Brasil
+70;Empresa 70;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+313;Empresa 313;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+505;Empresa 505;0,00%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+133;Empresa 133;0,00%;Nacional;Sim;Efetivo;São Bernardo do Campo;São Paulo;Brasil
+822;Empresa 822;0,00%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+4;Empresa 4;0,00%;Multinacional;Sim;Efetivo;Sumaré;São Paulo;Brasil
+2;Empresa 2;0,00%;;Sim;;São Paulo;São Paulo;
+3;Empresa 3;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+6;Empresa 6;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+9;Empresa 9;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+10;Empresa 10;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+20;Empresa 20;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Valinhos;São Paulo;Brasil
+31;Empresa 31;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+32;Empresa 32;0,00%;Multinacional;-;Efetivo;Bom Jesus dos Perdões;São Paulo;Brasil
+35;Empresa 35;0,00%;Nacional;Sim;Efetivo;Diadema;São Paulo;Brasil
+36;Empresa 36;0,00%;;-;Efetivo;Diadema;São Paulo;
+39;Empresa 39;0,00%;Multinacional;-;Efetivo;São Paulo;São Paulo;Brasil
+44;Empresa 44;0,00%;Multinacional;Sim;Efetivo;Sorocaba;São Paulo;Brasil
+46;Empresa 46;0,00%;Multinacional;Sim;Efetivo;Vargem Grande Paulista;São Paulo;Brasil
+50;Empresa 50;0,00%;Nacional;Sim;Efetivo;Cotia;São Paulo;Brasil
+56;Empresa 56;0,00%;Nacional;Sim;Efetivo;Catanduva;São Paulo;Brasil
+58;Empresa 58;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+61;Empresa 61;0,00%;Nacional;Sim;Efetivo;Hortolândia;São Paulo;Brasil
+63;Empresa 63;0,00%;Nacional;Sim;Efetivo;Cotia;São Paulo;
+67;Empresa 67;0,00%;Multinacional;Sim;Efetivo;Jaguariúna;São Paulo;Brasil
+68;Empresa 68;0,00%;Nacional;Sim;Efetivo;Guarulhos;São Paulo;Brasil
+71;Empresa 71;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+78;Empresa 78;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+80;Empresa 80;0,00%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+82;Empresa 82;0,00%;Multinacional;-;Efetivo;São Paulo;São Paulo;Brasil
+84;Empresa 84;0,00%;Multinacional;-;Cooperador;São Paulo;São Paulo;Brasil
+86;Empresa 86;0,00%;Nacional;Sim;Efetivo;Barueri;São Paulo;Brasil
+87;Empresa 87;0,00%;Multinacional;Sim;Efetivo;Itapevi;São Paulo;Brasil
+103;Empresa 103;0,00%;Multinacional;-;Cooperador;São Paulo;São Paulo;Brasil
+104;Empresa 104;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+109;Empresa 109;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+116;Empresa 116;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+124;Empresa 124;0,00%;Multinacional;-;Efetivo;São Paulo;São Paulo;Brasil
+125;Empresa 125;0,00%;Multinacional;-;Efetivo;São Paulo;São Paulo;Brasil
+126;Empresa 126;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+134;Empresa 134;0,00%;Nacional;-;Efetivo;São Paulo;São Paulo;Brasil
+136;Empresa 136;0,00%;Multinacional;-;Efetivo;São Paulo;São Paulo;Brasil
+137;Empresa 137;0,00%;Nacional;Sim;Efetivo;Indaiatuba;São Paulo;Brasil
+138;Empresa 138;0,00%;Multinacional;Sim;Efetivo;Vargem Grande Paulista;São Paulo;Brasil
+140;Empresa 140;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+144;Empresa 144;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+206;Empresa 206;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+210;Empresa 210;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+212;Empresa 212;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+214;Empresa 214;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+218;Empresa 218;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+219;Empresa 219;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+220;Empresa 220;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+225;Empresa 225;0,00%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+226;Empresa 226;0,00%;Multinacional;-;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+228;Empresa 228;0,00%;Nacional;-;Efetivo;São Paulo;São Paulo;Brasil
+230;Empresa 230;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+233;Empresa 233;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+251;Empresa 251;0,00%;Nacional;-;;;Distrito Federal;Brasil
+255;Empresa 255;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+261;Empresa 261;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;Brasil
+265;Empresa 265;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Bragança Paulista;São Paulo;Brasil
+271;Empresa 271;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São José dos Campos;São Paulo;Brasil
+276;Empresa 276;0,00%;Multinacional;Sim;Cooperador;Piracicaba;São Paulo;Brasil
+277;Empresa 277;0,00%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+288;Empresa 288;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+296;Empresa 296;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;Brasil
+298;Empresa 298;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+307;Empresa 307;0,00%;Nacional;-;;Brasília;Distrito Federal;Brasil
+331;Empresa 331;0,00%;Nacional;-;;Brasília;Distrito Federal;Brasil
+336;Empresa 336;0,00%;Nacional;Sim;Efetivo;Barueri;São Paulo;Brasil
+338;Empresa 338;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+344;Empresa 344;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+350;Empresa 350;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+353;Empresa 353;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+373;Empresa 373;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+375;Empresa 375;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+380;Empresa 380;0,00%;Nacional;-;Cooperador;Anápolis;Goiás;Brasil
+382;Empresa 382;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+385;Empresa 385;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+388;Empresa 388;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+390;Empresa 390;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+391;Empresa 391;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+399;Empresa 399;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+406;Empresa 406;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Jerônimo;Rio Grande do Sul;Brasil
+412;Empresa 412;0,00%;Multinacional;Sim;Efetivo;Rio de Janeiro;Rio de Janeiro;Brasil
+419;Empresa 419;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+433;Empresa 433;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+440;Empresa 440;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+444;Empresa 444;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+448;Empresa 448;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;São José dos Campos;São Paulo;Brasil
+452;Empresa 452;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Cotia;São Paulo;Brasil
+459;Empresa 459;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+476;Empresa 476;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+478;Empresa 478;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+481;Empresa 481;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+488;Empresa 488;0,00%;Nacional;-;Cooperador;Campinas;São Paulo;Brasil
+509;Empresa 509;0,00%;Multinacional;-;;;;Brasil
+534;Empresa 534;0,00%;Nacional;-;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+536;Empresa 536;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+540;Empresa 540;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+542;Empresa 542;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+553;Empresa 553;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+555;Empresa 555;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+563;Empresa 563;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+565;Empresa 565;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+569;Empresa 569;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+570;Empresa 570;0,00%;Nacional;-;;Porto Alegre;Rio Grande do Sul;Brasil
+571;Empresa 571;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+572;Empresa 572;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+573;Empresa 573;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+576;Empresa 576;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+594;Empresa 594;0,00%;Multinacional;-;;;;Brasil
+599;Empresa 599;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Fortaleza;Ceará;Brasil
+601;Empresa 601;0,00%;Nacional;Sim;Cooperador;Curitiba;Paraná;Brasil
+603;Empresa 603;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+611;Empresa 611;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Caieiras;São Paulo;Brasil
+614;Empresa 614;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+615;Empresa 615;0,00%;Multinacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+616;Empresa 616;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+619;Empresa 619;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+621;Empresa 621;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Porto Alegre;Rio Grande do Sul;Brasil
+622;Empresa 622;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+631;Empresa 631;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+634;Empresa 634;0,00%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+635;Empresa 635;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+636;Empresa 636;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+638;Empresa 638;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+639;Empresa 639;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+640;Empresa 640;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Fortaleza;Ceará;Brasil
+641;Empresa 641;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Belo Horizonte;Minas Gerais;Brasil
+642;Empresa 642;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Recife;Pernambuco;Brasil
+643;Empresa 643;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Curitiba;Paraná;Brasil
+644;Empresa 644;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Joinville;Santa Catarina;Brasil
+645;Empresa 645;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Nova Londrina;Paraná;Brasil
+646;Empresa 646;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Valinhos;São Paulo;Brasil
+647;Empresa 647;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Osasco;São Paulo;Brasil
+648;Empresa 648;0,00%;Multinacional;-;Efetivo;São Paulo;São Paulo;Brasil
+650;Empresa 650;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+651;Empresa 651;0,00%;Nacional;-;;São Paulo;São Paulo;Brasil
+652;Empresa 652;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+653;Empresa 653;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+655;Empresa 655;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+656;Empresa 656;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+657;Empresa 657;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+659;Empresa 659;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+662;Empresa 662;0,00%;Nacional;-;Cooperador;Juiz de Fora;Minas Gerais;Brasil
+663;Empresa 663;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+664;Empresa 664;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+666;Empresa 666;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São José do Rio Preto;São Paulo;Brasil
+668;Empresa 668;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Curitiba;Paraná;Brasil
+671;Empresa 671;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+673;Empresa 673;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santos;São Paulo;Brasil
+675;Empresa 675;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Vargem Grande Paulista;São Paulo;Brasil
+676;Empresa 676;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+678;Empresa 678;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+679;Empresa 679;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+680;Empresa 680;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+684;Empresa 684;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+685;Empresa 685;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+687;Empresa 687;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+690;Empresa 690;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+692;Empresa 692;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+693;Empresa 693;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+696;Empresa 696;0,00%;Nacional;-;Fornecedor de Bens e Serviços;;;Brasil
+699;Empresa 699;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+700;Empresa 700;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Diadema;São Paulo;Brasil
+701;Empresa 701;0,00%;Nacional;-;;Cuiabá;Mato Grosso;Brasil
+702;Empresa 702;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+703;Empresa 703;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+704;Empresa 704;0,00%;Multinacional;-;Cooperador;Barueri;São Paulo;Brasil
+706;Empresa 706;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+707;Empresa 707;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+708;Empresa 708;0,00%;Nacional;Sim;Efetivo;Barretos;São Paulo;Brasil
+710;Empresa 710;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Mogi das Cruzes;São Paulo;Brasil
+712;Empresa 712;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;Belo Horizonte;Minas Gerais;Brasil
+713;Empresa 713;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+716;Empresa 716;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+717;Empresa 717;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+718;Empresa 718;0,00%;Multinacional;-;Fornecedor de Bens e Serviços;Salto Grande;São Paulo;Brasil
+720;Empresa 720;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Sorocaba;São Paulo;Brasil
+721;Empresa 721;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itajaí;Santa Catarina;Brasil
+722;Empresa 722;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Juiz de Fora;Minas Gerais;Brasil
+724;Empresa 724;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+725;Empresa 725;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+726;Empresa 726;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+727;Empresa 727;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Cajamar;São Paulo;Brasil
+729;Empresa 729;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+730;Empresa 730;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+732;Empresa 732;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+733;Empresa 733;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+736;Empresa 736;0,00%;Nacional;Sim;Cooperador;Belo Horizonte;Minas Gerais;Brasil
+738;Empresa 738;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Serra;Espírito Santo;Brasil
+739;Empresa 739;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+740;Empresa 740;0,00%;Nacional;-;Cooperador;Hortolândia;São Paulo;Brasil
+743;Empresa 743;0,00%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+744;Empresa 744;0,00%;Nacional;-;Cooperador;Fortaleza;Ceará;Brasil
+745;Empresa 745;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+746;Empresa 746;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Manaus;Amazonas;Brasil
+748;Empresa 748;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Porto Alegre;Rio Grande do Sul;Brasil
+750;Empresa 750;0,00%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+751;Empresa 751;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+752;Empresa 752;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+753;Empresa 753;0,00%;Multinacional;-;Cooperador;São Paulo;São Paulo;Brasil
+754;Empresa 754;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+757;Empresa 757;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+758;Empresa 758;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+760;Empresa 760;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+761;Empresa 761;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+767;Empresa 767;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Cotia;São Paulo;Brasil
+768;Empresa 768;0,00%;Nacional;Sim;Cooperador;Goiânia;Goiás;Brasil
+770;Empresa 770;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+771;Empresa 771;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Osasco;São Paulo;Brasil
+772;Empresa 772;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+773;Empresa 773;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+774;Empresa 774;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+775;Empresa 775;0,00%;Multinacional;-;Cooperador;São Paulo;São Paulo;Brasil
+776;Empresa 776;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+778;Empresa 778;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+779;Empresa 779;0,00%;Nacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+780;Empresa 780;0,00%;Nacional;-;Cooperador;São Paulo;São Paulo;Brasil
+781;Empresa 781;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+783;Empresa 783;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+784;Empresa 784;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+785;Empresa 785;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+788;Empresa 788;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+789;Empresa 789;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+791;Empresa 791;0,00%;Nacional;Sim;Cooperador;Anápolis;Goiás;Brasil
+792;Empresa 792;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Sorocaba;São Paulo;Brasil
+794;Empresa 794;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+795;Empresa 795;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+796;Empresa 796;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+797;Empresa 797;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+798;Empresa 798;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+800;Empresa 800;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Diadema;São Paulo;Brasil
+801;Empresa 801;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+803;Empresa 803;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+804;Empresa 804;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+806;Empresa 806;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+808;Empresa 808;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+809;Empresa 809;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+810;Empresa 810;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+813;Empresa 813;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Vargem Grande Paulista;São Paulo;Brasil
+814;Empresa 814;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+815;Empresa 815;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Jundiaí;São Paulo;Brasil
+816;Empresa 816;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+817;Empresa 817;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+818;Empresa 818;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+819;Empresa 819;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+820;Empresa 820;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Caetano do Sul;São Paulo;Brasil
+821;Empresa 821;0,00%;Nacional;-;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+823;Empresa 823;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santo André;São Paulo;Brasil
+824;Empresa 824;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+825;Empresa 825;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Pouso Alegre;Minas Gerais;Brasil
+827;Empresa 827;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+829;Empresa 829;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Pouso Alegre;Minas Gerais;Brasil
+830;Empresa 830;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+831;Empresa 831;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+832;Empresa 832;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;Brasil
+833;Empresa 833;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Uruguaiana;Rio Grande do Sul;Brasil
+834;Empresa 834;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+835;Empresa 835;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Osasco;São Paulo;Brasil
+836;Empresa 836;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+837;Empresa 837;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+838;Empresa 838;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+839;Empresa 839;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+840;Empresa 840;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+841;Empresa 841;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+842;Empresa 842;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+843;Empresa 843;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+844;Empresa 844;0,00%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+846;Empresa 846;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+847;Empresa 847;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Diadema;São Paulo;Brasil
+848;Empresa 848;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+849;Empresa 849;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+850;Empresa 850;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Vinhedo;São Paulo;Brasil
+852;Empresa 852;0,00%;Multinacional;-;Cooperador;São Paulo;São Paulo;Brasil
+853;Empresa 853;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+854;Empresa 854;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+856;Empresa 856;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;Brasil
+857;Empresa 857;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+858;Empresa 858;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+859;Empresa 859;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+860;Empresa 860;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+861;Empresa 861;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+862;Empresa 862;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+863;Empresa 863;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+868;Empresa 868;0,00%;;-;;São Paulo;São Paulo;Brasil
+871;Empresa 871;0,00%;;-;;São Paulo;São Paulo;Brasil
+872;Empresa 872;0,00%;;-;;São Paulo;São Paulo;Brasil
+873;Empresa 873;0,00%;;-;;São Paulo;São Paulo;Brasil
+878;Empresa 878;0,00%;;-;;São Paulo;São Paulo;Brasil
+880;Empresa 880;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+881;Empresa 881;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;;;
+883;Empresa 883;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Jacareí;São Paulo;Brasil
+885;Empresa 885;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+886;Empresa 886;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+887;Empresa 887;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;;;
+889;Empresa 889;0,00%;;Sim;Fornecedor de Bens e Serviços;;;
+890;Empresa 890;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;;;
+891;Empresa 891;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+892;Empresa 892;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Valinhos;São Paulo;Brasil
+893;Empresa 893;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+894;Empresa 894;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+895;Empresa 895;0,00%;;-;Fornecedor de Bens e Serviços;;;
+896;Empresa 896;0,00%;Nacional;Sim;Cooperador;Vargem Grande Paulista;São Paulo;Brasil
+897;Empresa 897;0,00%;;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+898;Empresa 898;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+899;Empresa 899;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+901;Empresa 901;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Paulínia;São Paulo;Brasil
+903;Empresa 903;0,00%;;Sim;Fornecedor de Bens e Serviços;Goiânia;Goiás;Brasil
+904;Empresa 904;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+905;Empresa 905;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+906;Empresa 906;0,00%;Multinacional;Sim;Efetivo;Guarulhos;São Paulo;Brasil
+907;Empresa 907;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;SP;São Paulo;BRASIL
+908;Empresa 908;0,00%;;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+910;Empresa 910;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+911;Empresa 911;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Hortolândia;São Paulo;BRASIL
+912;Empresa 912;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Indaiatuba;São Paulo;BRASIL
+913;Empresa 913;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;BRASIL
+914;Empresa 914;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Goiânia;Goiás;BRASIL
+915;Empresa 915;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Joinville;Santa Catarina;BRASIL
+916;Empresa 916;0,00%;;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+917;Empresa 917;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+918;Empresa 918;0,00%;;Sim;Fornecedor de Bens e Serviços;Serra;Espírito Santo;BRASIL
+919;Empresa 919;0,00%;;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+920;Empresa 920;0,00%;;-;Cooperador;Mandaguaçu;Paraná;BRASIL
+921;Empresa 921;0,00%;;-;Fornecedor de Bens e Serviços;Goiânia;Goiás;BRASIL
+923;Empresa 923;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Atibaia;São Paulo;BRASIL
+924;Empresa 924;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itajaí;Santa Catarina;BRASIL
+925;Empresa 925;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;BRASIL
+926;Empresa 926;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+927;Empresa 927;0,00%;;Sim;Fornecedor de Bens e Serviços;Itajaí;Santa Catarina;BRASIL
+928;Empresa 928;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+929;Empresa 929;0,00%;;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+930;Empresa 930;0,00%;;-;Fornecedor de Bens e Serviços;Santana de Parnaíba;São Paulo;BRASIL
+931;Empresa 931;0,00%;;-;Cooperador;São Paulo;São Paulo;BRASIL
+932;Empresa 932;0,00%;;Sim;Fornecedor de Bens e Serviços;Vinhedo;São Paulo;BRASIL
+933;Empresa 933;0,00%;;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;
+937;Empresa 937;0,00%;Nacional;-;;Japeri;Rio de Janeiro;BRASIL
+938;Empresa 938;0,00%;;-;Cooperador;Anápolis;Goiás;
+939;Empresa 939;0,00%;;-;;Paulínia;São Paulo;Brasil
+941;Empresa 941;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;
+942;Empresa 942;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;
+943;Empresa 943;0,00%;;-;;São Paulo;São Paulo;Brasil
+944;Empresa 944;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;BRASIL
+945;Empresa 945;0,00%;;Sim;Fornecedor de Bens e Serviços;Pompéia;São Paulo;BRASIL
+946;Empresa 946;0,00%;Nacional;Sim;Cooperador;São Paulo;São Paulo;BRASIL
+947;Empresa 947;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São José dos Campos;São Paulo;BRASIL
+948;Empresa 948;0,00%;;Sim;Fornecedor de Bens e Serviços;Mauá;São Paulo;BRASIL
+949;Empresa 949;0,00%;;Sim;Fornecedor de Bens e Serviços;Santos;São Paulo;BRASIL
+950;Empresa 950;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+951;Empresa 951;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+952;Empresa 952;0,00%;;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;
+954;Empresa 954;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+955;Empresa 955;0,00%;;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+956;Empresa 956;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itupeva;São Paulo;brasil
+957;Empresa 957;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;brasil
+958;Empresa 958;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Betim;Minas Gerais;BRASIL
+959;Empresa 959;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;BRASIL
+960;Empresa 960;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itu;São Paulo;BRASIL
+961;Empresa 961;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;BRASIL
+962;Empresa 962;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Jundiaí;São Paulo;BRASIL
+964;Empresa 964;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+965;Empresa 965;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+967;Empresa 967;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+968;Empresa 968;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+969;Empresa 969;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+970;Empresa 970;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Paulínia;São Paulo;Brasil
+971;Empresa 971;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Cotia;São Paulo;Brasil
+972;Empresa 972;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Porto Alegre;Rio Grande do Sul;Brasil
+973;Empresa 973;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+974;Empresa 974;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+976;Empresa 976;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+977;Empresa 977;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+978;Empresa 978;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Porto Alegre;Rio Grande do Sul;Brasil
+979;Empresa 979;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Cotia;São Paulo;Brasil
+980;Empresa 980;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+981;Empresa 981;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itapira;São Paulo;Brasil
+982;Empresa 982;0,00%;Nacional;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+983;Empresa 983;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+984;Empresa 984;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+985;Empresa 985;0,00%;Nacional;-;Fornecedor de Bens e Serviços;Cajamar;São Paulo;Brasil
+986;Empresa 986;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Aparecida de Goiania;Goiás;Brasil
+987;Empresa 987;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+989;Empresa 989;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+990;Empresa 990;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+991;Empresa 991;0,00%;;-;;;;
+992;Empresa 992;0,00%;;-;;São Paulo;São Paulo;
+993;Empresa 993;0,00%;;-;;São Paulo;São Paulo;
+994;Empresa 994;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santana de Parnaíba;São Paulo;Brasil
+995;Empresa 995;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Diadema;São Paulo;Brasil
+996;Empresa 996;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Goiânia;Goiás;Brasil
+997;Empresa 997;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Taboão da Serra;São Paulo;Brasil
+998;Empresa 998;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+1003;Empresa 1003;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Canela;Rio Grande do Sul;Brasil
+1004;Empresa 1004;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Vinhedo;São Paulo;Brasil
+1006;Empresa 1006;0,00%;;Sim;Efetivo;Barueri;São Paulo;
+1007;Empresa 1007;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Goiânia;Goiás;Brasil
+1008;Empresa 1008;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1009;Empresa 1009;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1010;Empresa 1010;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1011;Empresa 1011;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Cambé;Paraná;Brasil
+1012;Empresa 1012;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1013;Empresa 1013;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1014;Empresa 1014;0,00%;Multinacional;Sim;Efetivo;Vargem Grande Paulista;São Paulo;Brasil
+1015;Empresa 1015;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1017;Empresa 1017;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+1018;Empresa 1018;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1019;Empresa 1019;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1020;Empresa 1020;0,00%;;-;;;;
+1021;Empresa 1021;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1022;Empresa 1022;0,00%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;Brasil
+1023;Empresa 1023;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1024;Empresa 1024;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+1026;Empresa 1026;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1028;Empresa 1028;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Santo André;São Paulo;Brasil
+1029;Empresa 1029;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;brasil
+1030;Empresa 1030;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Cotia;São Paulo;brasil
+1031;Empresa 1031;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Caetano do Sul;São Paulo;Brasil
+1034;Empresa 1034;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1035;Empresa 1035;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1036;Empresa 1036;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1037;Empresa 1037;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santos;São Paulo;Brasil
+1038;Empresa 1038;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1039;Empresa 1039;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1040;Empresa 1040;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1042;Empresa 1042;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Paulínia;São Paulo;Brasil
+1043;Empresa 1043;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1044;Empresa 1044;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1045;Empresa 1045;0,00%;;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+1046;Empresa 1046;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santana de Parnaíba;São Paulo;Brasil
+1047;Empresa 1047;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1048;Empresa 1048;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1049;Empresa 1049;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1050;Empresa 1050;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1051;Empresa 1051;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1052;Empresa 1052;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Londrina;Paraná;Brasil
+1053;Empresa 1053;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1054;Empresa 1054;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Porto Alegre;Rio Grande do Sul;Brasil
+1055;Empresa 1055;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1056;Empresa 1056;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Lagoa Santa;Minas Gerais;Brasil
+1057;Empresa 1057;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Mogi das Cruzes;São Paulo;Brasil
+1058;Empresa 1058;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1059;Empresa 1059;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Porto Alegre;Rio Grande do Sul;Brasil
+1060;Empresa 1060;0,00%;;-;;;;
+1061;Empresa 1061;0,00%;;-;;;;
+1062;Empresa 1062;0,00%;;-;;;;
+1063;Empresa 1063;0,00%;;-;;;;
+1064;Empresa 1064;0,00%;;-;;;;
+1065;Empresa 1065;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;Brasil
+1066;Empresa 1066;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1067;Empresa 1067;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1068;Empresa 1068;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1069;Empresa 1069;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1070;Empresa 1070;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1071;Empresa 1071;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1073;Empresa 1073;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Taboão da Serra;São Paulo;Brasil
+1074;Empresa 1074;0,00%;;-;;;;
+1075;Empresa 1075;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Duque de Caxias;Rio de Janeiro;Brasil
+1076;Empresa 1076;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+1077;Empresa 1077;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1079;Empresa 1079;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+1080;Empresa 1080;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+1081;Empresa 1081;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1086;Empresa 1086;0,00%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+1087;Empresa 1087;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1088;Empresa 1088;0,00%;Multinacional;Sim;Efetivo;São Caetano do Sul;São Paulo;Brasil
+1090;Empresa 1090;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1091;Empresa 1091;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1092;Empresa 1092;0,00%;;-;;JOINVILLE;Santa Catarina;Brasil
+1093;Empresa 1093;0,00%;;-;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1094;Empresa 1094;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Toledo;Paraná;Brasil
+1095;Empresa 1095;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1096;Empresa 1096;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Jandira;São Paulo;Brasil
+1097;Empresa 1097;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1098;Empresa 1098;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1099;Empresa 1099;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Jacareí;São Paulo;Brasil
+1100;Empresa 1100;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1101;Empresa 1101;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1102;Empresa 1102;0,00%;;-;;;;
+1104;Empresa 1104;0,00%;Nacional;Sim;Cooperador;Niterói;Rio de Janeiro;Brasil
+1105;Empresa 1105;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1106;Empresa 1106;0,00%;;-;;São Paulo;São Paulo;
+1107;Empresa 1107;0,00%;;-;;São Paulo;São Paulo;
+1109;Empresa 1109;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1110;Empresa 1110;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1111;Empresa 1111;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itajaí;Santa Catarina;Brasil
+1112;Empresa 1112;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1113;Empresa 1113;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Goiânia;Goiás;Brasil
+1114;Empresa 1114;0,00%;Nacional;Sim;Efetivo;Hortolândia;São Paulo;Brasil
+1115;Empresa 1115;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+1116;Empresa 1116;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santana de Parnaíba;São Paulo;
+1117;Empresa 1117;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1118;Empresa 1118;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1119;Empresa 1119;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1120;Empresa 1120;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Paulínia;São Paulo;Brasil
+1122;Empresa 1122;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1123;Empresa 1123;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1124;Empresa 1124;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1125;Empresa 1125;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Itupeva;São Paulo;Brasil
+1126;Empresa 1126;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Belo Horizonte;Minas Gerais;Brasil
+1127;Empresa 1127;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Sorocaba;São Paulo;Brasil
+1128;Empresa 1128;0,00%;Nacional;Sim;Cooperador;Rio de Janeiro;Rio de Janeiro;Brasil
+1129;Empresa 1129;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+1130;Empresa 1130;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1131;Empresa 1131;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Bernardo do Campo;São Paulo;Brasil
+1132;Empresa 1132;0,00%;;-;;;;
+1133;Empresa 1133;0,00%;Nacional;Sim;Efetivo;Barueri;São Paulo;Brasil
+1134;Empresa 1134;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1135;Empresa 1135;0,00%;;-;;;;
+1139;Empresa 1139;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1140;Empresa 1140;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1141;Empresa 1141;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Frankfurt;;Alemanha
+1142;Empresa 1142;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Nova Lima;Minas Gerais;Brasil
+1143;Empresa 1143;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1144;Empresa 1144;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1145;Empresa 1145;0,00%;Multinacional;Sim;Cooperador;Belo Horizonte;Minas Gerais;Brasil
+1146;Empresa 1146;0,00%;Nacional;Sim;Efetivo;Cotia;São Paulo;Brasil
+1147;Empresa 1147;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+1149;Empresa 1149;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1150;Empresa 1150;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+1152;Empresa 1152;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1153;Empresa 1153;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santos;São Paulo;Brasil
+1154;Empresa 1154;0,00%;Multinacional;Sim;Efetivo;Cajamar;São Paulo;Brasil
+1155;Empresa 1155;0,00%;;-;;;;
+1156;Empresa 1156;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itapevi;São Paulo;Brasil
+1157;Empresa 1157;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Cosmópolis;São Paulo;Brasil
+1158;Empresa 1158;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Cotia;São Paulo;Brasil
+1159;Empresa 1159;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Indaiatuba;São Paulo;Brasil
+1160;Empresa 1160;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+1161;Empresa 1161;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1164;Empresa 1164;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Campinas;São Paulo;Brasil
+1165;Empresa 1165;0,00%;Nacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1167;Empresa 1167;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+1171;Empresa 1171;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itajaí;Santa Catarina;Brasil
+1172;Empresa 1172;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1173;Empresa 1173;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Vila Velha;Espírito Santo;Brasil
+1174;Empresa 1174;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Brasília;Distrito Federal;Brasil
+1176;Empresa 1176;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1177;Empresa 1177;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Viamão;Rio Grande do Sul;Brasil
+1180;Empresa 1180;0,00%;Nacional;Sim;Efetivo;Anápolis;Goiás;Brasil
+1181;Empresa 1181;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Embu das Artes;São Paulo;Brasil
+1182;Empresa 1182;0,00%;Multinacional;Sim;Cooperador;Piracicaba;São Paulo;Brasil
+1183;Empresa 1183;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1184;Empresa 1184;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+1185;Empresa 1185;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Juiz de Fora;Minas Gerais;Brasil
+1186;Empresa 1186;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Delaware;;EUA
+1187;Empresa 1187;0,00%;;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1189;Empresa 1189;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio Claro;São Paulo;Brasil
+1191;Empresa 1191;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1192;Empresa 1192;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Jundiaí;São Paulo;Brasil
+1193;Empresa 1193;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Anápolis;Goiás;Brasil
+1194;Empresa 1194;0,00%;Nacional;Sim;Efetivo;São José dos Campos;São Paulo;Brasil
+1196;Empresa 1196;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Jataí;Goiás;Brasil
+1197;Empresa 1197;0,00%;Multinacional;Sim;Efetivo;São José dos Pinhais;Paraná;Brasil
+1198;Empresa 1198;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+1199;Empresa 1199;0,00%;;Sim;Fornecedor de Bens e Serviços;Ribeirão Preto;São Paulo;Brasil
+1200;Empresa 1200;0,00%;;Sim;Efetivo;Vargem Grande Paulista;São Paulo;
+1201;Empresa 1201;0,00%;;Sim;Fornecedor de Bens e Serviços;Itu;São Paulo;Brasil
+1202;Empresa 1202;0,00%;Multinacional;Sim;Fornecedor de Bens e Serviços;Itupeva;São Paulo;Brasil
+1203;Empresa 1203;0,00%;Nacional;Sim;Efetivo;Jundiaí;São Paulo;Brasil
+1204;Empresa 1204;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1205;Empresa 1205;0,00%;Nacional;Sim;Efetivo;Indaiatuba;São Paulo;Brasil
+1206;Empresa 1206;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Paulo;São Paulo;Brasil
+1208;Empresa 1208;0,00%;Nacional;Sim;Efetivo;Campinas;São Paulo;Brasil
+1209;Empresa 1209;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Bragança Paulista;São Paulo;Brasil
+1210;Empresa 1210;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Lauro de Freitas;Bahia;Brasil
+1211;Empresa 1211;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Itupeva;São Paulo;Brasil
+1212;Empresa 1212;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1213;Empresa 1213;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Barueri;São Paulo;Brasil
+1214;Empresa 1214;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;São Caetano do Sul;São Paulo;Brasil
+1215;Empresa 1215;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Valinhos;São Paulo;Brasil
+1216;Empresa 1216;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Maringá;Paraná;Brasil
+1217;Empresa 1217;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Santa Rita do Passa Quatro;São Paulo;Brasil
+1218;Empresa 1218;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Duque de Caxias;Rio de Janeiro;Brasil
+1221;Empresa 1221;0,00%;Nacional;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1222;Empresa 1222;0,00%;;Sim;Efetivo;Manaus;Amazonas;Brasil
+1224;Empresa 1224;0,00%;Multinacional;Sim;Cooperador;São Paulo;São Paulo;
+1225;Empresa 1225;0,00%;;Sim;Fornecedor de Bens e Serviços;Guarulhos;São Paulo;Brasil
+1226;Empresa 1226;0,00%;;Sim;Fornecedor de Bens e Serviços;Ribeirão Preto;São Paulo;
+1227;Empresa 1227;0,00%;Nacional;Sim;Efetivo;Diadema;São Paulo;Brasil
+1228;Empresa 1228;0,00%;Multinacional;Sim;Efetivo;São Paulo;São Paulo;Brasil
+1229;Empresa 1229;0,00%;;Sim;Fornecedor de Bens e Serviços;Rio de Janeiro;Rio de Janeiro;Brasil
+1239;Empresa 1239;0,00%;Multinacional;Sim;Efetivo;;;
+1242;Empresa 1242;0,00%;Multinacional;sim;Cooperador;;;
+1247;Empresa 1247;0,00%;;Sim;Fornecedor de Bens e Serviços;;;
+1253;Empresa 1253;0,00%;;Sim;Fornecedor de Bens e Serviços;;;
+1255;Empresa 1255;0,00%;Multinacional;Sim;Efetivo;;;
+1257;Empresa 1257;0,00%;Nacional;Sim;Cooperador;;;
+1263;Empresa 1263;0,00%;;Sim;Fornecedor de Bens e Serviços;;;
+1286;Empresa 1286;0,00%;Nacional;Sim;;;;
+1288;Empresa 1288;0,00%;;Sim;Fornecedor de Bens e Serviços;;;
+1290;Empresa 1290;0,00%;Multinacional;Sim;Cooperador;;;
+1301;Empresa 1301;0,00%;;Sim;Fornecedor de Bens e Serviços;;;

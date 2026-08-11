@@ -1,0 +1,23 @@
+# Report 12 - Acervo & Explorador
+
+- Título: `Acervo & Explorador`
+- Objetivo de negócio: disponibilizar um catálogo pesquisável do acervo de pesquisas.
+- Público: externo.
+- Cards/KPIs:
+  - pesquisas no acervo
+  - áreas
+  - ano inicial do acervo
+  - busca por tema/ano
+- Visuais:
+  - tabela/catálogo de pesquisas
+  - barras por área
+  - donut por ano
+- Dados necessários:
+  - `pesquisas.titulo`
+  - `pesquisas.area`
+  - `pesquisas.data_solicitacao`
+  - `pesquisas.tipo`
+- Status de viabilidade com a base atual: `100% possível`
+- Principais lacunas/riscos:
+  - o poder de busca depende de tratar bem `titulo`, `objetivos` e filtros de tempo.
+  - para ficar realmente bom, convém normalizar tags ou temas além do texto livre.

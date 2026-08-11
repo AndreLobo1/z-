@@ -1,0 +1,3469 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e analítica do projeto Sidusfarma">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../inventario_das_bases/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Relatório Quantitativo - Sidusfarma Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelagem-quantitativa-dos-dados-do-parceiro-sidusfarma" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Sidusfarma Docs" class="md-header__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sidusfarma Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Relatório Quantitativo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Sidusfarma Docs" class="md-nav__button md-logo" aria-label="Sidusfarma Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sidusfarma Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório Quantitativo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório Quantitativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-contextualizacao-quantitativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Contextualização Quantitativa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Contextualização Quantitativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-processo-representado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Processo Representado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-decisoes-que-podem-ser-apoiadas-por-esta-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Decisões que Podem Ser Apoiadas por esta Análise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-inventario-estrutural-das-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Inventário Estrutural das Bases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-unidades-de-analise-e-taxonomia-de-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Unidades de Análise e Taxonomia de Variáveis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Unidades de Análise e Taxonomia de Variáveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mapeamento-das-unidades-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Mapeamento das Unidades de Análise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-taxonomia-de-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Taxonomia de Variáveis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Taxonomia de Variáveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapeamento-completo-do-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapeamento Completo do Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-qualidade-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Qualidade dos Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Qualidade dos Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-boletim-de-pontuacao-dama-dmbok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Boletim de Pontuação DAMA-DMBOK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-completude-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Completude Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-completude-das-variaveis-criticas-e-impacto-nos-indicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Completude das Variáveis Críticas e Impacto nos Indicadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-inconsistencias-e-lacunas-de-preenchimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Inconsistências e Lacunas de Preenchimento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-integridade-referencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Integridade Referencial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Integridade Referencial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-auditadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relações Auditadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-integras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relações Íntegras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-com-orfaos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relações com Órfãos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impacto-nos-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impacto nos KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-viabilidade-dos-relatorios-com-a-base-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Viabilidade dos Relatórios com a Base Atual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-estatistica-descritiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Estatística Descritiva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Estatística Descritiva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-variaveis-categoricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Variáveis Categóricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Variáveis Categóricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-das-pesquisas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status das Pesquisas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-pesquisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipo de Pesquisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfil-das-empresas-vinculo-associativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfil das Empresas: Vínculo Associativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#departamentos-dos-contatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Departamentos dos Contatos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-questao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipo de Questão
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-variaveis-numericas-tendencia-central-e-dispersao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Variáveis Numéricas: Tendência Central e Dispersão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-distribuicao-temporal-volume-de-pesquisas-solicitadas-por-trimestre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Distribuição Temporal: Volume de Pesquisas Solicitadas por Trimestre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-valores-extremos-identificacao-pelo-metodo-iqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Valores Extremos: Identificação pelo Método IQR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Valores Extremos: Identificação pelo Método IQR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valores-extremos-por-variavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valores Extremos por Variável
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-indicadores-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Indicadores de Negócio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Indicadores de Negócio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-indicadores-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Indicadores Principais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-indicadores-complementares-universais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Indicadores Complementares Universais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-familias-de-indicadores-derivados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Famílias de Indicadores Derivados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-indicadores-especificos-por-pergunta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Indicadores Específicos por Pergunta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-granularidade-e-sintese-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Granularidade e Síntese Final
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Granularidade e Síntese Final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-sensibilidade-por-granularidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Sensibilidade por Granularidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-variaveis-e-indicadores-mais-importantes-para-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Variáveis e Indicadores Mais Importantes para o Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-problemas-de-qualidade-que-precisam-ser-tratados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Problemas de Qualidade que Precisam Ser Tratados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-cuidados-matematicos-antes-da-automacao-dos-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Cuidados Matemáticos Antes da Automação dos KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossário
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventario_das_bases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventário das Bases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catálogo de Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 03
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 04
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 05
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 06
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 07
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 08
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 09
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogo_reports/relatorio_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Report 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Especificações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/spec-analise-quantitativa-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação da Análise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specs/adr-001-pipeline-analise-quantitativa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR 001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-resumo-executivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Resumo Executivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-contextualizacao-quantitativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Contextualização Quantitativa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Contextualização Quantitativa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-processo-representado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Processo Representado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-decisoes-que-podem-ser-apoiadas-por-esta-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Decisões que Podem Ser Apoiadas por esta Análise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-inventario-estrutural-das-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Inventário Estrutural das Bases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-unidades-de-analise-e-taxonomia-de-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Unidades de Análise e Taxonomia de Variáveis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Unidades de Análise e Taxonomia de Variáveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mapeamento-das-unidades-de-analise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Mapeamento das Unidades de Análise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-taxonomia-de-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Taxonomia de Variáveis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Taxonomia de Variáveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapeamento-completo-do-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapeamento Completo do Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-qualidade-dos-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Qualidade dos Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Qualidade dos Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-boletim-de-pontuacao-dama-dmbok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Boletim de Pontuação DAMA-DMBOK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-completude-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Completude Geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-completude-das-variaveis-criticas-e-impacto-nos-indicadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Completude das Variáveis Críticas e Impacto nos Indicadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-inconsistencias-e-lacunas-de-preenchimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Inconsistências e Lacunas de Preenchimento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-integridade-referencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Integridade Referencial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Integridade Referencial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-auditadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relações Auditadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-integras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relações Íntegras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacoes-com-orfaos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relações com Órfãos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impacto-nos-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impacto nos KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-viabilidade-dos-relatorios-com-a-base-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Viabilidade dos Relatórios com a Base Atual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-estatistica-descritiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Estatística Descritiva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Estatística Descritiva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-variaveis-categoricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Variáveis Categóricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Variáveis Categóricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-das-pesquisas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status das Pesquisas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-pesquisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipo de Pesquisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perfil-das-empresas-vinculo-associativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfil das Empresas: Vínculo Associativo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#departamentos-dos-contatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Departamentos dos Contatos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-de-questao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipo de Questão
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-variaveis-numericas-tendencia-central-e-dispersao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Variáveis Numéricas: Tendência Central e Dispersão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-distribuicao-temporal-volume-de-pesquisas-solicitadas-por-trimestre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Distribuição Temporal: Volume de Pesquisas Solicitadas por Trimestre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-valores-extremos-identificacao-pelo-metodo-iqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Valores Extremos: Identificação pelo Método IQR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Valores Extremos: Identificação pelo Método IQR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valores-extremos-por-variavel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valores Extremos por Variável
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-indicadores-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Indicadores de Negócio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Indicadores de Negócio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-indicadores-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Indicadores Principais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-indicadores-complementares-universais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Indicadores Complementares Universais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-familias-de-indicadores-derivados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Famílias de Indicadores Derivados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-indicadores-especificos-por-pergunta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Indicadores Específicos por Pergunta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-granularidade-e-sintese-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Granularidade e Síntese Final
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Granularidade e Síntese Final">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-sensibilidade-por-granularidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Sensibilidade por Granularidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-variaveis-e-indicadores-mais-importantes-para-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Variáveis e Indicadores Mais Importantes para o Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-problemas-de-qualidade-que-precisam-ser-tratados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Problemas de Qualidade que Precisam Ser Tratados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-cuidados-matematicos-antes-da-automacao-dos-kpis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Cuidados Matemáticos Antes da Automação dos KPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glossário
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modelagem-quantitativa-dos-dados-do-parceiro-sidusfarma">Modelagem Quantitativa dos Dados do Parceiro Sidusfarma<a class="headerlink" href="#modelagem-quantitativa-dos-dados-do-parceiro-sidusfarma" title="Permanent link">&para;</a></h1>
+<p>Este relatório consolida a leitura quantitativa das 6 bases relacionais do parceiro com foco em qualidade de dados, estrutura analítica, indicadores e viabilidade dos relatórios previstos no artefato. As bases brutas analisadas estão em <code>DADOS/</code>, os cálculos são reprodutíveis a partir dos scripts em <code>scripts/data_quality/</code>, <code>scripts/metrics/</code> e <code>scripts/runners/</code>, os resultados persistidos desta análise estão em <code>docs/data/</code>, e a auditoria segue critérios do DAMA-DMBOK <a href="#ref-1">1</a>.</p>
+<hr />
+<h2 id="0-resumo-executivo">0. Resumo Executivo<a class="headerlink" href="#0-resumo-executivo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Escopo</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Bases auditadas</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">Registros analisados</td>
+<td style="text-align: right;">46.148</td>
+</tr>
+<tr>
+<td style="text-align: left;">Colunas analisadas</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPIs materializados</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lacunas relevantes</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Reports avaliados</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Diagnóstico executivo</th>
+<th style="text-align: center;">Status</th>
+<th style="text-align: left;">Detalhe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#3-qualidade-dos-dados">Qualidade dos dados</a></td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">completude geral de <strong>77,61%</strong> e <strong>3 relações com órfãos</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#viabilidade-dos-relatorios">Viabilidade analítica</a></td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">maioria dos reports é executável com a base atual</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#5-indicadores-de-negócio">Pontos fortes</a></td>
+<td style="text-align: center;">Forte</td>
+<td style="text-align: left;">volume, adesão, perfil, acervo e tendência</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_02/">Pontos de atenção</a></td>
+<td style="text-align: center;">Atenção</td>
+<td style="text-align: left;">prazo/SLA detalhado, <code>complexidade</code>, etapas intermediárias</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#35-integridade-referencial">Prioridade imediata</a></td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">saneamento das lacunas e tratamento dos órfãos</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Decisão executiva</th>
+<th style="text-align: left;">Leitura rápida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Avançar agora</td>
+<td style="text-align: left;">reports de produção, comparativo temporal, perfil, engajamento e acervo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Avançar com ressalva</td>
+<td style="text-align: left;">prazo/SLA detalhado e benchmark semântico por pergunta</td>
+</tr>
+<tr>
+<td style="text-align: left;">Aprofundar nos detalhes</td>
+<td style="text-align: left;"><a href="../inventario_das_bases/">Inventário das Bases</a>, <a href="#34-inconsistencias-e-lacunas-de-preenchimento">Lacunas</a>, <a href="#35-integridade-referencial">Integridade Referencial</a> e <a href="#5-indicadores-de-negócio">Indicadores</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-contextualizacao-quantitativa">1. Contextualização Quantitativa<a class="headerlink" href="#1-contextualizacao-quantitativa" title="Permanent link">&para;</a></h2>
+<h3 id="11-processo-representado">1.1 Processo Representado<a class="headerlink" href="#11-processo-representado" title="Permanent link">&para;</a></h3>
+<p>As bases de dados representam a operação ponta a ponta da Central de Pesquisas Setoriais do Sidusfarma: o fluxo que começa com o cadastro de empresas farmacêuticas e seus contatos executivos, passa pela solicitação, elaboração e lançamento de pesquisas setoriais, e termina na tabulação de respostas e divulgação dos relatórios consolidados ao setor. A principal unidade de análise adotada neste relatório é o <strong>registro de participação</strong> (<code>respondentes.csv</code>), porque ele conecta uma empresa a uma pesquisa específica e sustenta os principais indicadores de adesão e engajamento do modelo relacional.</p>
+<h3 id="12-decisoes-que-podem-ser-apoiadas-por-esta-analise">1.2 Decisões que Podem Ser Apoiadas por esta Análise<a class="headerlink" href="#12-decisoes-que-podem-ser-apoiadas-por-esta-analise" title="Permanent link">&para;</a></h3>
+<p>As bases já permitem apoiar decisões práticas do parceiro, tanto no desenho das pesquisas quanto na gestão operacional da Central.</p>
+<ul>
+<li><strong>Planejamento do catálogo anual:</strong> com 170 pesquisas de "Solicitação de associado" e 84 "Pesquisas fixas anuais", o portfólio é majoritariamente endógeno; isso ajuda a definir quais temas devem entrar no calendário recorrente.</li>
+<li><strong>Revisão do tamanho dos questionários:</strong> <code>tempo_preenchimento</code> tem mediana de 5 minutos e máximo de 60 minutos; questionários muito longos podem ser revistos quando o objetivo for elevar adesão ou reduzir atrito.</li>
+<li><strong>Priorização da base associativa:</strong> a adesão sobre a base total é 53,79%, mas sobe para 68,35% quando o universo passa a ser apenas as associadas; isso muda a estratégia de relacionamento e cobrança de participação.</li>
+<li><strong>Instrumentação do processo de coleta:</strong> <code>hora_inicio</code> e <code>hora_termino</code> estão praticamente vazios; sem isso, o parceiro não mede abandono, horário de pico nem tempo real de resposta por participante.</li>
+<li><strong>Melhoria do controle operacional:</strong> <code>complexidade</code>, <code>data_aprov</code> e <code>prorrogada_ate</code> existem, mas o uso é inconsistente; isso limita análises de gargalo e SLA e indica necessidade de padronização no sistema de origem.</li>
+</ul>
+<h3 id="13-inventario-estrutural-das-bases">1.3 Inventário Estrutural das Bases<a class="headerlink" href="#13-inventario-estrutural-das-bases" title="Permanent link">&para;</a></h3>
+<p>O inventário completo das 6 bases, com todas as colunas, exemplos de 3 linhas por dataset e ligações possíveis entre as tabelas, está em <a href="../inventario_das_bases/">Inventário das Bases</a>. Essa página passa a ser a referência estrutural do projeto para leitura do schema físico e dos joins possíveis.</p>
+<hr />
+<h2 id="2-unidades-de-analise-e-taxonomia-de-variaveis">2. Unidades de Análise e Taxonomia de Variáveis<a class="headerlink" href="#2-unidades-de-analise-e-taxonomia-de-variaveis" title="Permanent link">&para;</a></h2>
+<h3 id="21-mapeamento-das-unidades-de-analise">2.1 Mapeamento das Unidades de Análise<a class="headerlink" href="#21-mapeamento-das-unidades-de-analise" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;">Unidade de Análise</th>
+<th style="text-align: left;">O que representa cada linha</th>
+<th style="text-align: right;">Registros</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>clientes.csv</code></td>
+<td style="text-align: left;">Contato Executivo</td>
+<td style="text-align: left;">Profissional cadastrado vinculado a uma empresa</td>
+<td style="text-align: right;">5.430</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas.csv</code></td>
+<td style="text-align: left;">Empresa Farmacêutica</td>
+<td style="text-align: left;">Organização do setor cadastrada no Sidusfarma</td>
+<td style="text-align: right;">779</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.csv</code></td>
+<td style="text-align: left;">Instrumento de Pesquisa</td>
+<td style="text-align: left;">Pesquisa setorial solicitada, em andamento ou concluída</td>
+<td style="text-align: right;">366</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes.csv</code></td>
+<td style="text-align: left;">Item do Questionário</td>
+<td style="text-align: left;">Pergunta individual pertencente a um instrumento</td>
+<td style="text-align: right;">231</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.csv</code></td>
+<td style="text-align: left;">Registro de Participação</td>
+<td style="text-align: left;">Participação de uma empresa em uma pesquisa</td>
+<td style="text-align: right;">18.735</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respostas.csv</code></td>
+<td style="text-align: left;">Microdado de Resposta</td>
+<td style="text-align: left;">Resposta de um respondente a uma questão específica</td>
+<td style="text-align: right;">20.607</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-taxonomia-de-variaveis">2.2 Taxonomia de Variáveis<a class="headerlink" href="#22-taxonomia-de-variaveis" title="Permanent link">&para;</a></h3>
+<p>As variáveis abaixo foram priorizadas por três critérios combinados: completude mínima, vínculo direto com os <a href="#5-indicadores-de-negócio">indicadores de negócio</a> e capacidade de segmentar ou explicar comportamento operacional.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;"><a href="#glossário">Variável</a></th>
+<th style="text-align: left;"><a href="#glossário">Tipo Matemático</a></th>
+<th style="text-align: left;"><a href="#glossário">Domínio</a></th>
+<th style="text-align: left;">O que representa</th>
+<th style="text-align: left;">Relevância para o projeto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>status</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">{Finalizada, Em andamento, Em tabulação, ...}</td>
+<td style="text-align: left;">estágio atual da pesquisa</td>
+<td style="text-align: left;">base de <a href="#kpi-02">KPI-02</a> e dos <a href="../catalogo_reports/relatorio_01/">reports 01</a> e <a href="../catalogo_reports/relatorio_03/">03</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>tipo</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">{Solicitação de associado, Pesquisa fixa anual, ...}</td>
+<td style="text-align: left;">origem da demanda</td>
+<td style="text-align: left;">segmentação central dos <a href="../catalogo_reports/relatorio_01/">reports 01</a> e <a href="../catalogo_reports/relatorio_11/">11</a> e do recorte de <a href="#kpi-02">KPI-02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>area</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">{RH, Regulatórios, Business Support, ...}</td>
+<td style="text-align: left;">área temática ou demandante</td>
+<td style="text-align: left;">composição temática dos <a href="../catalogo_reports/relatorio_01/">reports 01</a>, <a href="../catalogo_reports/relatorio_05/">05</a> e <a href="../catalogo_reports/relatorio_12/">12</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>participantes</code></td>
+<td style="text-align: left;">Numérica discreta</td>
+<td style="text-align: left;">[6, 358]</td>
+<td style="text-align: left;">quantidade de participantes por pesquisa</td>
+<td style="text-align: left;">base de <a href="#kpi-03">KPI-03</a> e da leitura de engajamento no <a href="../catalogo_reports/relatorio_06/">report 06</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>tempo_preenchimento</code></td>
+<td style="text-align: left;">Numérica contínua</td>
+<td style="text-align: left;">[1, 60] min</td>
+<td style="text-align: left;">duração média estimada do questionário</td>
+<td style="text-align: left;">base de <a href="#kpi-07">KPI-07</a> e do bloco de esforço do respondente no <a href="../catalogo_reports/relatorio_07/">report 07</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>dias_uteis_para_entrega</code></td>
+<td style="text-align: left;">Numérica contínua</td>
+<td style="text-align: left;">[2, 89] dias</td>
+<td style="text-align: left;">prazo operacional até entrega/divulgação</td>
+<td style="text-align: left;">base de <a href="#kpi-08">KPI-08</a> e dos blocos de SLA dos <a href="../catalogo_reports/relatorio_02/">reports 02</a> e <a href="../catalogo_reports/relatorio_03/">03</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>data_solicitacao</code></td>
+<td style="text-align: left;">Temporal</td>
+<td style="text-align: left;">dd/mm/aaaa</td>
+<td style="text-align: left;">data de abertura da demanda</td>
+<td style="text-align: left;">eixo temporal dos <a href="../catalogo_reports/relatorio_01/">reports 01</a>, <a href="../catalogo_reports/relatorio_09/">09</a>, <a href="../catalogo_reports/relatorio_11/">11</a> e <a href="../catalogo_reports/relatorio_12/">12</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>complexidade</code></td>
+<td style="text-align: left;">Categórica ordinal</td>
+<td style="text-align: left;">{baixa, média, alta}</td>
+<td style="text-align: left;">dificuldade estimada da pesquisa</td>
+<td style="text-align: left;">segmentação prevista nos <a href="../catalogo_reports/relatorio_02/">reports 02</a> e <a href="../catalogo_reports/relatorio_05/">05</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>dias úteis aberta</code></td>
+<td style="text-align: left;">Numérica discreta</td>
+<td style="text-align: left;">[1, 31]</td>
+<td style="text-align: left;">permanência da pesquisa aberta</td>
+<td style="text-align: left;">detalhamento de janela de coleta no <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>dias para tabulação</code></td>
+<td style="text-align: left;">Numérica contínua</td>
+<td style="text-align: left;">[1, 56]</td>
+<td style="text-align: left;">tempo consumido na tabulação</td>
+<td style="text-align: left;">bloco de gargalo operacional do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas</code></td>
+<td style="text-align: left;"><code>dias entre a solicitação e a divulgação</code></td>
+<td style="text-align: left;">Numérica contínua</td>
+<td style="text-align: left;">[2, 89]</td>
+<td style="text-align: left;">ciclo total da pesquisa</td>
+<td style="text-align: left;">visão de ciclo dos <a href="../catalogo_reports/relatorio_02/">reports 02</a> e <a href="../catalogo_reports/relatorio_03/">03</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas</code></td>
+<td style="text-align: left;"><code>Associado</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">{Sim, Não}</td>
+<td style="text-align: left;">vínculo associativo</td>
+<td style="text-align: left;">base de <a href="#kpi-04">KPI-04</a>, <a href="#kpi-05">KPI-05</a>, <a href="#kpi-06">KPI-06</a> e da segmentação do <a href="../catalogo_reports/relatorio_06/">report 06</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas</code></td>
+<td style="text-align: left;"><code>% de mercado</code></td>
+<td style="text-align: left;">Categórica textual numérica</td>
+<td style="text-align: left;">percentuais textuais</td>
+<td style="text-align: left;">participação estimada de mercado</td>
+<td style="text-align: left;">representatividade dos <a href="../catalogo_reports/relatorio_09/">reports 09</a> e <a href="../catalogo_reports/relatorio_10/">10</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas</code></td>
+<td style="text-align: left;"><code>Nacionalidade</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">valores institucionais observados</td>
+<td style="text-align: left;">perfil institucional da empresa</td>
+<td style="text-align: left;">composição do <a href="../catalogo_reports/relatorio_08/">report 08</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clientes</code></td>
+<td style="text-align: left;"><code>cargo</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">títulos livres</td>
+<td style="text-align: left;">papel do respondente</td>
+<td style="text-align: left;">perfil de respondentes no <a href="../catalogo_reports/relatorio_08/">report 08</a> e apoio ao benchmark do <a href="../catalogo_reports/relatorio_10/">report 10</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>clientes</code></td>
+<td style="text-align: left;"><code>departamento</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">áreas funcionais</td>
+<td style="text-align: left;">área interna do contato</td>
+<td style="text-align: left;">perfil funcional no <a href="../catalogo_reports/relatorio_08/">report 08</a> e concentração usada em KPI complementar</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes</code></td>
+<td style="text-align: left;"><code>tipo</code></td>
+<td style="text-align: left;">Categórica nominal</td>
+<td style="text-align: left;">{multipla_escolha, caixas_de_selecao, numerica, aberta, matriz_avaliacao}</td>
+<td style="text-align: left;">formato da pergunta</td>
+<td style="text-align: left;">define comparabilidade do <a href="../catalogo_reports/relatorio_07/">report 07</a> e do <a href="../catalogo_reports/relatorio_10/">report 10</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes</code></td>
+<td style="text-align: left;"><code>confianca</code></td>
+<td style="text-align: left;">Categórica ordinal</td>
+<td style="text-align: left;">{alta, média, baixa}</td>
+<td style="text-align: left;">grau de confiança atribuído à pergunta</td>
+<td style="text-align: left;">núcleo do <a href="../catalogo_reports/relatorio_04/">report 04</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes</code></td>
+<td style="text-align: left;"><code>qtd_alternativas</code></td>
+<td style="text-align: left;">Numérica discreta</td>
+<td style="text-align: left;">inteiros não negativos</td>
+<td style="text-align: left;">quantidade de alternativas por questão</td>
+<td style="text-align: left;">leitura de complexidade do instrumento no <a href="../catalogo_reports/relatorio_07/">report 07</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mapeamento-completo-do-schema">Mapeamento Completo do Schema<a class="headerlink" href="#mapeamento-completo-do-schema" title="Permanent link">&para;</a></h4>
+<p>O mapeamento completo do schema está em <a href="../inventario_das_bases/">Inventário das Bases</a>.</p>
+<hr />
+<h2 id="3-qualidade-dos-dados">3. Qualidade dos Dados<a class="headerlink" href="#3-qualidade-dos-dados" title="Permanent link">&para;</a></h2>
+<p>A auditoria foi conduzida com base nos critérios DAMA-DMBOK <a href="#ref-1">1</a>, cobrindo completude, unicidade, integridade referencial e consistência de domínio. O escopo total analisado foi de 46.148 registros distribuídos em 75 colunas.</p>
+<h3 id="31-boletim-de-pontuacao-dama-dmbok">3.1 Boletim de Pontuação DAMA-DMBOK<a class="headerlink" href="#31-boletim-de-pontuacao-dama-dmbok" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Métrica executiva</th>
+<th style="text-align: right;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Completude geral consolidada</td>
+<td style="text-align: right;">77,61%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Datasets auditados</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">Registros órfãos em FKs</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: left;">Duplicatas exatas</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Colunas 100% nulas</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: right;">Registros</th>
+<th style="text-align: right;">Colunas</th>
+<th style="text-align: right;">Completude média</th>
+<th style="text-align: right;">Nulos totais</th>
+<th style="text-align: right;">Colunas 100% nulas</th>
+<th style="text-align: left;">Colunas mais críticas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>clientes.csv</code></td>
+<td style="text-align: right;">5.430</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">99,75%</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><code>cargo</code>, <code>departamento</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas.csv</code></td>
+<td style="text-align: right;">779</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">96,26%</td>
+<td style="text-align: right;">262</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><code>Nacionalidade</code>, <code>País</code>, <code>Tipo de Associado</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.csv</code></td>
+<td style="text-align: right;">366</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">54,94%</td>
+<td style="text-align: right;">5.442</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;"><code>data_aprov</code>, <code>complexidade</code>, <code>tempo_preenchimento</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes.csv</code></td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">75,33%</td>
+<td style="text-align: right;">741</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;"><code>observacoes</code>, <code>linhas_matriz</code>, <code>colunas_matriz</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.csv</code></td>
+<td style="text-align: right;">18.735</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">67,34%</td>
+<td style="text-align: right;">36.717</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><code>hora_inicio</code>, <code>hora_termino</code>, <code>id_cliente</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respostas.csv</code></td>
+<td style="text-align: right;">20.607</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">72,07%</td>
+<td style="text-align: right;">51.791</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;"><code>linha_matriz</code>, <code>coluna_matriz</code>, <code>alternativa</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-completude-geral">3.2 Completude Geral<a class="headerlink" href="#32-completude-geral" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: right;">Registros</th>
+<th style="text-align: right;">Colunas</th>
+<th style="text-align: right;">Completude Média</th>
+<th style="text-align: right;">Duplicatas</th>
+<th style="text-align: right;">Colunas 100% Nulas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>clientes.csv</code></td>
+<td style="text-align: right;">5.430</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">99,75%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas.csv</code></td>
+<td style="text-align: right;">779</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">96,26%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.csv</code></td>
+<td style="text-align: right;">366</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">54,94%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes.csv</code></td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">75,33%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.csv</code></td>
+<td style="text-align: right;">18.735</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">67,34%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respostas.csv</code></td>
+<td style="text-align: right;">20.607</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">72,07%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>46.148</strong></td>
+<td style="text-align: right;"><strong>75</strong></td>
+<td style="text-align: right;"><strong>77,61%</strong></td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td style="text-align: right;"><strong>12</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-completude-das-variaveis-criticas-e-impacto-nos-indicadores">3.3 Completude das Variáveis Críticas e Impacto nos Indicadores<a class="headerlink" href="#33-completude-das-variaveis-criticas-e-impacto-nos-indicadores" title="Permanent link">&para;</a></h3>
+<p><img alt="Completude das Variáveis Críticas" src="../images/completude_variaveis_criticas.png" /></p>
+<p>Chamamos de <strong>variáveis críticas</strong> as variáveis sem as quais um ou mais indicadores não podem ser calculados ou segmentados de forma confiável.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variável</th>
+<th style="text-align: left;">O que representa</th>
+<th style="text-align: left;">Por que é crítica</th>
+<th style="text-align: right;">Completude</th>
+<th style="text-align: left;">Impacto nos indicadores e relatórios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>pesquisas.status</code></td>
+<td style="text-align: left;">estágio atual da pesquisa</td>
+<td style="text-align: left;">define conclusão e funil macro</td>
+<td style="text-align: right;">100,0%</td>
+<td style="text-align: left;">taxa de conclusão com cobertura total</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.participantes</code></td>
+<td style="text-align: left;">volume de participantes por pesquisa</td>
+<td style="text-align: left;">sustenta adesão média por pesquisa</td>
+<td style="text-align: right;">91,5%</td>
+<td style="text-align: left;">indicadores de engajamento ficam parcialmente subestimados</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.dias_uteis_para_entrega</code></td>
+<td style="text-align: left;">prazo operacional total</td>
+<td style="text-align: left;">sustenta SLA e atraso</td>
+<td style="text-align: right;">90,4%</td>
+<td style="text-align: left;">relatórios de prazo precisam de aviso de cobertura parcial</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.tempo_preenchimento</code></td>
+<td style="text-align: left;">duração média do questionário</td>
+<td style="text-align: left;">mede esforço do respondente</td>
+<td style="text-align: right;">63,1%</td>
+<td style="text-align: left;">relatórios de usabilidade e esforço cobrem só parte da base</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.complexidade</code></td>
+<td style="text-align: left;">dificuldade estimada da pesquisa</td>
+<td style="text-align: left;">permitiria comparar prazo e carga por dificuldade</td>
+<td style="text-align: right;">24,6%</td>
+<td style="text-align: left;">fragiliza relatórios por complexidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pesquisas.data_aprov</code></td>
+<td style="text-align: left;">data de aprovação formal</td>
+<td style="text-align: left;">sustentaria etapa intermediária do ciclo</td>
+<td style="text-align: right;">5,5%</td>
+<td style="text-align: left;">enfraquece o report de ciclo de vida</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.hora_inicio</code> / <code>hora_termino</code></td>
+<td style="text-align: left;">marcações reais de início e fim</td>
+<td style="text-align: left;">permitiriam tempo individual de resposta</td>
+<td style="text-align: right;">4,3%</td>
+<td style="text-align: left;">inviabilizam análise real de abandono e ritmo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>empresas.% de mercado</code></td>
+<td style="text-align: left;">participação estimada de mercado</td>
+<td style="text-align: left;">sustenta representatividade do setor</td>
+<td style="text-align: right;">100,0% preenchido</td>
+<td style="text-align: left;">exige validação semântica por concentração de <code>0,00%</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-inconsistencias-e-lacunas-de-preenchimento">3.4 Inconsistências e Lacunas de Preenchimento<a class="headerlink" href="#34-inconsistencias-e-lacunas-de-preenchimento" title="Permanent link">&para;</a></h3>
+<p>As lacunas abaixo são relevantes porque afetam cálculo, interpretação ou credibilidade dos indicadores e dos relatórios.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Problema ou lacuna</th>
+<th style="text-align: left;">Evidência</th>
+<th style="text-align: left;">Como pode afetar indicadores e relatórios</th>
+<th style="text-align: left;">Tratamento recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span id="lac-01"><code>LAC-01</code></span></td>
+<td style="text-align: left;">Heterogeneidade em <code>Associado</code></td>
+<td style="text-align: left;">aparecem <code>Sim</code>, <code>sim</code> e <code>-</code></td>
+<td style="text-align: left;">distorce filtros e segmentações de associação</td>
+<td style="text-align: left;">normalizar para <code>{Sim, Não}</code> na ingestão</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-02"><code>LAC-02</code></span></td>
+<td style="text-align: left;"><code>complexidade</code> muito incompleta</td>
+<td style="text-align: left;">90 de 366 registros válidos</td>
+<td style="text-align: left;">enfraquece os relatórios 02 e 05 e qualquer leitura de prazo por dificuldade</td>
+<td style="text-align: left;">manter como lacuna explícita; não usar como segmentador central</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-03"><code>LAC-03</code></span></td>
+<td style="text-align: left;"><code>data_aprov</code> quase vazia</td>
+<td style="text-align: left;">20 de 366 registros válidos</td>
+<td style="text-align: left;">torna o relatório 03 apenas parcialmente viável</td>
+<td style="text-align: left;">tratar como lacuna de processo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-04"><code>LAC-04</code></span></td>
+<td style="text-align: left;"><code>hora_inicio</code> e <code>hora_termino</code> quase vazios</td>
+<td style="text-align: left;">4,3% de completude</td>
+<td style="text-align: left;">impede medir abandono, horário de pico e tempo real por respondente</td>
+<td style="text-align: left;">recomendar captura sistemática</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-05"><code>LAC-05</code></span></td>
+<td style="text-align: left;"><code>prorrogada_ate</code> sem flag binária nativa</td>
+<td style="text-align: left;">há data final, mas não um campo <code>teve_prorrogacao</code></td>
+<td style="text-align: left;">complica contagens simples de prorrogação e leitura do relatório 02</td>
+<td style="text-align: left;">derivar campo booleano na camada analítica</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-06"><code>LAC-06</code></span></td>
+<td style="text-align: left;">Ausência de cancelamento explícito</td>
+<td style="text-align: left;">não há <code>data_cancelamento</code> nem <code>motivo_encerramento</code></td>
+<td style="text-align: left;">a taxa de conclusão pode parecer melhor do que o processo real</td>
+<td style="text-align: left;">tratar como lacuna de processo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-07"><code>LAC-07</code></span></td>
+<td style="text-align: left;"><code>participantes</code> ausente em 31 pesquisas</td>
+<td style="text-align: left;">335 de 366 registros válidos</td>
+<td style="text-align: left;">reduz cobertura de métricas de engajamento</td>
+<td style="text-align: left;">avisar cobertura parcial</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-08"><code>LAC-08</code></span></td>
+<td style="text-align: left;"><code>tempo_preenchimento</code> ausente em 135 pesquisas</td>
+<td style="text-align: left;">231 de 366 registros válidos</td>
+<td style="text-align: left;">reduz robustez das métricas de esforço do respondente</td>
+<td style="text-align: left;">usar cobertura explícita</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-09"><code>LAC-09</code></span></td>
+<td style="text-align: left;"><code>dias_uteis_para_entrega</code> ausente em 35 pesquisas</td>
+<td style="text-align: left;">331 de 366 registros válidos</td>
+<td style="text-align: left;">afeta SLA, prazos e listas de atraso</td>
+<td style="text-align: left;">manter aviso de cobertura parcial</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-10"><code>LAC-10</code></span></td>
+<td style="text-align: left;">11 colunas <code>Unnamed</code> em <code>pesquisas.csv</code></td>
+<td style="text-align: left;">100% nulas e sem significado analítico</td>
+<td style="text-align: left;">poluem o schema e confundem leitura técnica</td>
+<td style="text-align: left;">eliminar totalmente na Staging</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-11"><code>LAC-11</code></span></td>
+<td style="text-align: left;"><code>questoes.observacoes</code> sem uso</td>
+<td style="text-align: left;">0 de 231 registros válidos</td>
+<td style="text-align: left;">aumenta ruído sem agregar valor</td>
+<td style="text-align: left;">manter fora do escopo analítico</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="lac-12"><code>LAC-12</code></span></td>
+<td style="text-align: left;"><code>% de mercado</code> concentrado em <code>0,00%</code></td>
+<td style="text-align: left;">619 de 779 empresas com <code>0,00%</code></td>
+<td style="text-align: left;">pode achatar leitura de representatividade</td>
+<td style="text-align: left;">validar com o parceiro o significado de zero</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-integridade-referencial">3.5 Integridade Referencial<a class="headerlink" href="#35-integridade-referencial" title="Permanent link">&para;</a></h3>
+<p>Foram verificadas 7 relações de chave estrangeira. Quatro estão íntegras e três apresentam registros órfãos que precisam ser tratados antes da automação mais pesada dos KPIs.</p>
+<h4 id="relacoes-auditadas">Relações Auditadas<a class="headerlink" href="#relacoes-auditadas" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Grupo</th>
+<th style="text-align: right;">Quantidade</th>
+<th style="text-align: left;">Leitura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Relações auditadas</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">conjunto total de vínculos PK/FK verificados entre as 6 bases</td>
+</tr>
+<tr>
+<td style="text-align: left;">Relações íntegras</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">podem ser usadas em joins sem perda por órfãos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Relações com órfãos</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">exigem saneamento, quarentena ou aviso explícito de cobertura</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Relação</th>
+<th style="text-align: right;">Órfãos</th>
+<th style="text-align: center;">Impacto</th>
+<th style="text-align: left;">Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>clientes.id_empresa → empresas.ID</code></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">Nulo</td>
+<td style="text-align: left;">relação íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>questoes.pesquisa_id → pesquisas.id</code></td>
+<td style="text-align: right;">4 (<code>424</code>, <code>1116</code>, <code>1139</code>, <code>1147</code>)</td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: left;">há questões apontando para pesquisas inexistentes na tabela-mãe</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.id_empresa → empresas.ID</code></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">Nulo</td>
+<td style="text-align: left;">relação íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.id_cliente → clientes.id_cliente</code></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">Nulo</td>
+<td style="text-align: left;">relação íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respostas.id_pergunta → questoes.id_pergunta</code></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: center;">Nulo</td>
+<td style="text-align: left;">relação íntegra</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respondentes.id_pesq → pesquisas.id</code></td>
+<td style="text-align: right;">1 (<code>304</code>)</td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: left;">infla participação sem pesquisa-mãe correspondente</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>respostas.pesquisa_id → pesquisas.id</code></td>
+<td style="text-align: right;">4 (<code>424</code>, <code>1116</code>, <code>1139</code>, <code>1147</code>)</td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: left;">respostas podem sumir em joins por tema, área ou tipo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relacoes-integras">Relações Íntegras<a class="headerlink" href="#relacoes-integras" title="Permanent link">&para;</a></h4>
+<p>As relações <code>clientes.id_empresa → empresas.ID</code>, <code>respondentes.id_empresa → empresas.ID</code>, <code>respondentes.id_cliente → clientes.id_cliente</code> e <code>respostas.id_pergunta → questoes.id_pergunta</code> estão estáveis. Elas sustentam com segurança os recortes institucionais, o vínculo entre participação e contato, e a leitura de microdados por pergunta.</p>
+<h4 id="relacoes-com-orfaos">Relações com Órfãos<a class="headerlink" href="#relacoes-com-orfaos" title="Permanent link">&para;</a></h4>
+<p>As três relações problemáticas convergem para o mesmo ponto estrutural: há IDs de pesquisa presentes nas tabelas filhas que não aparecem em <code>pesquisas.csv</code>. Isso afeta <code>questoes</code>, <code>respondentes</code> e <code>respostas</code>, em graus diferentes.</p>
+<p>No caso de <code>questoes.pesquisa_id → pesquisas.id</code>, existem 4 IDs órfãos (<code>424</code>, <code>1116</code>, <code>1139</code>, <code>1147</code>). Isso enfraquece qualquer análise que tente cruzar questões com <code>status</code>, <code>tipo</code>, <code>area</code>, datas ou prazo da pesquisa. É também uma das razões para <a href="#kpi-09">KPI-09</a> exigir cautela interpretativa, porque a média de questões por instrumento passa a ser calculada sobre um cadastro de instrumentos incompleto do ponto de vista relacional.</p>
+<p>No caso de <code>respondentes.id_pesq → pesquisas.id</code>, existe 1 órfão (<code>304</code>). O efeito é menor em volume, mas ele ainda pode inflar indicadores de participação e adesão quando o numerador vem de <code>respondentes</code> e o denominador ou os segmentadores vêm de <code>pesquisas</code>.</p>
+<p>No caso de <code>respostas.pesquisa_id → pesquisas.id</code>, existem 4 órfãos (<code>424</code>, <code>1116</code>, <code>1139</code>, <code>1147</code>). Isso afeta leituras por tema, área, tipo e período da pesquisa, porque parte dos microdados fica sem pesquisa-mãe correspondente em joins analíticos.</p>
+<h4 id="impacto-nos-kpis">Impacto nos KPIs<a class="headerlink" href="#impacto-nos-kpis" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">KPI</th>
+<th style="text-align: left;">Como a integridade referencial afeta a leitura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#kpi-03">KPI-03</a></td>
+<td style="text-align: left;">o órfão em <code>respondentes</code> pode inflar levemente a média de participantes por pesquisa</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#kpi-09">KPI-09</a></td>
+<td style="text-align: left;">questões órfãs reduzem a confiabilidade da média de questões por instrumento quando o denominador vem de <code>pesquisas.csv</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#kpi-10">KPI-10</a></td>
+<td style="text-align: left;">respostas ligadas a pesquisas órfãs podem distorcer a leitura de volume médio por pergunta quando o recorte exige atributos da pesquisa</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPIs por <code>status</code>, <code>tipo</code>, <code>area</code> e período</td>
+<td style="text-align: left;">qualquer indicador que dependa de join com <code>pesquisas.csv</code> pode subcontar ou excluir linhas órfãs nos recortes</td>
+</tr>
+</tbody>
+</table>
+<p>Os 9 registros órfãos observados nas relações que dependem de <code>pesquisas.csv</code> devem ser enviados para quarentena na camada de Staging e registrados no log de limpeza. Eles não inviabilizam a análise global, mas reduzem a confiança em indicadores que dependem de joins completos entre participação, questões, respostas e cadastro de pesquisas.</p>
+<p><a id="viabilidade-dos-relatorios"></a></p>
+<h3 id="36-viabilidade-dos-relatorios-com-a-base-atual">3.6 Viabilidade dos Relatórios com a Base Atual<a class="headerlink" href="#36-viabilidade-dos-relatorios-com-a-base-atual" title="Permanent link">&para;</a></h3>
+<p>O detalhamento textual de cada mockup está em <a href="../catalogo_reports/">docs/catalogo_reports/README.md</a>. Esses mockups foram fornecidos pelo próprio parceiro após solicitação do orientador Hermano durante o workshop conduzido com o grupo, e por isso hoje são o melhor guia disponível para priorização de estrutura analítica, lacunas de dados e desenho dos relatórios futuros.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Report</th>
+<th style="text-align: left;">Foco</th>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Leitura técnica da viabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_01/">01</a></td>
+<td style="text-align: left;">Produção &amp; Volume</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base entrega volume, status, tipo, área e recorte temporal. A meta anual prevista no mockup não existe nos CSVs e precisará vir de parametrização externa.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_02/">02</a></td>
+<td style="text-align: left;">Prazos &amp; SLA</td>
+<td style="text-align: left;">Viável com lacunas relevantes</td>
+<td style="text-align: left;">Datas, ciclo total, dias úteis aberta, prorrogação e tabulação existem. O bloco <code>tempo por complexidade</code> fica fraco porque <code>complexidade</code> está muito incompleta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_03/">03</a></td>
+<td style="text-align: left;">Ciclo de Vida da Pesquisa</td>
+<td style="text-align: left;">Viável com lacunas relevantes</td>
+<td style="text-align: left;">Solicitação, divulgação e conclusão estão disponíveis. A etapa de aprovação fica frágil porque <code>data_aprov</code> quase não é usada.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_04/">04</a></td>
+<td style="text-align: left;">Qualidade &amp; Governança</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base e a auditoria sustentam completude, órfãos, inconsistências e confiança das perguntas. O score sintético de saúde do dado dependerá de regra definida pelo grupo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_05/">05</a></td>
+<td style="text-align: left;">Carga &amp; Demanda por Área</td>
+<td style="text-align: left;">Viável com lacunas relevantes</td>
+<td style="text-align: left;">A demanda por área é viável. Os blocos de complexidade e <code>complexidade x prazo</code> ficam limitados pela baixa cobertura desse campo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_06/">06</a></td>
+<td style="text-align: left;">Engajamento &amp; Adesão</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base sustenta adesão global, empresas ativas, empresas inativas, recortes geográficos e listas de reengajamento. A régua de “reengajar” precisará ser definida analiticamente.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_07/">07</a></td>
+<td style="text-align: left;">Resultados da Pesquisa</td>
+<td style="text-align: left;">Viável com lacunas relevantes</td>
+<td style="text-align: left;">A base sustenta distribuição de respostas, pergunta-chave e destaques por questão, sobretudo para perguntas fechadas. O limite está nas perguntas abertas e na necessidade de curadoria narrativa.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_08/">08</a></td>
+<td style="text-align: left;">Perfil dos Participantes</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base sustenta nacionalidade, cargo, departamento e distribuição geográfica com joins entre <code>respondentes</code>, <code>clientes</code> e <code>empresas</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_09/">09</a></td>
+<td style="text-align: left;">Representatividade de Mercado</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base sustenta mercado coberto, share dos participantes e comparação temporal. A ressalva é semântica: <code>% de mercado</code> precisa ser validado, não por ausência, mas por concentração de zeros.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_10/">10</a></td>
+<td style="text-align: left;">Benchmark Setorial</td>
+<td style="text-align: left;">Viável com lacunas relevantes</td>
+<td style="text-align: left;">A base de microdados permite benchmark, mas o mockup exige padronização por pergunta, definição de indicadores comparáveis e marcação explícita da empresa-alvo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_11/">11</a></td>
+<td style="text-align: left;">Comparativo Anual &amp; Tendências</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base sustenta série temporal, composição por ano e comparação entre períodos. A definição de “onda” precisa ser padronizada para evitar mistura de recortes não comparáveis.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../catalogo_reports/relatorio_12/">12</a></td>
+<td style="text-align: left;">Acervo &amp; Explorador</td>
+<td style="text-align: left;">Viável com a base atual</td>
+<td style="text-align: left;">A base sustenta catálogo, busca por título, filtros por área e por ano. O ganho adicional virá de normalização de tags e temas, não de correção de lacuna estrutural.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-estatistica-descritiva">4. Estatística Descritiva<a class="headerlink" href="#4-estatistica-descritiva" title="Permanent link">&para;</a></h2>
+<p>Foram selecionadas para esta seção as variáveis com completude suficiente e vínculo direto com comportamento operacional, perfil dos participantes ou cálculo de indicadores. Campos abaixo de 25% de preenchimento, como <code>complexidade</code>, <code>data_aprov</code> e <code>hora_inicio</code>, permanecem documentados na seção de qualidade, mas não são tratados aqui como base estatística principal.</p>
+<h3 id="41-variaveis-categoricas">4.1 Variáveis Categóricas<a class="headerlink" href="#41-variaveis-categoricas" title="Permanent link">&para;</a></h3>
+<h4 id="status-das-pesquisas">Status das Pesquisas<a class="headerlink" href="#status-das-pesquisas" title="Permanent link">&para;</a></h4>
+<p><img alt="Status das Pesquisas" src="../images/status_pesquisas.png" /></p>
+<p>90,7% das pesquisas registradas atingiram o status "Finalizada", que também é a moda da variável, com 332 registros. Os 9,3% restantes estão distribuídos entre etapas intermediárias do fluxo operacional. Não há registro explícito de cancelamento na base, o que pode indicar que pesquisas canceladas não são registradas ou são excluídas do sistema antes da exportação, uma lacuna de processo a investigar.</p>
+<h4 id="tipo-de-pesquisa">Tipo de Pesquisa<a class="headerlink" href="#tipo-de-pesquisa" title="Permanent link">&para;</a></h4>
+<p><img alt="Tipo de Pesquisa" src="../images/tipo_pesquisas.png" /></p>
+<p>A demanda é predominantemente endógena: "Solicitação de associado" é a moda da variável, com 170 registros (46,4%), e "Pesquisa fixa anual" aparece em 84 registros (23,0%). Juntas, elas somam 69,4% do catálogo e indicam que a Central opera prioritariamente a serviço da base de associados.</p>
+<h4 id="perfil-das-empresas-vinculo-associativo">Perfil das Empresas: Vínculo Associativo<a class="headerlink" href="#perfil-das-empresas-vinculo-associativo" title="Permanent link">&para;</a></h4>
+<p>Após normalização dos valores de <code>Associado</code>, a categoria modal é <code>Sim</code>, com 613 empresas. Isso corresponde a 78,7% das empresas cadastradas e é central para qualquer análise de engajamento segmentado, especialmente na comparação entre base total e base associada.</p>
+<h4 id="departamentos-dos-contatos">Departamentos dos Contatos<a class="headerlink" href="#departamentos-dos-contatos" title="Permanent link">&para;</a></h4>
+<p><img alt="Top 8 Departamentos" src="../images/departamentos_top8.png" /></p>
+<p>Recursos Humanos é a moda da variável, com 905 contatos (16,8%), seguido por Assuntos Regulatórios, com 721 (13,4%). Juntos, concentram 30,2% do cadastro e ajudam a explicar quais áreas mais interagem com as pesquisas.</p>
+<h4 id="tipo-de-questao">Tipo de Questão<a class="headerlink" href="#tipo-de-questao" title="Permanent link">&para;</a></h4>
+<p><img alt="Tipo de Questão" src="../images/tipo_questoes.png" /></p>
+<p>87,9% das questões são fechadas (<code>multipla_escolha</code> + <code>caixas_de_selecao</code>). A moda é <code>multipla_escolha</code>, com 123 registros, seguida por <code>caixas_de_selecao</code>, com 80. Isso favorece tabulação quantitativa, benchmark e geração de relatórios. As questões abertas são minoria e não inviabilizam a análise, mas podem exigir tratamento textual separado.</p>
+<h3 id="42-variaveis-numericas-tendencia-central-e-dispersao">4.2 Variáveis Numéricas: Tendência Central e Dispersão<a class="headerlink" href="#42-variaveis-numericas-tendencia-central-e-dispersao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><a href="#glossário">Variável</a></th>
+<th style="text-align: right;">N válidos</th>
+<th style="text-align: right;"><a href="#glossário">Média</a></th>
+<th style="text-align: right;"><a href="#glossário">Mediana</a></th>
+<th style="text-align: right;">Moda</th>
+<th style="text-align: right;">Mínimo</th>
+<th style="text-align: right;">Máximo</th>
+<th style="text-align: right;"><a href="#glossário">Amplitude</a></th>
+<th style="text-align: right;">Desvio Padrão</th>
+<th style="text-align: right;">Coef. de Variação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>participantes</code></td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">60,68</td>
+<td style="text-align: right;">54,00</td>
+<td style="text-align: right;">54,00</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">358</td>
+<td style="text-align: right;">352</td>
+<td style="text-align: right;">41,33</td>
+<td style="text-align: right;">68,1%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tempo_preenchimento</code> (min)</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">5,97</td>
+<td style="text-align: right;">5,00</td>
+<td style="text-align: right;">3,00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">5,13</td>
+<td style="text-align: right;">85,8%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>dias_uteis_para_entrega</code></td>
+<td style="text-align: right;">331</td>
+<td style="text-align: right;">21,11</td>
+<td style="text-align: right;">19,00</td>
+<td style="text-align: right;">19,00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">12,16</td>
+<td style="text-align: right;">57,6%</td>
+</tr>
+</tbody>
+</table>
+<p>As três variáveis têm média acima da mediana, indicando assimetria à direita e presença de casos extremos. A amplitude confirma que não existe um “tamanho padrão” de pesquisa nem um único tempo operacional típico para toda a base. Para relatórios executivos, a mediana é mais estável do que a média.</p>
+<h3 id="43-distribuicao-temporal-volume-de-pesquisas-solicitadas-por-trimestre">4.3 Distribuição Temporal: Volume de Pesquisas Solicitadas por Trimestre<a class="headerlink" href="#43-distribuicao-temporal-volume-de-pesquisas-solicitadas-por-trimestre" title="Permanent link">&para;</a></h3>
+<p><img alt="Volume de Pesquisas por Trimestre" src="../images/serie_temporal_pesquisas.png" /></p>
+<p>A série temporal mostra a evolução das pesquisas por trimestre. Nesta documentação, o formato <code>2024Q3</code> significa <strong>terceiro trimestre de 2024</strong>, em que <code>Q</code> vem de <em>quarter</em> e é um padrão comum de representação temporal. Esse recorte é útil porque permite cruzar volume com prazo de entrega e detectar sazonalidade operacional.</p>
+<h3 id="44-valores-extremos-identificacao-pelo-metodo-iqr">4.4 Valores Extremos: Identificação pelo Método IQR<a class="headerlink" href="#44-valores-extremos-identificacao-pelo-metodo-iqr" title="Permanent link">&para;</a></h3>
+<p>O método IQR foi adotado por ser não-paramétrico e funcionar bem em distribuições assimétricas <a href="#ref-2">2</a>. Nesta seção, <code>Q1</code>, <code>Q3</code>, <code>IQR</code> e <code>LS</code> são usados no sentido estatístico padrão e estão definidos no <a href="#glossário">Glossário</a>.</p>
+<div class="arithmatex">\[
+IQR = Q3 - Q1 \quad|\quad LI = Q1 - 1{,}5 \times IQR \quad|\quad LS = Q3 + 1{,}5 \times IQR
+\]</div>
+<p><img alt="Distribuição e Outliers: Variáveis Numéricas" src="../images/outliers_combined.png" /></p>
+<h4 id="valores-extremos-por-variavel">Valores Extremos por Variável<a class="headerlink" href="#valores-extremos-por-variavel" title="Permanent link">&para;</a></h4>
+<p><strong><code>participantes</code></strong>: <code>Q1 = 40</code>, <code>Q3 = 70</code>, <code>IQR = 30</code>, <code>LS = 115</code>, 19 valores acima do limite.</p>
+<p>Tratamento recomendado: <strong>manter</strong>. Os valores de 290 a 358 respondentes representam pesquisas de alta representatividade e não devem ser tratados como erro só por estarem fora do padrão central.</p>
+<p><strong><code>tempo_preenchimento</code></strong>: <code>Q1 = 3</code>, <code>Q3 = 7</code>, <code>IQR = 4</code>, <code>LS = 13</code>, 12 valores acima do limite.</p>
+<p>Tratamento recomendado: <strong>manter com flag analítica</strong>. O outlier mais extremo é 60 minutos; em vez de exclusão, o caso pede segmentação e possível criação de um marcador para questionários longos.</p>
+<p><strong><code>dias_uteis_para_entrega</code></strong>: <code>Q1 = 13,5</code>, <code>Q3 = 25</code>, <code>IQR = 11,5</code>, <code>LS = 42,25</code>, 18 valores acima do limite.</p>
+<p>Tratamento recomendado: <strong>manter e investigar</strong>. Esses casos descrevem justamente o atraso que o parceiro precisa enxergar. Para modelagem futura, pode haver tratamento robusto na camada analítica, mas não supressão automática da base.</p>
+<hr />
+<p><a id="5-indicadores-de-negócio"></a></p>
+<h2 id="5-indicadores-de-negocio">5. Indicadores de Negócio<a class="headerlink" href="#5-indicadores-de-negocio" title="Permanent link">&para;</a></h2>
+<p>Os indicadores desta seção foram identificados a partir das perguntas de negócio sugeridas pelos 12 mockups de relatórios, das colunas efetivamente disponíveis nas 6 bases e das métricas operacionais, de adesão, perfil, representatividade e microdados que podem ser calculadas sem depender de interpretação subjetiva do conteúdo textual. A organização adotada separa indicadores principais, indicadores complementares universais e indicadores específicos por pergunta.</p>
+<h3 id="51-indicadores-principais">5.1 Indicadores Principais<a class="headerlink" href="#51-indicadores-principais" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: left;">Pergunta de negócio</th>
+<th style="text-align: left;">Unidade de análise</th>
+<th style="text-align: left;">Fórmula resumida</th>
+<th style="text-align: left;">Variáveis principais</th>
+<th style="text-align: right;">Valor apurado</th>
+<th style="text-align: left;">Limitação principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span id="kpi-01">KPI-01</span></td>
+<td style="text-align: left;">Volume total de pesquisas</td>
+<td style="text-align: left;">Qual o tamanho do catálogo?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(pesquisas.id)</code></td>
+<td style="text-align: left;"><code>pesquisas.id</code></td>
+<td style="text-align: right;">366</td>
+<td style="text-align: left;">não distingue importância estratégica</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-02">KPI-02</span></td>
+<td style="text-align: left;">Taxa de conclusão</td>
+<td style="text-align: left;">Quantas pesquisas chegam ao fim?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>Finalizadas / Total × 100</code></td>
+<td style="text-align: left;"><code>pesquisas.status</code></td>
+<td style="text-align: right;">90,71%</td>
+<td style="text-align: left;">cancelamento não é explícito</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-03">KPI-03</span></td>
+<td style="text-align: left;">Média de participantes por pesquisa</td>
+<td style="text-align: left;">Qual o engajamento médio por pesquisa?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(respondentes) / COUNT(pesquisas)</code></td>
+<td style="text-align: left;"><code>respondentes.id_pesq</code>, <code>pesquisas.id</code></td>
+<td style="text-align: right;">51,19</td>
+<td style="text-align: left;">um órfão infla o numerador</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-04">KPI-04</span></td>
+<td style="text-align: left;">Taxa de empresas associadas</td>
+<td style="text-align: left;">Quanto do cadastro é associado?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;"><code>Associadas / Total × 100</code></td>
+<td style="text-align: left;"><code>empresas.Associado</code></td>
+<td style="text-align: right;">78,69%</td>
+<td style="text-align: left;">exige normalização de rótulos</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-05">KPI-05</span></td>
+<td style="text-align: left;">Taxa de adesão global</td>
+<td style="text-align: left;">Quantas empresas do cadastro já participaram?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;"><code>Empresas participantes / Total × 100</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa</code>, <code>empresas.ID</code></td>
+<td style="text-align: right;">53,79%</td>
+<td style="text-align: left;">não mede recorrência</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-06">KPI-06</span></td>
+<td style="text-align: left;">Taxa de adesão das associadas</td>
+<td style="text-align: left;">Como a adesão muda na base associada?</td>
+<td style="text-align: left;">Empresa associada</td>
+<td style="text-align: left;"><code>Empresas participantes / Associadas × 100</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa</code>, <code>empresas.Associado</code></td>
+<td style="text-align: right;">68,35%</td>
+<td style="text-align: left;">não mede intensidade</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-07">KPI-07</span></td>
+<td style="text-align: left;">Tempo médio de preenchimento</td>
+<td style="text-align: left;">Quanto esforço a pesquisa exige?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEAN(tempo_preenchimento)</code></td>
+<td style="text-align: left;"><code>pesquisas.tempo_preenchimento</code></td>
+<td style="text-align: right;">5,97 min</td>
+<td style="text-align: left;">cobertura de 63,1%</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-08">KPI-08</span></td>
+<td style="text-align: left;">Tempo médio de entrega</td>
+<td style="text-align: left;">Quanto tempo a Central leva para entregar?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEAN(dias_uteis_para_entrega)</code></td>
+<td style="text-align: left;"><code>pesquisas.dias_uteis_para_entrega</code></td>
+<td style="text-align: right;">21,11 dias úteis</td>
+<td style="text-align: left;">35 pesquisas fora do cálculo</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-09">KPI-09</span></td>
+<td style="text-align: left;">Média de questões por instrumento</td>
+<td style="text-align: left;">Qual a extensão média dos questionários?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(questoes) / COUNT(pesquisas)</code></td>
+<td style="text-align: left;"><code>questoes.id_pergunta</code>, <code>pesquisas.id</code></td>
+<td style="text-align: right;">0,63</td>
+<td style="text-align: left;">revela lacuna do cadastro de questões</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span id="kpi-10">KPI-10</span></td>
+<td style="text-align: left;">Média de respostas por pergunta</td>
+<td style="text-align: left;">Qual o volume médio de microdados por questão?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(respostas) / COUNT(questoes)</code></td>
+<td style="text-align: left;"><code>respostas.id_resposta</code>, <code>questoes.id_pergunta</code></td>
+<td style="text-align: right;">89,21</td>
+<td style="text-align: left;">há respostas ligadas a pesquisas órfãs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-indicadores-complementares-universais">5.2 Indicadores Complementares Universais<a class="headerlink" href="#52-indicadores-complementares-universais" title="Permanent link">&para;</a></h3>
+<p>Os indicadores abaixo também são calculáveis com a base atual e ampliam a cobertura analítica do projeto.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID lógico</th>
+<th style="text-align: left;">Indicador</th>
+<th style="text-align: left;">Pergunta de negócio</th>
+<th style="text-align: left;">Unidade de análise</th>
+<th style="text-align: left;">Fórmula resumida</th>
+<th style="text-align: left;">Variáveis principais</th>
+<th style="text-align: left;">Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">KPI-11</td>
+<td style="text-align: left;">Volume de pesquisas no período</td>
+<td style="text-align: left;">Quantas pesquisas houve no ano/trimestre/mês?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(pesquisas por período)</code></td>
+<td style="text-align: left;"><code>data_solicitacao</code>, <code>data_divulgacao</code></td>
+<td style="text-align: left;">sustenta os <a href="../catalogo_reports/relatorio_01/">reports 01</a> e <a href="../catalogo_reports/relatorio_11/">11</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-12</td>
+<td style="text-align: left;">Volume de pesquisas finalizadas no período</td>
+<td style="text-align: left;">Quantas finalizações houve no período?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(status = finalizada por período)</code></td>
+<td style="text-align: left;"><code>status</code>, <code>data_divulgacao</code></td>
+<td style="text-align: left;">operação</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-13</td>
+<td style="text-align: left;">Volume de pesquisas em andamento</td>
+<td style="text-align: left;">Quantas pesquisas ainda estão abertas?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(status não final)</code></td>
+<td style="text-align: left;"><code>status</code></td>
+<td style="text-align: left;">operação</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-14</td>
+<td style="text-align: left;">Crescimento do volume vs. período anterior</td>
+<td style="text-align: left;">O volume cresceu ou caiu?</td>
+<td style="text-align: left;">Período</td>
+<td style="text-align: left;"><code>((t - t-1) / t-1)</code></td>
+<td style="text-align: left;"><code>data_solicitacao</code></td>
+<td style="text-align: left;">tendência temporal do <a href="../catalogo_reports/relatorio_01/">report 01</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-15</td>
+<td style="text-align: left;">Taxa de pesquisas prorrogadas</td>
+<td style="text-align: left;">Qual o peso das prorrogações?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>COUNT(prorrogada_ate preenchida) / Total</code></td>
+<td style="text-align: left;"><code>prorrogada_ate</code></td>
+<td style="text-align: left;">monitoramento de prazo do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-16</td>
+<td style="text-align: left;">Ciclo mediano da pesquisa</td>
+<td style="text-align: left;">Qual o SLA central mais robusto?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEDIAN(dias entre solicitação e divulgação)</code></td>
+<td style="text-align: left;"><code>dias entre a solicitação e a divulgação</code></td>
+<td style="text-align: left;">leitura central de prazo do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-17</td>
+<td style="text-align: left;">Média de dias úteis aberta</td>
+<td style="text-align: left;">Quanto tempo a pesquisa fica aberta?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEAN(dias úteis aberta)</code></td>
+<td style="text-align: left;"><code>dias úteis aberta</code></td>
+<td style="text-align: left;">janela operacional do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-18</td>
+<td style="text-align: left;">Mediana de dias úteis aberta</td>
+<td style="text-align: left;">Qual o valor central do tempo aberta?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEDIAN(dias úteis aberta)</code></td>
+<td style="text-align: left;"><code>dias úteis aberta</code></td>
+<td style="text-align: left;">janela operacional do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-19</td>
+<td style="text-align: left;">Média de dias para tabulação</td>
+<td style="text-align: left;">Quanto tempo a tabulação consome?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEAN(dias para tabulação)</code></td>
+<td style="text-align: left;"><code>dias para tabulação</code></td>
+<td style="text-align: left;">gargalo de tabulação do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-20</td>
+<td style="text-align: left;">Mediana de dias para tabulação</td>
+<td style="text-align: left;">Qual o valor central da tabulação?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEDIAN(dias para tabulação)</code></td>
+<td style="text-align: left;"><code>dias para tabulação</code></td>
+<td style="text-align: left;">gargalo de tabulação do <a href="../catalogo_reports/relatorio_02/">report 02</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-21</td>
+<td style="text-align: left;">Empresas participantes distintas</td>
+<td style="text-align: left;">Quantas empresas ativas existem?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;"><code>COUNT(DISTINCT id_empresa)</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa</code></td>
+<td style="text-align: left;">base ativa do <a href="../catalogo_reports/relatorio_06/">report 06</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-22</td>
+<td style="text-align: left;">Empresas que nunca participaram</td>
+<td style="text-align: left;">Quantas empresas seguem inativas?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;"><code>Total empresas - empresas participantes</code></td>
+<td style="text-align: left;"><code>empresas.ID</code>, <code>respondentes.id_empresa</code></td>
+<td style="text-align: left;">base inativa do <a href="../catalogo_reports/relatorio_06/">report 06</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-23</td>
+<td style="text-align: left;">Participações médias por empresa ativa</td>
+<td style="text-align: left;">Quão recorrente é a participação?</td>
+<td style="text-align: left;">Empresa ativa</td>
+<td style="text-align: left;"><code>COUNT(participações) / empresas ativas</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa</code></td>
+<td style="text-align: left;">recorrência do <a href="../catalogo_reports/relatorio_06/">report 06</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-24</td>
+<td style="text-align: left;">Empresas recorrentes</td>
+<td style="text-align: left;">Quantas empresas participaram de 2+ pesquisas?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;"><code>COUNT(empresas com 2+ participações)</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa</code>, <code>id_pesq</code></td>
+<td style="text-align: left;">engajamento</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-25</td>
+<td style="text-align: left;">Taxa de associadas entre participantes</td>
+<td style="text-align: left;">Entre quem responde, quanto é associado?</td>
+<td style="text-align: left;">Empresa participante</td>
+<td style="text-align: left;"><code>Associadas participantes / participantes × 100</code></td>
+<td style="text-align: left;"><code>respondentes.id_empresa</code>, <code>Associado</code></td>
+<td style="text-align: left;">perfil</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-26</td>
+<td style="text-align: left;">Cobertura total de mercado das participantes</td>
+<td style="text-align: left;">Quanto do mercado a pesquisa cobre?</td>
+<td style="text-align: left;">Pesquisa/período</td>
+<td style="text-align: left;"><code>SUM(% mercado participantes)</code></td>
+<td style="text-align: left;"><code>empresas.% de mercado</code>, <code>respondentes.id_empresa</code></td>
+<td style="text-align: left;">representatividade do <a href="../catalogo_reports/relatorio_09/">report 09</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-27</td>
+<td style="text-align: left;">Cobertura média de mercado por pesquisa</td>
+<td style="text-align: left;">Qual a representatividade média do portfólio?</td>
+<td style="text-align: left;">Pesquisa</td>
+<td style="text-align: left;"><code>MEAN(cobertura por pesquisa)</code></td>
+<td style="text-align: left;"><code>% de mercado</code>, <code>id_pesq</code></td>
+<td style="text-align: left;">representatividade do <a href="../catalogo_reports/relatorio_09/">report 09</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-28</td>
+<td style="text-align: left;">Variação da cobertura de mercado vs. período anterior</td>
+<td style="text-align: left;">A cobertura cresceu ou caiu?</td>
+<td style="text-align: left;">Período</td>
+<td style="text-align: left;">comparação temporal</td>
+<td style="text-align: left;"><code>% de mercado</code>, <code>data_solicitacao</code></td>
+<td style="text-align: left;">série temporal do <a href="../catalogo_reports/relatorio_09/">report 09</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-29</td>
+<td style="text-align: left;">Quantidade de empresas top-share participantes</td>
+<td style="text-align: left;">Quantas líderes de mercado participaram?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;">contagem sob regra definida</td>
+<td style="text-align: left;"><code>% de mercado</code>, <code>id_empresa</code></td>
+<td style="text-align: left;">concentração de mercado do <a href="../catalogo_reports/relatorio_09/">report 09</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-30</td>
+<td style="text-align: left;">Concentração departamental</td>
+<td style="text-align: left;">Qual departamento domina o cadastro?</td>
+<td style="text-align: left;">Contato</td>
+<td style="text-align: left;"><code>COUNT(departamento = X) / Total</code></td>
+<td style="text-align: left;"><code>clientes.departamento</code></td>
+<td style="text-align: left;">perfil</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-31</td>
+<td style="text-align: left;">Concentração por cargo</td>
+<td style="text-align: left;">Qual cargo domina o cadastro?</td>
+<td style="text-align: left;">Contato</td>
+<td style="text-align: left;"><code>COUNT(cargo = X) / Total</code></td>
+<td style="text-align: left;"><code>clientes.cargo</code></td>
+<td style="text-align: left;">perfil</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-32</td>
+<td style="text-align: left;">Concentração por nacionalidade</td>
+<td style="text-align: left;">Qual nacionalidade domina a base?</td>
+<td style="text-align: left;">Empresa</td>
+<td style="text-align: left;"><code>COUNT(nacionalidade = X) / Total</code></td>
+<td style="text-align: left;"><code>empresas.Nacionalidade</code></td>
+<td style="text-align: left;">perfil</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-33</td>
+<td style="text-align: left;">Cobertura geográfica das participantes</td>
+<td style="text-align: left;">Quais estados/países aparecem mais?</td>
+<td style="text-align: left;">Empresa participante</td>
+<td style="text-align: left;">distribuição geográfica</td>
+<td style="text-align: left;"><code>Estado</code>, <code>País</code>, <code>id_empresa</code></td>
+<td style="text-align: left;">distribuição regional dos <a href="../catalogo_reports/relatorio_06/">reports 06</a> e <a href="../catalogo_reports/relatorio_08/">08</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-34</td>
+<td style="text-align: left;">Total de questões cadastradas</td>
+<td style="text-align: left;">Quantas questões existem na base?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(id_pergunta)</code></td>
+<td style="text-align: left;"><code>questoes.id_pergunta</code></td>
+<td style="text-align: left;">questionário</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-35</td>
+<td style="text-align: left;">Taxa de questões fechadas</td>
+<td style="text-align: left;">Quanto do instrumento é fechado?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(tipo fechado) / Total</code></td>
+<td style="text-align: left;"><code>questoes.tipo</code></td>
+<td style="text-align: left;">estrutura do <a href="../catalogo_reports/relatorio_07/">report 07</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-36</td>
+<td style="text-align: left;">Taxa de questões abertas</td>
+<td style="text-align: left;">Quanto do instrumento é aberto?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(tipo aberta) / Total</code></td>
+<td style="text-align: left;"><code>questoes.tipo</code></td>
+<td style="text-align: left;">estrutura do <a href="../catalogo_reports/relatorio_07/">report 07</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-37</td>
+<td style="text-align: left;">Taxa de questões matriciais</td>
+<td style="text-align: left;">Quanto do instrumento é matricial?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(tipo matriz) / Total</code></td>
+<td style="text-align: left;"><code>questoes.tipo</code></td>
+<td style="text-align: left;">questionário</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-38</td>
+<td style="text-align: left;">Média de alternativas por questão</td>
+<td style="text-align: left;">Quão complexas são as perguntas fechadas?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>MEAN(qtd_alternativas)</code></td>
+<td style="text-align: left;"><code>qtd_alternativas</code></td>
+<td style="text-align: left;">questionário</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-39</td>
+<td style="text-align: left;">Taxa de perguntas com confiança alta</td>
+<td style="text-align: left;">Quanto do questionário tem alta confiança?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(confianca = alta) / Total</code></td>
+<td style="text-align: left;"><code>questoes.confianca</code></td>
+<td style="text-align: left;">governança</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-40</td>
+<td style="text-align: left;">Total de respostas coletadas</td>
+<td style="text-align: left;">Qual o volume bruto de microdados?</td>
+<td style="text-align: left;">Resposta</td>
+<td style="text-align: left;"><code>COUNT(id_resposta)</code></td>
+<td style="text-align: left;"><code>respostas.id_resposta</code></td>
+<td style="text-align: left;">microdados</td>
+</tr>
+<tr>
+<td style="text-align: left;">KPI-41</td>
+<td style="text-align: left;">Taxa de respostas por pergunta cadastrada</td>
+<td style="text-align: left;">A base de respostas é densa?</td>
+<td style="text-align: left;">Questão</td>
+<td style="text-align: left;"><code>COUNT(respostas) / COUNT(questoes)</code></td>
+<td style="text-align: left;"><code>respostas</code>, <code>questoes</code></td>
+<td style="text-align: left;">microdados</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-familias-de-indicadores-derivados">5.3 Famílias de Indicadores Derivados<a class="headerlink" href="#53-familias-de-indicadores-derivados" title="Permanent link">&para;</a></h3>
+<p>Além dos 41 indicadores universais listados acima, existem famílias de indicadores que podem ser calculadas sempre que o recorte fizer sentido. As principais são: distribuição por <code>status</code>, distribuição por <code>tipo</code>, distribuição por <code>area</code>, distribuição por <code>departamento</code>, distribuição por <code>cargo</code>, distribuição por <code>nacionalidade</code> e distribuição geográfica por estado, cidade ou país.</p>
+<h3 id="54-indicadores-especificos-por-pergunta">5.4 Indicadores Específicos por Pergunta<a class="headerlink" href="#54-indicadores-especificos-por-pergunta" title="Permanent link">&para;</a></h3>
+<p>O número total de indicadores possíveis deixa de ser fechado quando entramos em <code>respostas.csv</code> e <code>questoes.csv</code>, porque cada pergunta pode gerar métricas próprias, como percentual por alternativa, alternativa líder, ranking de alternativas, média e mediana de resposta numérica, comparação entre ondas, benchmark empresa vs. setor e destaque positivo e negativo por questão. Por isso, o conjunto fechado deste relatório é composto por 10 indicadores principais já apurados, 31 indicadores complementares universais e 7 famílias de indicadores derivados, além de um conjunto aberto de indicadores específicos por pergunta.</p>
+<hr />
+<h2 id="6-granularidade-e-sintese-final">6. Granularidade e Síntese Final<a class="headerlink" href="#6-granularidade-e-sintese-final" title="Permanent link">&para;</a></h2>
+<h3 id="61-sensibilidade-por-granularidade">6.1 Sensibilidade por Granularidade<a class="headerlink" href="#61-sensibilidade-por-granularidade" title="Permanent link">&para;</a></h3>
+<p>Dois indicadores mostram com clareza como a interpretação muda quando o grão de análise deixa de ser global.</p>
+<p><strong>KPI-02: Taxa de conclusão.</strong> No agregado, o indicador é <strong>90,71%</strong>. Quando o recorte passa a ser por <code>tipo</code>, a leitura muda bastante: <code>Pública</code> aparece com <strong>100,0%</strong>, <code>Solicitação de associado</code> com <strong>95,88%</strong>, <code>Uso interno</code> com <strong>83,33%</strong> e <code>Pesquisa fixa anual</code> com <strong>79,76%</strong>. Há ainda <code>Pesquisa fixa bianual</code> com <strong>0,0%</strong>, mas em apenas 4 registros, o que exige cautela. O ponto principal é que o agregado esconde diferenças importantes entre linhas de pesquisa.</p>
+<p><strong>KPI-08: Tempo de entrega.</strong> No agregado, a média é <strong>21,11 dias úteis</strong> e a mediana é <strong>19 dias</strong>. Quando o recorte passa a ser por trimestre de solicitação, surgem diferenças concretas: <code>2023Q2</code> tem mediana de <strong>16,5 dias</strong>, enquanto <code>2023Q3</code> sobe para <strong>26 dias</strong>; <code>2025Q3</code> cai para <strong>15 dias</strong>, enquanto <code>2025Q2</code> está em <strong>26 dias</strong>. Isso mostra que o grão temporal muda a interpretação do SLA e pode revelar sazonalidade de gargalo.</p>
+<h3 id="62-variaveis-e-indicadores-mais-importantes-para-o-projeto">6.2 Variáveis e Indicadores Mais Importantes para o Projeto<a class="headerlink" href="#62-variaveis-e-indicadores-mais-importantes-para-o-projeto" title="Permanent link">&para;</a></h3>
+<p>Os mockups de relatórios fornecidos pelo parceiro, registrados no <a href="../catalogo_reports/">catálogo textual dos reports</a>, hoje são o melhor guia para definir prioridade analítica. A base mostra com clareza que <code>status</code>, <code>tipo</code>, <code>area</code>, <code>data_solicitacao</code> e <code>data_divulgacao</code> são o núcleo estrutural dos <a href="../catalogo_reports/relatorio_01/">reports 01</a>, <a href="../catalogo_reports/relatorio_03/">03</a>, <a href="../catalogo_reports/relatorio_11/">11</a> e <a href="../catalogo_reports/relatorio_12/">12</a>, porque explicam volume, composição do portfólio, evolução temporal e acervo.</p>
+<p>No eixo de engajamento e relacionamento, <code>respondentes.id_empresa</code>, <code>empresas.Associado</code>, <code>clientes.cargo</code> e <code>clientes.departamento</code> são as variáveis mais importantes porque sustentam diretamente os <a href="../catalogo_reports/relatorio_06/">reports 06</a>, <a href="../catalogo_reports/relatorio_08/">08</a> e parte do <a href="../catalogo_reports/relatorio_10/">10</a>. É nesse bloco que aparecem os principais indicadores de adesão, recorrência, perfil do respondente e segmentação institucional.</p>
+<p>No eixo operacional, <code>dias_uteis_para_entrega</code>, <code>dias úteis aberta</code>, <code>dias para tabulação</code>, <code>tempo_preenchimento</code> e, com muita ressalva, <code>complexidade</code>, são as variáveis que mais importam para os <a href="../catalogo_reports/relatorio_02/">reports 02</a>, <a href="../catalogo_reports/relatorio_05/">05</a> e <a href="../catalogo_reports/relatorio_07/">07</a>. Já no eixo de representatividade, <code>% de mercado</code>, <code>participantes</code>, <code>questoes.tipo</code> e a ligação entre <code>respostas</code>, <code>questoes</code> e <code>pesquisas</code> formam a base mais valiosa para os <a href="../catalogo_reports/relatorio_07/">reports 07</a>, <a href="../catalogo_reports/relatorio_09/">09</a> e <a href="../catalogo_reports/relatorio_10/">10</a>. Em termos de prioridade prática, esses conjuntos são mais relevantes do que qualquer variável periférica porque coincidem com o que o parceiro explicitamente demonstrou querer enxergar nos mockups.</p>
+<h3 id="63-problemas-de-qualidade-que-precisam-ser-tratados">6.3 Problemas de Qualidade que Precisam Ser Tratados<a class="headerlink" href="#63-problemas-de-qualidade-que-precisam-ser-tratados" title="Permanent link">&para;</a></h3>
+<p>Os problemas mais importantes a tratar já estão formalizados na seção <a href="#34-inconsistencias-e-lacunas-de-preenchimento">3.4 Inconsistências e Lacunas de Preenchimento</a>. O primeiro bloco prioritário é composto por <a href="#lac-01">LAC-01</a>, <a href="#lac-10">LAC-10</a> e <a href="#lac-11">LAC-11</a>, porque trata de padronização de domínio e ruído estrutural do schema: normalização de <code>Associado</code>, eliminação das 11 colunas <code>Unnamed</code> e manutenção de <code>questoes.observacoes</code> fora da camada analítica principal.</p>
+<p>O segundo bloco prioritário é composto por <a href="#lac-02">LAC-02</a>, <a href="#lac-03">LAC-03</a>, <a href="#lac-04">LAC-04</a>, <a href="#lac-05">LAC-05</a> e <a href="#lac-06">LAC-06</a>, todos ligados à capacidade de explicar prazo, fluxo e comportamento operacional. Aqui entram a baixa cobertura de <code>complexidade</code>, o quase não uso de <code>data_aprov</code>, a captura insuficiente de <code>hora_inicio</code> e <code>hora_termino</code>, a ausência de flag binária de prorrogação e a falta de um registro explícito de cancelamento. Esses pontos não inviabilizam o relatório atual, mas reduzem fortemente a confiança nos reports de ciclo, SLA e gargalo.</p>
+<p>O terceiro bloco é o de cobertura parcial e coerência analítica, formado por <a href="#lac-07">LAC-07</a>, <a href="#lac-08">LAC-08</a>, <a href="#lac-09">LAC-09</a> e <a href="#lac-12">LAC-12</a>. Esses itens afetam diretamente o quanto os indicadores representam a base inteira ou apenas subconjuntos dela. <code>participantes</code>, <code>tempo_preenchimento</code> e <code>dias_uteis_para_entrega</code> exigem leitura com cobertura explícita, enquanto <code>% de mercado</code> precisa de validação semântica antes de sustentar afirmações mais fortes de representatividade. Os registros órfãos, detalhados na seção <a href="#35-integridade-referencial">3.5 Integridade Referencial</a>, também entram nesse pacote de saneamento mínimo antes de automação mais pesada dos indicadores.</p>
+<h3 id="64-cuidados-matematicos-antes-da-automacao-dos-kpis">6.4 Cuidados Matemáticos Antes da Automação dos KPIs<a class="headerlink" href="#64-cuidados-matematicos-antes-da-automacao-dos-kpis" title="Permanent link">&para;</a></h3>
+<p>Para prazo e tempo de preenchimento, a mediana deve acompanhar a média, porque os extremos têm peso real na distribuição e mudam a interpretação do resultado agregado. Indicadores calculados sobre subconjuntos precisam trazer cobertura explícita na documentação e em qualquer camada de visualização futura, para deixar claro quando o universo observado não coincide com o total de pesquisas.</p>
+<p>Comparações por <code>complexidade</code> não devem ser apresentadas como conclusivas enquanto a taxa de preenchimento desse campo permanecer baixa. Da mesma forma, indicadores de adesão precisam exibir o denominador usado, porque a narrativa muda muito entre base total e base associada. Por fim, indicadores derivados de respostas por pergunta ou benchmark precisam deixar claro quando se trata de pergunta fechada comparável e quando se trata de pergunta aberta ou não padronizada, para evitar equivalências analíticas que a base não sustenta.</p>
+<hr />
+<h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<p><a id="ref-1"></a>[1] DAMA International. <em>DAMA-DMBOK: Data Management Body of Knowledge</em>. 2. ed. Basking Ridge: Technics Publications, 2017.</p>
+<p><a id="ref-2"></a>[2] TUKEY, John W. <em>Exploratory Data Analysis</em>. Reading: Addison-Wesley, 1977.</p>
+<hr />
+<p><a id="glossário"></a></p>
+<h2 id="glossario">Glossário<a class="headerlink" href="#glossario" title="Permanent link">&para;</a></h2>
+<p><strong>Amplitude.</strong> Diferença entre o valor máximo e o valor mínimo de uma variável.</p>
+<p><strong>Completude.</strong> Proporção de valores não nulos em relação ao total de registros de um campo.</p>
+<p><strong>Domínio.</strong> Conjunto de valores válidos, esperados ou observados de uma variável.</p>
+<p><strong>Endógena.</strong> Neste contexto, pesquisa gerada principalmente por demanda interna da própria base do Sidusfarma, e não por uma iniciativa pública ampla.</p>
+<p><strong>IQR.</strong> Intervalo interquartil. Diferença entre <code>Q3</code> e <code>Q1</code>, usada para descrever a faixa central de 50% dos dados.</p>
+<p><strong>LS.</strong> Limite superior usado na regra do IQR para detectar valores extremos: <code>LS = Q3 + 1,5 × IQR</code>.</p>
+<p><strong>Mediana.</strong> Valor central da distribuição ordenada: 50% dos casos ficam abaixo e 50% acima.</p>
+<p><strong>Q1.</strong> Primeiro quartil. Valor abaixo do qual estão 25% dos casos.</p>
+<p><strong>Q3.</strong> Terceiro quartil. Valor abaixo do qual estão 75% dos casos.</p>
+<p><strong>Quarter (Q).</strong> Representação de trimestre no formato temporal. <code>2024Q3</code> significa terceiro trimestre de 2024.</p>
+<p><strong>Registro órfão.</strong> Registro em uma tabela filha que referencia uma chave inexistente na tabela pai.</p>
+<p><strong>Tipo Matemático.</strong> Classificação formal de uma variável, como categórica nominal, categórica ordinal, numérica discreta, numérica contínua ou temporal.</p>
+<p><strong>Variável.</strong> Campo observado em uma base de dados, como <code>status</code>, <code>tipo</code>, <code>participantes</code> ou <code>Associado</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "content.code.copy", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/mathjax-init.js"></script>
+      
+    
+  </body>
+</html>
