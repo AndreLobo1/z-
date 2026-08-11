@@ -1,0 +1,39 @@
+name: Sprint 1 Scheduler
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-scheduler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 540
+
+    steps:
+      - name: Checkout scheduler repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set timezone to Brasilia
+        run: sudo timedatectl set-timezone America/Sao_Paulo || echo "timedatectl not available"
+
+      - name: Install git and configure
+        run: |
+          git config --global user.name "Andre Lobo"
+          git config --global user.email "andre.paula@sou.inteli.edu.br"
+
+      - name: Clone GitLab working repo
+        run: |
+          git clone "https://oauth2:${{ secrets.GITLAB_TOKEN }}@git.inteli.edu.br/graduacao/2026-2a/t13/2026-2a-t13-es11-g02/sindusfarma-g02.git" /tmp/sindusfarma-work
+          git -C /tmp/sindusfarma-work config user.name "Andre Lobo"
+          git -C /tmp/sindusfarma-work config user.email "andre.paula@sou.inteli.edu.br"
+
+      - name: Run Sprint 1 Scheduler
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          TZ: America/Sao_Paulo
+        run: |
+          python3 scheduler.py
