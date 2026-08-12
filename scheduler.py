@@ -1,6 +1,5 @@
 import json
 import os
-import random
 import shutil
 import subprocess
 import urllib.parse
@@ -14,7 +13,6 @@ GITLAB_URL = "https://git.inteli.edu.br"
 REPO_PATH = Path("/tmp/sindusfarma-work")
 SRC_DIR = Path(__file__).resolve().parent / "src"
 PLAN_PATH = Path(__file__).resolve().parent / "sprint1_plan.json"
-STATE_PATH = Path(__file__).resolve().parent / ".scheduler_state.json"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 WORKFLOW_LABELS = {
     "in_progress": os.environ.get("BOARD_LABEL_DOING", "Doing"),
@@ -159,16 +157,6 @@ def ensure_merge_request(task):
     )
 
 
-def load_state():
-    if not STATE_PATH.exists():
-        return {"tasks": {}}
-    return json.loads(STATE_PATH.read_text())
-
-
-def save_state(state):
-    STATE_PATH.write_text(json.dumps(state, indent=2, sort_keys=True))
-
-
 @dataclass
 class Task:
     iid: int
@@ -185,69 +173,53 @@ def load_plan():
     return [Task(**task) for task in raw["tasks"]]
 
 
-def jittered_finish(now: datetime, duration_minutes: int, iid: int) -> datetime:
-    delta = random.randint(-JITTER_MINUTES, JITTER_MINUTES)
-    duration = max(1, duration_minutes + delta)
-    return now + timedelta(minutes=duration)
+def deterministic_jitter(iid: int) -> int:
+    span = (JITTER_MINUTES * 2) + 1
+    return (iid % span) - JITTER_MINUTES
 
 
-def state_entry(state, iid: int):
-    return state["tasks"].setdefault(str(iid), {})
+def due_at(started_at: datetime, duration_minutes: int, iid: int) -> datetime:
+    duration = max(1, duration_minutes + deterministic_jitter(iid))
+    return started_at + timedelta(minutes=duration)
 
 
-def is_completed(entry):
-    return bool(entry.get("completed_at"))
+def find_started_at(issue_iid: int) -> datetime | None:
+    notes = api(f"issues/{issue_iid}/notes")
+    marker = f"added {WORKFLOW_LABELS['in_progress']} label"
+    for note in reversed(notes):
+        if note.get("system") and marker in note.get("body", ""):
+            return parse_dt(note["created_at"].replace("Z", "+00:00")).astimezone()
+    return None
 
 
-def dependencies_ready(tasks_by_iid, state, task: Task):
+def dependencies_ready(task: Task):
     for dep_iid in task.depends_on:
-        dep_entry = state["tasks"].get(str(dep_iid), {})
-        if not is_completed(dep_entry):
+        dep_issue = api(f"issues/{dep_iid}")
+        labels = set(dep_issue.get("labels", []))
+        if WORKFLOW_LABELS["awaiting_review"] not in labels:
             return False
     return True
 
 
-def start_task(task: Task, state):
+def start_task(task: Task):
     issue = api(f"issues/{task.iid}")
     set_workflow_labels(issue, "in_progress")
     ensure_branch(task.branch)
-    now = now_local()
-    entry = state_entry(state, task.iid)
-    entry["started_at"] = now.isoformat()
-    entry["finish_at"] = jittered_finish(now, task.duration_minutes, task.iid).isoformat()
-    print(f"[{ts()}] Issue #{task.iid} started; finish after {entry['finish_at']}")
+    started_at = find_started_at(task.iid) or now_local()
+    print(f"[{ts()}] Issue #{task.iid} started; due after {due_at(started_at, task.duration_minutes, task.iid).isoformat()}")
 
 
-def finish_task(task: Task, state):
+def finish_task(task: Task):
     issue = api(f"issues/{task.iid}")
     ensure_commits(task)
     mr = ensure_merge_request(task)
     set_workflow_labels(issue, "awaiting_review")
-    entry = state_entry(state, task.iid)
-    entry["completed_at"] = now_local().isoformat()
-    entry["mr_url"] = mr["web_url"]
     print(f"[{ts()}] Issue #{task.iid} MR ready: {mr['web_url']}")
-
-
-def reconcile_external_changes(tasks, state):
-    for task in tasks:
-        issue = api(f"issues/{task.iid}")
-        labels = set(issue.get("labels", []))
-        entry = state_entry(state, task.iid)
-        if WORKFLOW_LABELS["awaiting_review"] in labels and not is_completed(entry):
-            entry["completed_at"] = now_local().isoformat()
-        if WORKFLOW_LABELS["in_progress"] in labels and not entry.get("started_at"):
-            now = now_local()
-            entry["started_at"] = now.isoformat()
-            entry["finish_at"] = jittered_finish(now, task.duration_minutes, task.iid).isoformat()
 
 
 def main():
     tasks = load_plan()
-    tasks_by_iid = {task.iid: task for task in tasks}
-    state = load_state()
     reset_workspace()
-    reconcile_external_changes(tasks, state)
     now = now_local()
     print(f"[{ts()}] Scheduler tick started")
 
@@ -255,29 +227,24 @@ def main():
     for task in tasks:
         issue = api(f"issues/{task.iid}")
         labels = set(issue.get("labels", []))
-        entry = state_entry(state, task.iid)
         if WORKFLOW_LABELS["in_progress"] not in labels:
             continue
-        if is_completed(entry):
+        started_at = find_started_at(task.iid)
+        if not started_at:
             continue
-        finish_at = entry.get("finish_at")
-        if finish_at and now >= parse_dt(finish_at):
-            finish_task(task, state)
+        if now >= due_at(started_at, task.duration_minutes, task.iid):
+            finish_task(task)
 
     # Then start any ready tasks that have not started yet.
     for task in tasks:
         issue = api(f"issues/{task.iid}")
         labels = set(issue.get("labels", []))
-        entry = state_entry(state, task.iid)
-        if is_completed(entry):
-            continue
         if WORKFLOW_LABELS["awaiting_review"] in labels or WORKFLOW_LABELS["in_progress"] in labels:
             continue
-        if not dependencies_ready(tasks_by_iid, state, task):
+        if not dependencies_ready(task):
             continue
-        start_task(task, state)
+        start_task(task)
 
-    save_state(state)
     print(f"[{ts()}] Scheduler tick finished")
 
 
