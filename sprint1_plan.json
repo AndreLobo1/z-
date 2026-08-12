@@ -1,23 +1,23 @@
 {
   "tasks": [
     {
-      "iid": 12,
+      "iid": 21,
       "title": "docs(modelagem): ingestão de contexto institucional, tapi e dados do parceiro",
       "branch": "feature/1-contexto-projeto",
       "offset_minutes": 0,
       "duration_minutes": 30,
       "depends_on": [],
-      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #12",
+      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #21",
       "commits": []
     },
     {
-      "iid": 13,
+      "iid": 22,
       "title": "docs(modelagem): infraestrutura sdd e índice de tarefas da sprint 1",
       "branch": "feature/2-sdd-tasks-index",
       "offset_minutes": 30,
       "duration_minutes": 30,
-      "depends_on": [12],
-      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #13",
+      "depends_on": [21],
+      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #22",
       "commits": [
         {
           "message": "docs(sdd): add tasks index and parallel matrix",
@@ -29,13 +29,13 @@
       ]
     },
     {
-      "iid": 14,
+      "iid": 23,
       "title": "docs(modelagem): setup de infraestrutura de documentação mkdocs",
       "branch": "feature/3-mkdocs-setup",
       "offset_minutes": 30,
       "duration_minutes": 30,
-      "depends_on": [12],
-      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #14",
+      "depends_on": [21],
+      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #23",
       "commits": [
         {
           "message": "chore(mkdocs): add mkdocs configuration",
@@ -48,13 +48,13 @@
       ]
     },
     {
-      "iid": 15,
+      "iid": 24,
       "title": "docs(modelagem): elaboração do inventário analítico das bases de dados",
       "branch": "feature/4-inventario-bases",
       "offset_minutes": 30,
       "duration_minutes": 60,
-      "depends_on": [12],
-      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #15",
+      "depends_on": [21],
+      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #24",
       "commits": [
         {
           "message": "docs(math): add data base inventory",
@@ -65,13 +65,13 @@
       ]
     },
     {
-      "iid": 16,
+      "iid": 25,
       "title": "docs(modelagem): especificação técnica e adr-001 da análise quantitativa",
       "branch": "feature/5-specs-adr",
       "offset_minutes": 90,
       "duration_minutes": 30,
-      "depends_on": [15],
-      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #16",
+      "depends_on": [24],
+      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #25",
       "commits": [
         {
           "message": "docs(spec): add quantitative spec and adr",
@@ -83,13 +83,13 @@
       ]
     },
     {
-      "iid": 17,
+      "iid": 26,
       "title": "docs(modelagem): especificação e testes unitários do pipeline de dados",
       "branch": "feature/6-tdd-tests",
       "offset_minutes": 120,
       "duration_minutes": 30,
-      "depends_on": [16],
-      "mr_description": "Suíte de testes automatizados Pytest (TDD Red Phase).\n\nCloses #17",
+      "depends_on": [25],
+      "mr_description": "Suíte de testes automatizados Pytest (TDD Red Phase).\n\nCloses #26",
       "commits": [
         {
           "message": "test(pipeline): add data pipeline tests",
@@ -100,13 +100,13 @@
       ]
     },
     {
-      "iid": 18,
+      "iid": 27,
       "title": "docs(modelagem): implementação dos scripts de geração de gráficos e métricas",
       "branch": "feature/7-scripts-pipeline",
       "offset_minutes": 150,
       "duration_minutes": 60,
-      "depends_on": [17],
-      "mr_description": "Scripts Python de processamento e visualização (TDD Green Phase).\n\nCloses #18",
+      "depends_on": [26],
+      "mr_description": "Scripts Python de processamento e visualização (TDD Green Phase).\n\nCloses #27",
       "commits": [
         {
           "message": "feat(scripts): add quantitative pipeline scripts",
@@ -119,13 +119,13 @@
       ]
     },
     {
-      "iid": 19,
+      "iid": 28,
       "title": "docs(modelagem): elaboração do relatório de modelagem quantitativa de dados",
       "branch": "feature/8-relatorio-modelagem",
       "offset_minutes": 210,
       "duration_minutes": 180,
-      "depends_on": [14, 16, 18],
-      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #19",
+      "depends_on": [23, 25, 27],
+      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #28",
       "commits": [
         {
           "message": "docs(math): add quantitative model report",
