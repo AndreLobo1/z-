@@ -16,17 +16,14 @@ SRC_DIR = Path(__file__).resolve().parent / "src"
 PLAN_PATH = Path(__file__).resolve().parent / "sprint1_plan.json"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 WORKFLOW_LABELS = {
-    "in_progress": ["em-desenvolvimento", "workflow::in-progress"],
-    "awaiting_review": ["aguardando-review", "workflow::awaiting-review"],
+    "in_progress": [os.environ.get("BOARD_LABEL_DOING", "Doing")],
+    "awaiting_review": [os.environ.get("BOARD_LABEL_WAITING_REVIEW", "Waiting Review")],
 }
 TRANSIENT_LABELS = {
-    "Backlog",
-    "em-desenvolvimento",
-    "aguardando-review",
-    "em-review",
-    "workflow::in-progress",
-    "workflow::awaiting-review",
-    "workflow::in-review",
+    os.environ.get("BOARD_LABEL_BACKLOG", "Backlog"),
+    os.environ.get("BOARD_LABEL_DOING", "Doing"),
+    os.environ.get("BOARD_LABEL_WAITING_REVIEW", "Waiting Review"),
+    os.environ.get("BOARD_LABEL_REVIEW", "Review"),
 }
 
 
