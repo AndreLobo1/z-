@@ -184,11 +184,11 @@ def due_at(started_at: datetime, duration_minutes: int, iid: int) -> datetime:
 
 
 def find_started_at(issue_iid: int) -> datetime | None:
-    notes = api(f"issues/{issue_iid}/notes")
-    marker = f"added {WORKFLOW_LABELS['in_progress']} label"
-    for note in reversed(notes):
-        if note.get("system") and marker in note.get("body", ""):
-            return parse_dt(note["created_at"].replace("Z", "+00:00")).astimezone()
+    events = api(f"issues/{issue_iid}/resource_label_events")
+    for event in reversed(events):
+        label = event.get("label") or {}
+        if event.get("action") == "add" and label.get("name") == WORKFLOW_LABELS["in_progress"]:
+            return parse_dt(event["created_at"].replace("Z", "+00:00")).astimezone()
     return None
 
 
