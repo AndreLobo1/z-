@@ -3,7 +3,7 @@ name: Sprint 1 Scheduler
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
 
 concurrency:
   group: sprint1-scheduler
