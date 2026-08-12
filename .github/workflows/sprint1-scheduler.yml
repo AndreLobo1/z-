@@ -2,11 +2,17 @@ name: Sprint 1 Scheduler
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+concurrency:
+  group: sprint1-scheduler
+  cancel-in-progress: false
 
 jobs:
   run-scheduler:
     runs-on: ubuntu-latest
-    timeout-minutes: 540
+    timeout-minutes: 15
 
     steps:
       - name: Checkout scheduler repo
@@ -25,15 +31,14 @@ jobs:
           git config --global user.name "Andre Lobo"
           git config --global user.email "andre.paula@sou.inteli.edu.br"
 
-      - name: Clone GitLab working repo
-        run: |
-          git clone "https://oauth2:${{ secrets.GITLAB_TOKEN }}@git.inteli.edu.br/graduacao/2026-2a/t13/2026-2a-t13-es11-g02/sindusfarma-g02.git" /tmp/sindusfarma-work
-          git -C /tmp/sindusfarma-work config user.name "Andre Lobo"
-          git -C /tmp/sindusfarma-work config user.email "andre.paula@sou.inteli.edu.br"
-
       - name: Run Sprint 1 Scheduler
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GITLAB_PROJECT_PATH: graduacao/2026-2a/t13/2026-2a-t13-es11-g02/sindusfarma-g02
+          GITLAB_PROJECT_ID: 30889
+          GIT_AUTHOR_NAME: Andre Lobo
+          GIT_AUTHOR_EMAIL: andre.paula@sou.inteli.edu.br
+          SCHEDULE_START: 2026-08-12T12:00:00-03:00
           TZ: America/Sao_Paulo
         run: |
           python3 scheduler.py

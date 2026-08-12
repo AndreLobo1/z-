@@ -1,0 +1,140 @@
+{
+  "tasks": [
+    {
+      "iid": 1,
+      "title": "docs(context): ingestão de contexto institucional, tapi e dados do parceiro",
+      "branch": "feature/1-contexto-projeto",
+      "offset_minutes": 0,
+      "duration_minutes": 30,
+      "depends_on": [],
+      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #1",
+      "commits": []
+    },
+    {
+      "iid": 2,
+      "title": "docs(sdd): infraestrutura sdd e índice de tarefas da sprint 1",
+      "branch": "feature/2-sdd-tasks-index",
+      "offset_minutes": 30,
+      "duration_minutes": 30,
+      "depends_on": [1],
+      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #2",
+      "commits": [
+        {
+          "message": "docs(sdd): add tasks index and parallel matrix",
+          "paths": [
+            "docs/tasks_andre.md",
+            "docs/specs/tasks"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 3,
+      "title": "chore(mkdocs): setup de infraestrutura de documentação mkdocs",
+      "branch": "feature/3-mkdocs-setup",
+      "offset_minutes": 30,
+      "duration_minutes": 30,
+      "depends_on": [1],
+      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #3",
+      "commits": [
+        {
+          "message": "chore(mkdocs): add mkdocs configuration",
+          "paths": [
+            "mkdocs.yml",
+            "requirements-docs.txt",
+            "docs/javascripts"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 4,
+      "title": "docs(math): elaboração do inventário analítico das bases de dados",
+      "branch": "feature/4-inventario-bases",
+      "offset_minutes": 30,
+      "duration_minutes": 60,
+      "depends_on": [1],
+      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #4",
+      "commits": [
+        {
+          "message": "docs(math): add data base inventory",
+          "paths": [
+            "docs/inventario_das_bases.md"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 5,
+      "title": "docs(spec): especificação técnica e adr-001 da análise quantitativa",
+      "branch": "feature/5-specs-adr",
+      "offset_minutes": 90,
+      "duration_minutes": 30,
+      "depends_on": [4],
+      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #5",
+      "commits": [
+        {
+          "message": "docs(spec): add quantitative spec and adr",
+          "paths": [
+            "docs/specs/spec-analise-quantitativa-dados.md",
+            "docs/specs/adr-001-pipeline-analise-quantitativa.md"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 6,
+      "title": "test(pipeline): especificação e testes unitários do pipeline de dados",
+      "branch": "feature/6-tdd-tests",
+      "offset_minutes": 120,
+      "duration_minutes": 30,
+      "depends_on": [5],
+      "mr_description": "Suíte de testes automatizados Pytest (TDD Red Phase).\n\nCloses #6",
+      "commits": [
+        {
+          "message": "test(pipeline): add data pipeline tests",
+          "paths": [
+            "tests/test_data_pipeline.py"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 7,
+      "title": "feat(scripts): implementação dos scripts de geração de gráficos e métricas",
+      "branch": "feature/7-scripts-pipeline",
+      "offset_minutes": 150,
+      "duration_minutes": 60,
+      "depends_on": [6],
+      "mr_description": "Scripts Python de processamento e visualização (TDD Green Phase).\n\nCloses #7",
+      "commits": [
+        {
+          "message": "feat(scripts): add quantitative pipeline scripts",
+          "paths": [
+            "scripts",
+            "docs/data",
+            "docs/images"
+          ]
+        }
+      ]
+    },
+    {
+      "iid": 8,
+      "title": "docs(math): elaboração do relatório de modelagem quantitativa de dados",
+      "branch": "feature/8-relatorio-modelagem",
+      "offset_minutes": 210,
+      "duration_minutes": 180,
+      "depends_on": [3, 5, 7],
+      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #8",
+      "commits": [
+        {
+          "message": "docs(math): add quantitative model report",
+          "paths": [
+            "docs/index.md",
+            "docs/modelagem_quantitativa_de_dados_do_parceiro.md"
+          ]
+        }
+      ]
+    }
+  ]
+}
