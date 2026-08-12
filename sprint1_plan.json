@@ -1,23 +1,33 @@
 {
   "tasks": [
     {
-      "iid": 21,
+      "iid": 30,
       "title": "docs(modelagem): ingestão de contexto institucional, tapi e dados do parceiro",
-      "branch": "feature/1-contexto-projeto",
+      "branch": "feature/30-contexto-projeto",
       "offset_minutes": 0,
       "duration_minutes": 30,
       "depends_on": [],
-      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #21",
-      "commits": []
+      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #30",
+      "commits": [
+        {
+          "message": "docs(modelagem): add project context and source data",
+          "paths": [
+            "CONTEXTO_PROJETO",
+            "DADOS",
+            "docs/catalogo_reports",
+            "docs/contexto_organizacional_+_requisitos_da_solução_analítica.md"
+          ]
+        }
+      ]
     },
     {
-      "iid": 22,
+      "iid": 31,
       "title": "docs(modelagem): infraestrutura sdd e índice de tarefas da sprint 1",
-      "branch": "feature/2-sdd-tasks-index",
+      "branch": "feature/31-sdd-tasks-index",
       "offset_minutes": 30,
       "duration_minutes": 30,
-      "depends_on": [21],
-      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #22",
+      "depends_on": [30],
+      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #31",
       "commits": [
         {
           "message": "docs(sdd): add tasks index and parallel matrix",
@@ -29,13 +39,13 @@
       ]
     },
     {
-      "iid": 23,
+      "iid": 32,
       "title": "docs(modelagem): setup de infraestrutura de documentação mkdocs",
-      "branch": "feature/3-mkdocs-setup",
+      "branch": "feature/32-mkdocs-setup",
       "offset_minutes": 30,
       "duration_minutes": 30,
-      "depends_on": [21],
-      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #23",
+      "depends_on": [30],
+      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #32",
       "commits": [
         {
           "message": "chore(mkdocs): add mkdocs configuration",
@@ -48,13 +58,13 @@
       ]
     },
     {
-      "iid": 24,
+      "iid": 33,
       "title": "docs(modelagem): elaboração do inventário analítico das bases de dados",
-      "branch": "feature/4-inventario-bases",
+      "branch": "feature/33-inventario-bases",
       "offset_minutes": 30,
       "duration_minutes": 60,
-      "depends_on": [21],
-      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #24",
+      "depends_on": [30],
+      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #33",
       "commits": [
         {
           "message": "docs(math): add data base inventory",
@@ -65,13 +75,13 @@
       ]
     },
     {
-      "iid": 25,
+      "iid": 34,
       "title": "docs(modelagem): especificação técnica e adr-001 da análise quantitativa",
-      "branch": "feature/5-specs-adr",
+      "branch": "feature/34-specs-adr",
       "offset_minutes": 90,
       "duration_minutes": 30,
-      "depends_on": [24],
-      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #25",
+      "depends_on": [33],
+      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #34",
       "commits": [
         {
           "message": "docs(spec): add quantitative spec and adr",
@@ -83,13 +93,13 @@
       ]
     },
     {
-      "iid": 26,
+      "iid": 35,
       "title": "docs(modelagem): especificação e testes unitários do pipeline de dados",
-      "branch": "feature/6-tdd-tests",
+      "branch": "feature/35-tdd-tests",
       "offset_minutes": 120,
       "duration_minutes": 30,
-      "depends_on": [25],
-      "mr_description": "Suíte de testes automatizados Pytest (TDD Red Phase).\n\nCloses #26",
+      "depends_on": [34],
+      "mr_description": "Suíte de testes automatizados Pytest (TDD Red Phase).\n\nCloses #35",
       "commits": [
         {
           "message": "test(pipeline): add data pipeline tests",
@@ -100,13 +110,13 @@
       ]
     },
     {
-      "iid": 27,
+      "iid": 36,
       "title": "docs(modelagem): implementação dos scripts de geração de gráficos e métricas",
-      "branch": "feature/7-scripts-pipeline",
+      "branch": "feature/36-scripts-pipeline",
       "offset_minutes": 150,
       "duration_minutes": 60,
-      "depends_on": [26],
-      "mr_description": "Scripts Python de processamento e visualização (TDD Green Phase).\n\nCloses #27",
+      "depends_on": [35],
+      "mr_description": "Scripts Python de processamento e visualização (TDD Green Phase).\n\nCloses #36",
       "commits": [
         {
           "message": "feat(scripts): add quantitative pipeline scripts",
@@ -119,13 +129,13 @@
       ]
     },
     {
-      "iid": 28,
+      "iid": 37,
       "title": "docs(modelagem): elaboração do relatório de modelagem quantitativa de dados",
-      "branch": "feature/8-relatorio-modelagem",
+      "branch": "feature/37-relatorio-modelagem",
       "offset_minutes": 210,
       "duration_minutes": 180,
-      "depends_on": [23, 25, 27],
-      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #28",
+      "depends_on": [32, 34, 36],
+      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #37",
       "commits": [
         {
           "message": "docs(math): add quantitative model report",

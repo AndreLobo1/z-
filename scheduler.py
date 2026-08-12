@@ -101,21 +101,6 @@ def set_workflow_labels(issue, state: str):
     print(f"[{ts()}] Issue #{issue['iid']} -> {state}")
 
 
-def find_note(notes, marker: str):
-    for note in notes:
-        if marker in note.get("body", ""):
-            return note
-    return None
-
-
-def ensure_note(issue_iid: int, marker: str, body: str):
-    notes = api(f"issues/{issue_iid}/notes")
-    note = find_note(notes, marker)
-    if note:
-        return note
-    return api(f"issues/{issue_iid}/notes", "POST", {"body": body})
-
-
 def ensure_branch(branch: str):
     try:
         api(f"repository/branches/{urllib.parse.quote_plus(branch)}")
@@ -181,10 +166,6 @@ class Task:
     commits: list
     mr_description: str
 
-    @property
-    def marker(self) -> str:
-        return f"AUTOMATION:TASK:{self.iid}"
-
     def planned_start(self, anchor: datetime) -> datetime:
         return anchor + timedelta(minutes=self.offset_minutes)
 
@@ -212,25 +193,14 @@ def start_task(task: Task, anchor: datetime):
     issue = api(f"issues/{task.iid}")
     set_workflow_labels(issue, "in_progress")
     ensure_branch(task.branch)
-    start_at = task.planned_start(anchor).isoformat()
-    finish_at = task.planned_finish(anchor).isoformat()
-    ensure_note(
-        task.iid,
-        task.marker,
-        f"{task.marker}\nstarted_at={start_at}\nfinish_at={finish_at}\nbranch={task.branch}",
-    )
 
 
 def finish_task(task: Task):
     issue = api(f"issues/{task.iid}")
     ensure_commits(task)
     mr = ensure_merge_request(task)
-    ensure_note(
-        task.iid,
-        f"{task.marker}:completed",
-        f"{task.marker}:completed\nmr={mr['web_url']}\ncompleted_at={now_local().isoformat()}",
-    )
     set_workflow_labels(issue, "awaiting_review")
+    print(f"[{ts()}] Issue #{task.iid} MR ready: {mr['web_url']}")
 
 
 def main():
@@ -251,7 +221,8 @@ def main():
             continue
         if "em-desenvolvimento" not in labels:
             start_task(task, anchor)
-            continue
+            if now < task.planned_finish(anchor):
+                continue
         if now >= task.planned_finish(anchor):
             finish_task(task)
     print(f"[{ts()}] Scheduler tick finished")
