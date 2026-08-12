@@ -231,8 +231,11 @@ def main():
             continue
         started_at = find_started_at(task.iid)
         if not started_at:
+            print(f"[{ts()}] Issue #{task.iid} in progress but without start timestamp")
             continue
-        if now >= due_at(started_at, task.duration_minutes, task.iid):
+        due_time = due_at(started_at, task.duration_minutes, task.iid)
+        print(f"[{ts()}] Issue #{task.iid} active since {started_at.isoformat()} due at {due_time.isoformat()}")
+        if now >= due_time:
             finish_task(task)
 
     # Then start any ready tasks that have not started yet.
