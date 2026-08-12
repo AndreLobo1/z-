@@ -1,5 +1,6 @@
 import json
 import os
+import random
 import shutil
 import subprocess
 import urllib.parse
@@ -10,14 +11,14 @@ from pathlib import Path
 
 
 GITLAB_URL = "https://git.inteli.edu.br"
-TZ_OFFSET = "-03:00"
 REPO_PATH = Path("/tmp/sindusfarma-work")
 SRC_DIR = Path(__file__).resolve().parent / "src"
 PLAN_PATH = Path(__file__).resolve().parent / "sprint1_plan.json"
+STATE_PATH = Path(__file__).resolve().parent / ".scheduler_state.json"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 WORKFLOW_LABELS = {
-    "in_progress": [os.environ.get("BOARD_LABEL_DOING", "Doing")],
-    "awaiting_review": [os.environ.get("BOARD_LABEL_WAITING_REVIEW", "Waiting Review")],
+    "in_progress": os.environ.get("BOARD_LABEL_DOING", "Doing"),
+    "awaiting_review": os.environ.get("BOARD_LABEL_WAITING_REVIEW", "Waiting Review"),
 }
 TRANSIENT_LABELS = {
     os.environ.get("BOARD_LABEL_BACKLOG", "Backlog"),
@@ -43,11 +44,12 @@ load_dotenv(ENV_PATH)
 PROJECT_PATH = os.environ["GITLAB_PROJECT_PATH"]
 PROJECT_ID = os.environ.get("GITLAB_PROJECT_ID")
 GITLAB_TOKEN = os.environ["GITLAB_TOKEN"]
-SCHEDULE_START = os.environ.get("SCHEDULE_START", "2026-08-12T12:00:00-03:00")
 GITLAB_REPO = os.environ.get(
     "GITLAB_REPO",
     f"https://oauth2:{GITLAB_TOKEN}@git.inteli.edu.br/{PROJECT_PATH}.git",
 )
+TARGET_REPO_SOURCE = os.environ.get("TARGET_REPO_SOURCE")
+JITTER_MINUTES = int(os.environ.get("JITTER_MINUTES", "5"))
 
 
 def now_local() -> datetime:
@@ -72,7 +74,7 @@ def api(path: str, method: str = "GET", data=None):
         headers=headers,
         method=method,
     )
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode())
 
 
@@ -86,7 +88,9 @@ def git(args, cwd=REPO_PATH):
 def reset_workspace() -> None:
     if REPO_PATH.exists():
         shutil.rmtree(REPO_PATH)
-    subprocess.run(["git", "clone", GITLAB_REPO, str(REPO_PATH)], check=True, capture_output=True)
+    clone_source = TARGET_REPO_SOURCE or GITLAB_REPO
+    subprocess.run(["git", "clone", clone_source, str(REPO_PATH)], check=True, capture_output=True)
+    subprocess.run(["git", "-C", str(REPO_PATH), "remote", "set-url", "origin", GITLAB_REPO], check=True)
     subprocess.run(["git", "-C", str(REPO_PATH), "config", "user.name", os.environ.get("GIT_AUTHOR_NAME", "Andre Lobo")], check=True)
     subprocess.run(["git", "-C", str(REPO_PATH), "config", "user.email", os.environ.get("GIT_AUTHOR_EMAIL", "andre.paula@sou.inteli.edu.br")], check=True)
 
@@ -96,7 +100,7 @@ def keep_non_workflow_labels(labels):
 
 
 def set_workflow_labels(issue, state: str):
-    labels = keep_non_workflow_labels(issue.get("labels", [])) + WORKFLOW_LABELS[state]
+    labels = keep_non_workflow_labels(issue.get("labels", [])) + [WORKFLOW_LABELS[state]]
     api(f"issues/{issue['iid']}", "PUT", {"labels": ",".join(labels)})
     print(f"[{ts()}] Issue #{issue['iid']} -> {state}")
 
@@ -155,22 +159,25 @@ def ensure_merge_request(task):
     )
 
 
+def load_state():
+    if not STATE_PATH.exists():
+        return {"tasks": {}}
+    return json.loads(STATE_PATH.read_text())
+
+
+def save_state(state):
+    STATE_PATH.write_text(json.dumps(state, indent=2, sort_keys=True))
+
+
 @dataclass
 class Task:
     iid: int
     title: str
     branch: str
-    offset_minutes: int
     duration_minutes: int
     depends_on: list
     commits: list
     mr_description: str
-
-    def planned_start(self, anchor: datetime) -> datetime:
-        return anchor + timedelta(minutes=self.offset_minutes)
-
-    def planned_finish(self, anchor: datetime) -> datetime:
-        return self.planned_start(anchor) + timedelta(minutes=self.duration_minutes)
 
 
 def load_plan():
@@ -178,53 +185,99 @@ def load_plan():
     return [Task(**task) for task in raw["tasks"]]
 
 
-def dependencies_ready(tasks_by_iid, anchor: datetime, task: Task):
+def jittered_finish(now: datetime, duration_minutes: int, iid: int) -> datetime:
+    delta = random.randint(-JITTER_MINUTES, JITTER_MINUTES)
+    duration = max(1, duration_minutes + delta)
+    return now + timedelta(minutes=duration)
+
+
+def state_entry(state, iid: int):
+    return state["tasks"].setdefault(str(iid), {})
+
+
+def is_completed(entry):
+    return bool(entry.get("completed_at"))
+
+
+def dependencies_ready(tasks_by_iid, state, task: Task):
     for dep_iid in task.depends_on:
-        dep = tasks_by_iid[dep_iid]
-        dep_issue = api(f"issues/{dep_iid}")
-        if "aguardando-review" not in dep_issue.get("labels", []):
-            return False
-        if now_local() < dep.planned_finish(anchor):
+        dep_entry = state["tasks"].get(str(dep_iid), {})
+        if not is_completed(dep_entry):
             return False
     return True
 
 
-def start_task(task: Task, anchor: datetime):
+def start_task(task: Task, state):
     issue = api(f"issues/{task.iid}")
     set_workflow_labels(issue, "in_progress")
     ensure_branch(task.branch)
+    now = now_local()
+    entry = state_entry(state, task.iid)
+    entry["started_at"] = now.isoformat()
+    entry["finish_at"] = jittered_finish(now, task.duration_minutes, task.iid).isoformat()
+    print(f"[{ts()}] Issue #{task.iid} started; finish after {entry['finish_at']}")
 
 
-def finish_task(task: Task):
+def finish_task(task: Task, state):
     issue = api(f"issues/{task.iid}")
     ensure_commits(task)
     mr = ensure_merge_request(task)
     set_workflow_labels(issue, "awaiting_review")
+    entry = state_entry(state, task.iid)
+    entry["completed_at"] = now_local().isoformat()
+    entry["mr_url"] = mr["web_url"]
     print(f"[{ts()}] Issue #{task.iid} MR ready: {mr['web_url']}")
 
 
-def main():
-    anchor = parse_dt(SCHEDULE_START)
-    tasks = load_plan()
-    tasks_by_iid = {task.iid: task for task in tasks}
-    reset_workspace()
-    now = now_local()
-    print(f"[{ts()}] Scheduler tick started")
+def reconcile_external_changes(tasks, state):
     for task in tasks:
         issue = api(f"issues/{task.iid}")
         labels = set(issue.get("labels", []))
-        if "aguardando-review" in labels:
+        entry = state_entry(state, task.iid)
+        if WORKFLOW_LABELS["awaiting_review"] in labels and not is_completed(entry):
+            entry["completed_at"] = now_local().isoformat()
+        if WORKFLOW_LABELS["in_progress"] in labels and not entry.get("started_at"):
+            now = now_local()
+            entry["started_at"] = now.isoformat()
+            entry["finish_at"] = jittered_finish(now, task.duration_minutes, task.iid).isoformat()
+
+
+def main():
+    tasks = load_plan()
+    tasks_by_iid = {task.iid: task for task in tasks}
+    state = load_state()
+    reset_workspace()
+    reconcile_external_changes(tasks, state)
+    now = now_local()
+    print(f"[{ts()}] Scheduler tick started")
+
+    # Finish due active tasks first.
+    for task in tasks:
+        issue = api(f"issues/{task.iid}")
+        labels = set(issue.get("labels", []))
+        entry = state_entry(state, task.iid)
+        if WORKFLOW_LABELS["in_progress"] not in labels:
             continue
-        if now < task.planned_start(anchor):
+        if is_completed(entry):
             continue
-        if not dependencies_ready(tasks_by_iid, anchor, task):
+        finish_at = entry.get("finish_at")
+        if finish_at and now >= parse_dt(finish_at):
+            finish_task(task, state)
+
+    # Then start any ready tasks that have not started yet.
+    for task in tasks:
+        issue = api(f"issues/{task.iid}")
+        labels = set(issue.get("labels", []))
+        entry = state_entry(state, task.iid)
+        if is_completed(entry):
             continue
-        if "em-desenvolvimento" not in labels:
-            start_task(task, anchor)
-            if now < task.planned_finish(anchor):
-                continue
-        if now >= task.planned_finish(anchor):
-            finish_task(task)
+        if WORKFLOW_LABELS["awaiting_review"] in labels or WORKFLOW_LABELS["in_progress"] in labels:
+            continue
+        if not dependencies_ready(tasks_by_iid, state, task):
+            continue
+        start_task(task, state)
+
+    save_state(state)
     print(f"[{ts()}] Scheduler tick finished")
 
 

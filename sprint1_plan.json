@@ -1,13 +1,12 @@
 {
   "tasks": [
     {
-      "iid": 30,
+      "iid": 39,
       "title": "docs(modelagem): ingestão de contexto institucional, tapi e dados do parceiro",
-      "branch": "feature/30-contexto-projeto",
-      "offset_minutes": 0,
+      "branch": "feature/39-contexto-projeto",
       "duration_minutes": 30,
       "depends_on": [],
-      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #30",
+      "mr_description": "Contexto institucional, datasets brutos e catálogo de relatórios do parceiro.\n\nCloses #39",
       "commits": [
         {
           "message": "docs(modelagem): add project context and source data",
@@ -21,16 +20,15 @@
       ]
     },
     {
-      "iid": 31,
+      "iid": 40,
       "title": "docs(modelagem): infraestrutura sdd e índice de tarefas da sprint 1",
-      "branch": "feature/31-sdd-tasks-index",
-      "offset_minutes": 30,
+      "branch": "feature/40-sdd-tasks-index",
       "duration_minutes": 30,
-      "depends_on": [30],
-      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #31",
+      "depends_on": [39],
+      "mr_description": "Publicação do `docs/tasks_andre.md` e especificações formais de tarefas.\n\nCloses #40",
       "commits": [
         {
-          "message": "docs(sdd): add tasks index and parallel matrix",
+          "message": "docs(modelagem): publish sprint task index",
           "paths": [
             "docs/tasks_andre.md",
             "docs/specs/tasks"
@@ -39,16 +37,15 @@
       ]
     },
     {
-      "iid": 32,
+      "iid": 41,
       "title": "docs(modelagem): setup de infraestrutura de documentação mkdocs",
-      "branch": "feature/32-mkdocs-setup",
-      "offset_minutes": 30,
+      "branch": "feature/41-mkdocs-setup",
       "duration_minutes": 30,
-      "depends_on": [30],
-      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #32",
+      "depends_on": [39],
+      "mr_description": "Configuração do MkDocs com Material Theme, MathJax e Mermaid.\n\nCloses #41",
       "commits": [
         {
-          "message": "chore(mkdocs): add mkdocs configuration",
+          "message": "chore(mkdocs): add documentation setup",
           "paths": [
             "mkdocs.yml",
             "requirements-docs.txt",
@@ -58,16 +55,15 @@
       ]
     },
     {
-      "iid": 33,
+      "iid": 42,
       "title": "docs(modelagem): elaboração do inventário analítico das bases de dados",
-      "branch": "feature/33-inventario-bases",
-      "offset_minutes": 30,
+      "branch": "feature/42-inventario-bases",
       "duration_minutes": 60,
-      "depends_on": [30],
-      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #33",
+      "depends_on": [39],
+      "mr_description": "Inventário analítico das 6 tabelas CSV do parceiro.\n\nCloses #42",
       "commits": [
         {
-          "message": "docs(math): add data base inventory",
+          "message": "docs(modelagem): add data base inventory",
           "paths": [
             "docs/inventario_das_bases.md"
           ]
@@ -75,16 +71,15 @@
       ]
     },
     {
-      "iid": 34,
+      "iid": 43,
       "title": "docs(modelagem): especificação técnica e adr-001 da análise quantitativa",
-      "branch": "feature/34-specs-adr",
-      "offset_minutes": 90,
+      "branch": "feature/43-specs-adr",
       "duration_minutes": 30,
-      "depends_on": [33],
-      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #34",
+      "depends_on": [42],
+      "mr_description": "Especificação formal do modelo e ADR-001.\n\nCloses #43",
       "commits": [
         {
-          "message": "docs(spec): add quantitative spec and adr",
+          "message": "docs(modelagem): add quantitative spec and adr",
           "paths": [
             "docs/specs/spec-analise-quantitativa-dados.md",
             "docs/specs/adr-001-pipeline-analise-quantitativa.md"
@@ -93,16 +88,15 @@
       ]
     },
     {
-      "iid": 35,
+      "iid": 44,
       "title": "docs(modelagem): especificação e testes unitários do pipeline de dados",
-      "branch": "feature/35-tdd-tests",
-      "offset_minutes": 120,
+      "branch": "feature/44-tdd-tests",
       "duration_minutes": 30,
-      "depends_on": [34],
-      "mr_description": "Suíte de testes automatizados Pytest (TDD Red Phase).\n\nCloses #35",
+      "depends_on": [43],
+      "mr_description": "Suíte de testes automatizados Pytest.\n\nCloses #44",
       "commits": [
         {
-          "message": "test(pipeline): add data pipeline tests",
+          "message": "test(pipeline): add quantitative pipeline tests",
           "paths": [
             "tests/test_data_pipeline.py"
           ]
@@ -110,13 +104,12 @@
       ]
     },
     {
-      "iid": 36,
+      "iid": 45,
       "title": "docs(modelagem): implementação dos scripts de geração de gráficos e métricas",
-      "branch": "feature/36-scripts-pipeline",
-      "offset_minutes": 150,
+      "branch": "feature/45-scripts-pipeline",
       "duration_minutes": 60,
-      "depends_on": [35],
-      "mr_description": "Scripts Python de processamento e visualização (TDD Green Phase).\n\nCloses #36",
+      "depends_on": [44],
+      "mr_description": "Scripts Python de processamento e visualização.\n\nCloses #45",
       "commits": [
         {
           "message": "feat(scripts): add quantitative pipeline scripts",
@@ -129,16 +122,15 @@
       ]
     },
     {
-      "iid": 37,
+      "iid": 46,
       "title": "docs(modelagem): elaboração do relatório de modelagem quantitativa de dados",
-      "branch": "feature/37-relatorio-modelagem",
-      "offset_minutes": 210,
+      "branch": "feature/46-relatorio-modelagem",
       "duration_minutes": 180,
-      "depends_on": [32, 34, 36],
-      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #37",
+      "depends_on": [41, 43, 45],
+      "mr_description": "Relatório analítico final do Artefato de Modelagem Quantitativa.\n\nCloses #46",
       "commits": [
         {
-          "message": "docs(math): add quantitative model report",
+          "message": "docs(modelagem): add quantitative modeling report",
           "paths": [
             "docs/index.md",
             "docs/modelagem_quantitativa_de_dados_do_parceiro.md"

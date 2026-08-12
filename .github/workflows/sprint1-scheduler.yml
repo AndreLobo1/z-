@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "*/5 * * * *"
 
+permissions:
+  actions: write
+  contents: read
+
 concurrency:
   group: sprint1-scheduler
   cancel-in-progress: false
@@ -17,6 +21,31 @@ jobs:
     steps:
       - name: Checkout scheduler repo
         uses: actions/checkout@v4
+
+      - name: Restore Scheduler State
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, urllib.request, zipfile, io
+          repo = os.environ["GH_REPO"]
+          token = os.environ["GH_TOKEN"]
+          url = f"https://api.github.com/repos/{repo}/actions/artifacts?per_page=100"
+          req = urllib.request.Request(url, headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "User-Agent": "codex"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              data = json.loads(r.read().decode())
+          artifacts = [a for a in data.get("artifacts", []) if a.get("name") == "scheduler-state" and not a.get("expired")]
+          if not artifacts:
+              raise SystemExit(0)
+          artifact = sorted(artifacts, key=lambda x: x["created_at"], reverse=True)[0]
+          req = urllib.request.Request(artifact["archive_download_url"], headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "User-Agent": "codex"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              payload = r.read()
+          zf = zipfile.ZipFile(io.BytesIO(payload))
+          zf.extractall(pathlib.Path("."))
+          print("restored scheduler-state artifact", artifact["id"])
+          PY
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,11 +67,20 @@ jobs:
           GITLAB_PROJECT_ID: 29514
           GIT_AUTHOR_NAME: Andre Lobo
           GIT_AUTHOR_EMAIL: andre.paula@sou.inteli.edu.br
-          SCHEDULE_START: 2026-08-12T08:25:00-03:00
           BOARD_LABEL_BACKLOG: Backlog
           BOARD_LABEL_DOING: Doing
           BOARD_LABEL_WAITING_REVIEW: Waiting Review
           BOARD_LABEL_REVIEW: Review
+          JITTER_MINUTES: 5
           TZ: America/Sao_Paulo
         run: |
           python3 scheduler.py
+
+      - name: Upload Scheduler State
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheduler-state
+          path: .scheduler_state.json
+          if-no-files-found: ignore
+          retention-days: 7
